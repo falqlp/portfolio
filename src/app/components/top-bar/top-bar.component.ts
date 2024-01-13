@@ -9,12 +9,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './top-bar.component.scss',
 })
 export class TopBarComponent {
+  protected lang = this.translateService.defaultLang;
   constructor(protected translateService: TranslateService) {}
 
   protected changeLanguage(): void {
-    this.translateService.currentLang;
-    this.translateService.use(
-      this.translateService.currentLang === 'fr-FR' ? 'en-EN' : 'fr-FR'
-    );
+    const newLang = this.lang === 'fr-FR' ? 'en-EN' : 'fr-FR';
+    this.lang = newLang;
+    this.translateService.use(newLang);
   }
 }
