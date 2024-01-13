@@ -1,0 +1,27 @@
+@use "sass:map";
+@import "../../../styles/color-palette";
+
+:host {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.primary-projects {
+  display: flex;
+  background-color: map.get($color-palette, "3");
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  transition: transform 0.4s ease-in-out;
+}
+.primary-projects:hover {
+  transform: translateY(-5px);
+}
+img {
+  max-height: 350px;
+  border-radius: 5px;
+}
+.description {
+  max-width: 400px;
+}

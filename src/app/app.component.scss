@@ -1,0 +1,9 @@
+@use "sass:map";
+@import "../styles/color-palette";
+.primary-projects {
+  background-color: map.get($color-palette, "1");
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+}
