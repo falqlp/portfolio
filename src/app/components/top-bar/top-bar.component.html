@@ -5,7 +5,7 @@
   <div class="nav">
     <button>{{ "PRIMARY_PROJECTS"|translate }}</button>
     <button>{{ "SECONDARY_PROJECTS"|translate }}</button>
-    <button>{{ "FORMATIONS"|translate }}</button>
-    <img src="https://flagsapi.com/FR/flat/64.png">
+    <button>{{ "EDUCATION"|translate }}</button>
+    <img (click)="changeLanguage()" [src]="'https://flagsapi.com/'+(translateService.currentLang === 'fr-FR' ? 'FR' : 'GB')+'/flat/64.png'">
   </div>
 </header>
