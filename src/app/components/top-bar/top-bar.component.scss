@@ -2,7 +2,7 @@
 @import "../../../styles/color-palette";
 
 header {
-  margin: 50px 0;
+  margin: 25px 0;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -11,4 +11,7 @@ header {
 .nav {
   display: flex;
   gap: 5px;
+}
+h2 {
+  margin: 0;
 }

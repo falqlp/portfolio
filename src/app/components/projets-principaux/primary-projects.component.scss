@@ -3,9 +3,14 @@
 
 :host {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
+  height: 100%;
 }
 
 .primary-projects {
@@ -15,14 +20,22 @@
   border-radius: 10px;
   gap: 10px;
   transition: transform 0.2s ease-in-out;
+  height: calc(100% - 45px);
+  width: 40%;
 }
 .primary-projects:hover {
   transform: translateY(-5px);
 }
 img {
-  max-height: 350px;
-  border-radius: 5px;
+  max-height: 256px;
+  border-radius: 10px;
 }
-.description {
-  max-width: 400px;
+
+.techno {
+  height: 64px;
+}
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }

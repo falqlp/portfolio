@@ -1,9 +1,12 @@
 @use "sass:map";
 @import "../styles/color-palette";
-.primary-projects {
+
+.swiper-slide {
   background-color: map.get($color-palette, "1");
   display: flex;
-  justify-content: center;
   padding: 15px;
-  width: calc(100% - 30px);
+  height: 100%;
+}
+.swiper {
+  height: calc(100vh - 82px);
 }

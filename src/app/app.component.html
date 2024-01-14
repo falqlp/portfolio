@@ -1,5 +1,11 @@
 <app-top-bar />
-<div class="primary-projects">
-  <app-primary-projects />
-</div>
-<div>{{ "TEST" | translate }}</div>
+<swiper-container init="false" class="swiper" #swiperContainer>
+  <swiper-slide>
+      <app-primary-projects class="swiper-slide" />
+  </swiper-slide>
+  <swiper-slide>
+    <app-secondary-projects class="swiper-slide"/>
+  </swiper-slide>
+  <swiper-slide>
+  </swiper-slide>
+</swiper-container>
