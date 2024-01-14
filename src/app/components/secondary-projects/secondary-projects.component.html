@@ -1,1 +1,27 @@
 <h3>{{"SECONDARY_PROJECTS"|translate}} :</h3>
+<div class="content">
+  <div class="d3js">
+    <img class="img-d3js" src="assets/images/d3js/preview.png" alt="pm logo" />
+    <div class="description">azegsdhjuyqskgfuyzjg qshjdgjshqvdhj qshdghqsgfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
+      <div class="logos">
+        <img class="techno" *ngFor="let techno of d3js.technologies" [src]="technologiesIconPath + techno + '.png'">
+      </div>
+    </div>
+  </div>
+  <div class="html-css-bdd">
+    <img class="img-html-css-bdd" src="assets/images/html-css-bdd/preview2.png" alt="html-css-bdd preview" />
+    <div class="description">azegsdhjuyqskgfuyzjg qshjdgjshqvdhj qshdghdqsgfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
+      <div class="logos">
+        <img class="techno" *ngFor="let techno of htmlCssBdd.technologies" [src]="technologiesIconPath + techno + '.png'">
+      </div>
+    </div>
+  </div>
+  <div class="primary-projects">
+    <img class="img" src="assets/images/eceau/eceau%20logo.png" alt="eceau logo" />
+    <div class="description">azegsdhjuyqskgfuyzjg qshjdgjshqvdhj qshdghqsgfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
+      <div class="logos">
+        <img class="techno" *ngFor="let techno of eceau.technologies" [src]="technologiesIconPath + techno + '.png'">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,25 @@
 import { Component } from '@angular/core';
-import {TranslateModule} from "@ngx-translate/core";
+import { TranslateModule } from '@ngx-translate/core';
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-secondary-projects',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, NgForOf],
   templateUrl: './secondary-projects.component.html',
   styleUrl: './secondary-projects.component.scss',
 })
-export class SecondaryProjectsComponent {}
+export class SecondaryProjectsComponent {
+  protected readonly technologiesIconPath = 'assets/images/technologies/';
+  protected d3js = {
+    technologies: ['html', 'css', 'javascript', 'd3'],
+  };
+
+  protected eceau = {
+    technologies: ['html', 'css', 'powerbi'],
+  };
+
+  protected htmlCssBdd = {
+    technologies: ['html', 'css', 'php', 'mariadb'],
+  };
+}

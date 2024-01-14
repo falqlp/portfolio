@@ -1,0 +1,61 @@
+@use "sass:map";
+@import "../../../styles/color-palette";
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  height: 100%;
+}
+
+.primary-projects {
+  display: flex;
+  background-color: map.get($color-palette, "3");
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  transition: transform 0.2s ease-in-out;
+  height: calc(100% - 45px);
+  width: 40%;
+}
+.primary-projects:hover,
+.html-css-bdd:hover,
+.d3js:hover {
+  transform: translateY(-5px);
+}
+img {
+  border-radius: 10px;
+}
+.img {
+  max-height: 256px;
+}
+
+.techno {
+  height: 64px;
+}
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.img-html-css-bdd,
+.img-d3js {
+  width: 100%;
+}
+.html-css-bdd,
+.d3js {
+  display: flex;
+  flex-direction: column;
+  background-color: map.get($color-palette, "3");
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  transition: transform 0.2s ease-in-out;
+  height: calc(100% - 45px);
+  width: 40%;
+}
