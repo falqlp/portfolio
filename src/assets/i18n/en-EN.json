@@ -35,6 +35,8 @@
   "WRITTEN_EXPRESSION_TECHNIQUES": "Written Expression Techniques",
   "MORE": "More",
   "POKEMON_MANAGER": "Pokemon Manager",
-  "PM_DESC": "Pokemon Manager is a personal project that I started in June 2023 with a clear goal: to merge two worlds that I am passionate about, Pokemon and management games in the style of Football Manager. The idea is simple: instead of experiencing the Pokémon adventure from the traditional third-person perspective, you step into the shoes of a manager. The mission is to ensure the proper development of the Pokémon while keeping an eye on the team's performance. This project is an opportunity for me to strengthen my skills in Angular, a technology I use in a professional context, while deepening my knowledge of MongoDB, which I discovered during my studies.",
+  "PM_DESC1": "Pokemon Manager is a personal project that I started in June 2023 with a clear goal: to merge two worlds that I am passionate about, Pokemon and management games in the style of Football Manager.",
+  "PM_DESC2": "The idea is simple: instead of experiencing the Pokémon adventure from the traditional third-person perspective, you step into the shoes of a manager. The mission is to ensure the proper development of the Pokémon while keeping an eye on the team's performance.",
+  "PM_DESC3": "This project is an opportunity for me to strengthen my skills in Angular, a technology I use in a professional context, while deepening my knowledge of MongoDB, which I discovered during my studies.",
   "WORK_IN_PROGRESS": "Work in progress..."
 }
