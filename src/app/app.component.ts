@@ -45,7 +45,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const swiperOption: SwiperOptions = {
-      effect: 'cube',
+      effect: 'slide',
       slidesPerView: 1,
       direction: 'vertical',
       mousewheel: true,

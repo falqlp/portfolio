@@ -1,19 +1,36 @@
-<h3>{{"PRIMARY_PROJECTS"|translate}} :</h3>
+<h3>{{ "PRIMARY_PROJECTS"|translate }} :</h3>
 <div class="content">
   <div class="primary-projects">
-    <img src="assets/images/pokemon-manager/pm_logo.png" alt="pm logo" />
-    <div class="description">azegsdhjuyqskgfuyzjg qshjdgjshqvdhj qshdghqsgfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
-      <div class="logos">
-        <img class="techno" *ngFor="let techno of pokemonManager.technologies" [src]="technologiesIconPath + techno + '.png'">
+    <div>
+      <h3 class="card-title">{{ "POKEMON_MANAGER"|translate }}</h3>
+      <div class="img-background" style="background-color: #fcf5e6">
+        <img src="assets/images/pokemon-manager/pm_logo.png" alt="pm logo"/>
       </div>
+      <div class="description">{{"PM_DESC"|translate}}
+        <br>
+        <strong>{{"WORK_IN_PROGRESS"|translate}} </strong>
+        <a href="https://github.com/falqlp/PokemonManager">Github</a>
+      </div>
+    </div>
+    <div class="logos">
+      <img class="techno" *ngFor="let techno of pokemonManager.technologies"
+           [src]="technologiesIconPath + techno + '.png'" [alt]="techno">
     </div>
   </div>
   <div class="primary-projects">
-    <img src="assets/images/aquiweb/aquiweb.jpg" alt="aquiweb logo" />
-    <div class="description">azegsdhjuyqskgfuyzjg qshjdgjshqvdhj qshdghqsgfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
-      <div class="logos">
-        <img class="techno" *ngFor="let techno of aquiweb.technologies" [src]="technologiesIconPath + techno + '.png'">
+    <div>
+      <h3 class="card-title">Aquiweb</h3>
+      <div class="img-background" style="background-color: #2A353B">
+        <img src="assets/images/aquiweb/aquiweb.jpg" alt="aquiweb logo"/>
       </div>
+      <div class="description">azegsdhjuyqsk gfuyzjg qshjdgjshqvdhj qshdghqsgfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb
+        hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
+        <a href="https://www.astree-software.fr/logiciel-mes/">{{ "MORE"|translate }}</a>
+      </div>
+    </div>
+    <div class="logos">
+      <img class="techno" *ngFor="let techno of aquiweb.technologies"
+           [src]="technologiesIconPath + techno + '.png'" [alt]="techno">
     </div>
   </div>
 </div>

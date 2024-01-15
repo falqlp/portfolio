@@ -15,20 +15,24 @@
 
 .primary-projects {
   display: flex;
+  flex-direction: column;
   background-color: map.get($color-palette, "3");
-  padding: 10px;
-  //border-radius: 10px;
   gap: 10px;
-  transition: transform 0.2s ease-in-out;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.2s, 0.2s;
   height: calc(100% - 45px);
   width: 40%;
+  border-radius: 3px;
+  overflow: hidden;
+  justify-content: space-between;
 }
 .primary-projects:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 img {
   max-height: 256px;
-  //border-radius: 10px;
+  width: fit-content;
 }
 
 .techno {
@@ -38,4 +42,19 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding: 10px;
+  justify-content: flex-end;
+}
+.card-title {
+  text-align: center;
+}
+.description {
+  padding: 10px;
+  text-align: justify;
+}
+
+.img-background {
+  display: flex;
+  justify-content: center;
+  background-color: #fcf5e6;
 }
