@@ -1,4 +1,4 @@
-<app-top-bar />
+<app-top-bar (goToSlide)="goToSlide($event)" />
 <swiper-container init="false" class="swiper" #swiperContainer>
   <swiper-slide>
       <app-primary-projects class="swiper-slide" />
@@ -7,5 +7,6 @@
     <app-secondary-projects class="swiper-slide"/>
   </swiper-slide>
   <swiper-slide>
+    <app-education/>
   </swiper-slide>
 </swiper-container>

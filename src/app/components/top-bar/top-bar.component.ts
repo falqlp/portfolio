@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,6 +9,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './top-bar.component.scss',
 })
 export class TopBarComponent {
+  @Output() public goToSlide = new EventEmitter<number>(null);
   protected lang = this.translateService.defaultLang;
   constructor(protected translateService: TranslateService) {}
 
@@ -16,5 +17,9 @@ export class TopBarComponent {
     const newLang = this.lang === 'fr-FR' ? 'en-EN' : 'fr-FR';
     this.lang = newLang;
     this.translateService.use(newLang);
+  }
+
+  protected goTo(slide: number): void {
+    this.goToSlide.emit(slide);
   }
 }

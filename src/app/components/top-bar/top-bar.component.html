@@ -3,9 +3,9 @@
     Falq Léo-Paul
   </h2>
   <div class="nav">
-    <button>{{ "PRIMARY_PROJECTS"|translate }}</button>
-    <button>{{ "SECONDARY_PROJECTS"|translate }}</button>
-    <button>{{ "EDUCATION"|translate }}</button>
+    <button (click)="goTo(0)">{{ "PRIMARY_PROJECTS"|translate }}</button>
+    <button (click)="goTo(1)">{{ "SECONDARY_PROJECTS"|translate }}</button>
+    <button (click)="goTo(2)">{{ "EDUCATION"|translate }}</button>
     <img (click)="changeLanguage()" [src]="'https://flagsapi.com/'+(lang === 'fr-FR' ? 'FR' : 'GB')+'/flat/32.png'">
   </div>
 </header>

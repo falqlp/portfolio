@@ -13,24 +13,26 @@
   height: 100%;
 }
 
-.primary-projects {
+.primary-projects,
+.html-css-bdd,
+.d3js {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: map.get($color-palette, "3");
-  //padding: 10px;
-  //border-radius: 10px;
-  gap: 10px;
-  transition: transform 0.2s ease-in-out;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.2s, 0.2s;
   height: calc(100% - 45px);
   width: 40%;
+  border-radius: 3px;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
 .primary-projects:hover,
 .html-css-bdd:hover,
 .d3js:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-}
-img {
-  //border-radius: 10px;
 }
 .img {
   max-height: 256px;
@@ -43,6 +45,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
 .img-html-css-bdd,
 .img-d3js {
@@ -50,13 +54,13 @@ img {
 }
 .html-css-bdd,
 .d3js {
-  display: flex;
   flex-direction: column;
-  background-color: map.get($color-palette, "3");
-  //padding: 10px;
-  //border-radius: 10px;
-  gap: 10px;
-  transition: transform 0.2s ease-in-out;
-  height: calc(100% - 45px);
-  width: 40%;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.description {
+  padding: 10px;
 }

@@ -15,6 +15,7 @@ import Swiper from 'swiper';
 import { SwiperOptions } from 'swiper/types';
 import { register } from 'swiper/element/bundle';
 import { SecondaryProjectsComponent } from './components/secondary-projects/secondary-projects.component';
+import { EducationComponent } from './components/education/education.component';
 
 register();
 
@@ -30,6 +31,7 @@ register();
     TopBarComponent,
     PrimaryProjectsComponent,
     SecondaryProjectsComponent,
+    EducationComponent,
   ],
 })
 export class AppComponent implements AfterViewInit {
@@ -43,6 +45,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const swiperOption: SwiperOptions = {
+      effect: 'cube',
       slidesPerView: 1,
       direction: 'vertical',
       mousewheel: true,
@@ -53,5 +56,9 @@ export class AppComponent implements AfterViewInit {
 
   protected updateSize(): void {
     this.swiperContainer.nativeElement.height = window.innerHeight - 82;
+  }
+
+  protected goToSlide(slide: number): void {
+    this.swiperContainer.nativeElement.swiper.slideTo(slide);
   }
 }

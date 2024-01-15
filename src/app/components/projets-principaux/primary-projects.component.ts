@@ -32,6 +32,7 @@ export class PrimaryProjectsComponent {
       'typescript',
       'java',
       'spring',
+      'hibernate',
       'postgresql',
     ],
   };

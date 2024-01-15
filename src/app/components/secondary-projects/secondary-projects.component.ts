@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgForOf } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-secondary-projects',
   standalone: true,
-  imports: [TranslateModule, NgForOf],
+  imports: [TranslateModule, NgForOf, MatCardModule],
   templateUrl: './secondary-projects.component.html',
   styleUrl: './secondary-projects.component.scss',
 })
