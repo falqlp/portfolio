@@ -1,6 +1,6 @@
 <h3>{{ "PRIMARY_PROJECTS"|translate }} :</h3>
 <div class="content">
-  <div class="primary-projects">
+  <div class="primary-projects shadow">
     <div>
       <h3 class="card-title">{{ "POKEMON_MANAGER"|translate }}</h3>
       <div class="img-background" style="background-color: #fcf5e6">
@@ -16,10 +16,10 @@
     </div>
     <div class="logos">
       <img class="techno" *ngFor="let techno of pokemonManager.technologies"
-           [src]="technologiesIconPath + techno + '.png'" [alt]="techno">
+           [src]="technologiesIconPath + techno + '.png'" [alt]="techno" [matTooltip]="techno">
     </div>
   </div>
-  <div class="primary-projects">
+  <div class="primary-projects shadow">
     <div>
       <h3 class="card-title">Aquiweb</h3>
       <div class="img-background" style="background-color: #2A353B">
@@ -34,7 +34,7 @@
     </div>
     <div class="logos">
       <img class="techno" *ngFor="let techno of aquiweb.technologies"
-           [src]="technologiesIconPath + techno + '.png'" [alt]="techno">
+           [src]="technologiesIconPath + techno + '.png'" [alt]="techno" [matTooltip]="techno">
     </div>
   </div>
 </div>

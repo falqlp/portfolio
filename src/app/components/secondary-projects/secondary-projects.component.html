@@ -1,6 +1,6 @@
 <h3>{{ "SECONDARY_PROJECTS"|translate }} :</h3>
 <div class="content">
-  <div class="d3js">
+  <div class="d3js shadow">
     <div>
       <h3 class="card-title">
         D3js
@@ -11,10 +11,11 @@
       </div>
     </div>
     <div class="logos">
-      <img class="techno" *ngFor="let techno of d3js.technologies" [src]="technologiesIconPath + techno + '.png'" [alt]="techno">
+      <img class="techno" *ngFor="let techno of d3js.technologies" [src]="technologiesIconPath + techno + '.png'"
+           [alt]="techno" [matTooltip]="techno">
     </div>
   </div>
-  <div class="html-css-bdd">
+  <div class="html-css-bdd shadow">
     <div>
       <h3 class="card-title">
         html-css-bdd-php
@@ -27,21 +28,25 @@
     </div>
     <div class="logos">
       <img class="techno" *ngFor="let techno of htmlCssBdd.technologies"
-           [src]="technologiesIconPath + techno + '.png'" [alt]="techno">
+           [src]="technologiesIconPath + techno + '.png'" [alt]="techno" [matTooltip]="techno">
     </div>
   </div>
-  <div class="primary-projects">
+  <div class="primary-projects shadow">
     <div>
       <h3 class="card-title">
         Ec'eau
       </h3>
-      <img class="img" src="assets/images/eceau/eceau%20logo.png" alt="eceau logo"/>
-      <div class="description">azegsdhjuy qskgfuyzjg qshjdgjshqvdhj qshdghqs gfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb
+      <div class="eceau-img">
+        <img class="img" src="assets/images/eceau/eceau%20logo.png" alt="eceau logo"/>
+      </div>
+      <div class="description">azegsdhjuy qskgfuyzjg qshjdgjshqvdhj qshdghqs gfvdsqghv qshdgsqhjgv
+        jdshgbfjhsdghfjhsdfhgb
         hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
       </div>
     </div>
     <div class="logos">
-      <img class="techno" *ngFor="let techno of eceau.technologies" [src]="technologiesIconPath + techno + '.png'" [alt]="techno">
+      <img class="techno" *ngFor="let techno of eceau.technologies" [src]="technologiesIconPath + techno + '.png'"
+           [alt]="techno" [matTooltip]="techno">
     </div>
   </div>
 </div>

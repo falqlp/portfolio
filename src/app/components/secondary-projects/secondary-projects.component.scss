@@ -20,19 +20,11 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: map.get($color-palette, "3");
-  transition-property: transform, box-shadow;
-  transition-duration: 0.2s, 0.2s;
   height: calc(100% - 45px);
   width: 40%;
   border-radius: 3px;
   overflow: hidden;
   padding-bottom: 10px;
-}
-.primary-projects:hover,
-.html-css-bdd:hover,
-.d3js:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 .img {
   max-height: 256px;
@@ -52,9 +44,9 @@
 .img-d3js {
   width: 100%;
 }
-.html-css-bdd,
-.d3js {
-  flex-direction: column;
+.eceau-img {
+  display: flex;
+  justify-content: center;
 }
 
 .card-title {

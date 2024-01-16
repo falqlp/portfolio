@@ -9,6 +9,4 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss',
 })
-export class EducationComponent {
-  panelOpenState = false;
-}
+export class EducationComponent {}
