@@ -61810,6 +61810,51 @@ var EducationComponent = _EducationComponent;
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(EducationComponent, { className: "EducationComponent", filePath: "src\\app\\components\\education\\education.component.ts", lineNumber: 12 });
 })();
 
+// src/app/components/first-slide/first-slide.component.ts
+var _FirstSlideComponent = class _FirstSlideComponent {
+  constructor() {
+    this.texte = "Apprenti Ingenieur Logiciel en Alternance chez Astree Software";
+    this.texteAnime = "";
+    this.isTypingCompleted = false;
+    this.index = 0;
+  }
+  ngOnInit() {
+    this.typeWriter();
+  }
+  typeWriter() {
+    if (this.index < this.texte.length) {
+      this.texteAnime += this.texte.charAt(this.index);
+      this.index += 1;
+      setTimeout(() => this.typeWriter(), 50);
+    } else {
+      this.isTypingCompleted = true;
+    }
+  }
+};
+_FirstSlideComponent.\u0275fac = function FirstSlideComponent_Factory(t) {
+  return new (t || _FirstSlideComponent)();
+};
+_FirstSlideComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FirstSlideComponent, selectors: [["app-first-slide"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 5, vars: 2, consts: [[1, "content"], ["src", "assets/images/pp/Photo%20d'identit\xE9%20Falq.jpg", "alt", "pp"], [1, "writing-text"], [3, "ngClass"]], template: function FirstSlideComponent_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 0);
+    \u0275\u0275element(1, "img", 1);
+    \u0275\u0275elementStart(2, "div", 2);
+    \u0275\u0275text(3);
+    \u0275\u0275element(4, "span", 3);
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate(ctx.texteAnime);
+    \u0275\u0275advance();
+    \u0275\u0275property("ngClass", ctx.isTypingCompleted ? "" : "cursor");
+  }
+}, dependencies: [NgClass], styles: ["\n\nimg[_ngcontent-%COMP%] {\n  height: 100%;\n  width: fit-content;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n  font-size: 50px;\n  align-items: center;\n}\n.cursor[_ngcontent-%COMP%] {\n  border-right: 4px solid black;\n  animation: _ngcontent-%COMP%_blinkCursor 0.75s step-end infinite;\n}\n@keyframes _ngcontent-%COMP%_blinkCursor {\n  0% {\n    border-right-color: black;\n  }\n  50% {\n    border-right-color: transparent;\n  }\n  100% {\n    border-right-color: black;\n  }\n}\n.writing-text[_ngcontent-%COMP%] {\n  font-size: 100px;\n  padding: 20px;\n}\n@media (max-width: 500px) {\n  .content[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n  img[_ngcontent-%COMP%] {\n    width: 100%;\n    height: fit-content;\n  }\n  .writing-text[_ngcontent-%COMP%] {\n    font-size: 20px;\n    padding: 20px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2ZpcnN0LXNsaWRlL2ZpcnN0LXNsaWRlLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJpbWcge1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiBmaXQtY29udGVudDtcbn1cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xuICBmb250LXNpemU6IDUwcHg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4uY3Vyc29yIHtcbiAgYm9yZGVyLXJpZ2h0OiA0cHggc29saWQgYmxhY2s7XG4gIGFuaW1hdGlvbjogYmxpbmtDdXJzb3IgMC43NXMgc3RlcC1lbmQgaW5maW5pdGU7XG59XG5cbkBrZXlmcmFtZXMgYmxpbmtDdXJzb3Ige1xuICAwJSB7XG4gICAgYm9yZGVyLXJpZ2h0LWNvbG9yOiBibGFjaztcbiAgfVxuICA1MCUge1xuICAgIGJvcmRlci1yaWdodC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIH1cbiAgMTAwJSB7XG4gICAgYm9yZGVyLXJpZ2h0LWNvbG9yOiBibGFjaztcbiAgfVxufVxuXG4ud3JpdGluZy10ZXh0IHtcbiAgZm9udC1zaXplOiAxMDBweDtcbiAgcGFkZGluZzogMjBweDtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDUwMHB4KSB7XG4gIC5jb250ZW50IHtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB9XG4gIGltZyB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiBmaXQtY29udGVudDtcbiAgfVxuICAud3JpdGluZy10ZXh0IHtcbiAgICBmb250LXNpemU6IDIwcHg7XG4gICAgcGFkZGluZzogMjBweDtcbiAgfVxufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUFBO0FBQ0UsVUFBQTtBQUNBLFNBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxVQUFBO0FBQ0EsYUFBQTtBQUNBLGVBQUE7O0FBRUYsQ0FBQTtBQUNFLGdCQUFBLElBQUEsTUFBQTtBQUNBLGFBQUEsWUFBQSxNQUFBLFNBQUE7O0FBR0YsV0FIRTtBQUlBO0FBQ0Usd0JBQUE7O0FBRUY7QUFDRSx3QkFBQTs7QUFFRjtBQUNFLHdCQUFBOzs7QUFJSixDQUFBO0FBQ0UsYUFBQTtBQUNBLFdBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBN0JGO0FBOEJJLG9CQUFBOztBQUVGO0FBQ0UsV0FBQTtBQUNBLFlBQUE7O0FBRUYsR0FiRjtBQWNJLGVBQUE7QUFDQSxhQUFBOzs7IiwKICAibmFtZXMiOiBbXQp9Cg== */"] });
+var FirstSlideComponent = _FirstSlideComponent;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FirstSlideComponent, { className: "FirstSlideComponent", filePath: "src\\app\\components\\first-slide\\first-slide.component.ts", lineNumber: 11 });
+})();
+
 // src/app/app.component.ts
 var _c06 = ["swiperContainer"];
 register();
@@ -61855,7 +61900,7 @@ _AppComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _A
       return ctx.onResize($event);
     }, false, \u0275\u0275resolveWindow);
   }
-}, standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 9, vars: 0, consts: [[3, "goToSlide"], ["init", "false", 1, "swiper"], ["swiperContainer", ""], [1, "swiper-slide"]], template: function AppComponent_Template(rf, ctx) {
+}, standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 11, vars: 0, consts: [[3, "goToSlide"], ["init", "false", 1, "swiper"], ["swiperContainer", ""], [1, "swiper-slide"]], template: function AppComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "app-top-bar", 0);
     \u0275\u0275listener("goToSlide", function AppComponent_Template_app_top_bar_goToSlide_0_listener($event) {
@@ -61863,13 +61908,16 @@ _AppComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _A
     });
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(1, "swiper-container", 1, 2)(3, "swiper-slide");
-    \u0275\u0275element(4, "app-primary-projects", 3);
+    \u0275\u0275element(4, "app-first-slide");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(5, "swiper-slide");
-    \u0275\u0275element(6, "app-secondary-projects", 3);
+    \u0275\u0275element(6, "app-primary-projects", 3);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(7, "swiper-slide");
-    \u0275\u0275element(8, "app-education");
+    \u0275\u0275element(8, "app-secondary-projects", 3);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(9, "swiper-slide");
+    \u0275\u0275element(10, "app-education");
     \u0275\u0275elementEnd()();
   }
 }, dependencies: [
@@ -61878,11 +61926,12 @@ _AppComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _A
   TopBarComponent,
   PrimaryProjectsComponent,
   SecondaryProjectsComponent,
-  EducationComponent
+  EducationComponent,
+  FirstSlideComponent
 ], styles: ["\n\n.swiper-slide[_ngcontent-%COMP%] {\n  background-color: #e8f3f1;\n  display: flex;\n  padding: 15px;\n  height: calc(100% - 30px);\n}\n.swiper[_ngcontent-%COMP%] {\n  height: calc(100vh - 82px);\n}\n@media (max-width: 550px) {\n  .swiper[_ngcontent-%COMP%] {\n    height: calc(100vh - 110px);\n  }\n  .swiper-slide[_ngcontent-%COMP%] {\n    height: calc(100% - 50px);\n  }\n}\n@media (max-width: 400px) {\n  .swiper[_ngcontent-%COMP%] {\n    height: calc(100vh - 135px);\n  }\n  .swiper-slide[_ngcontent-%COMP%] {\n    height: calc(100% - 82px);\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbi5zd2lwZXItc2xpZGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBtYXAuZ2V0KCRjb2xvci1wYWxldHRlLCBcIjFcIik7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIGhlaWdodDogY2FsYygxMDAlIC0gMzBweCk7XG59XG4uc3dpcGVyIHtcbiAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gODJweCk7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA1NTBweCkge1xuICAuc3dpcGVyIHtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAxMTBweCk7XG4gIH1cbiAgLnN3aXBlci1zbGlkZSB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMCUgLSA1MHB4KTtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNDAwcHgpIHtcbiAgLnN3aXBlciB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMTM1cHgpO1xuICB9XG4gIC5zd2lwZXItc2xpZGUge1xuICAgIGhlaWdodDogY2FsYygxMDAlIC0gODJweCk7XG4gIH1cbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFHQSxDQUFBO0FBQ0Usb0JBQUE7QUFDQSxXQUFBO0FBQ0EsV0FBQTtBQUNBLFVBQUEsS0FBQSxLQUFBLEVBQUE7O0FBRUYsQ0FBQTtBQUNFLFVBQUEsS0FBQSxNQUFBLEVBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBTEY7QUFNSSxZQUFBLEtBQUEsTUFBQSxFQUFBOztBQUVGLEdBZEY7QUFlSSxZQUFBLEtBQUEsS0FBQSxFQUFBOzs7QUFJSixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0FkRjtBQWVJLFlBQUEsS0FBQSxNQUFBLEVBQUE7O0FBRUYsR0F2QkY7QUF3QkksWUFBQSxLQUFBLEtBQUEsRUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var AppComponent = _AppComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src\\app\\app.component.ts", lineNumber: 37 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src\\app\\app.component.ts", lineNumber: 39 });
 })();
 
 // src/main.ts
