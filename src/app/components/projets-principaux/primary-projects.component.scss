@@ -36,7 +36,7 @@ img {
 }
 
 .techno {
-  height: 64px;
+  height: 48px;
 }
 .logos {
   display: flex;
@@ -51,11 +51,28 @@ img {
 .description {
   padding: 10px;
   text-align: justify;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .img-background {
   display: flex;
   justify-content: center;
-  background-color: #fcf5e6;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    gap: 10px;
+  }
+  .primary-projects {
+    width: 45%;
+  }
+  .description {
+    font-size: 14px;
+  }
+  img {
+    height: 100px;
+  }
+  .techno {
+    height: 32px;
+  }
 }

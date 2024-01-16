@@ -38,5 +38,8 @@
   "PM_DESC1": "Pokémon Manager est un projet personnel que j'ai commencé en juin 2023 avec un objectif clair : fusionner deux univers qui me passionnent, Pokémon et les jeux de gestion à la manière de Football Manager.",
   "PM_DESC2": "L'idée de base est simple : plutôt que de vivre l'aventure Pokémon dans la perspective classique de la troisième personne, on se glisse ici dans la peau d'un gestionnaire. La mission est de veiller au bon développement des Pokémon tout en surveillant les performances de l'équipe.",
   "PM_DESC3": "Ce projet est pour moi l'occasion de renforcer mes compétences en Angular, une technologie que j'utilise dans un cadre professionnel, tout en approfondissant ma connaissance de MongoDB, que j'ai découverte au cours de mes études.",
-  "WORK_IN_PROGRESS": "En cours de développement..."
+  "WORK_IN_PROGRESS": "En cours de développement...",
+  "AW_DESC1": "Pendant mon alternance chez Astrée Software, j'ai eu l'opportunité de contribuer, entre autres projets, au développement du logiciel phare de la société, Aquiweb.",
+  "AW_DESC2": "Aquiweb, un système d'exécution de la production (MES pour Manufacturing Execution System), numérise les processus de production afin d'optimiser de façon durable la performance industrielle.",
+  "AW_DESC3": "Ce projet chez Astrée Software a joué un rôle crucial dans mon parcours professionnel, car il a été mon introduction au monde du développement informatique"
 }
