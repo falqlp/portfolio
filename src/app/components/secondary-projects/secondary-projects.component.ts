@@ -22,6 +22,6 @@ export class SecondaryProjectsComponent {
   };
 
   protected htmlCssBdd = {
-    technologies: ['HTML', 'CSS', 'PHP', 'MariaDB'],
+    technologies: ['HTML', 'CSS', 'PHP', 'MariaDB', 'Docker'],
   };
 }
