@@ -7,6 +7,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 .nav {
   display: flex;
@@ -14,4 +15,7 @@ header {
 }
 h2 {
   margin: 0;
+}
+.lang {
+  height: fit-content;
 }

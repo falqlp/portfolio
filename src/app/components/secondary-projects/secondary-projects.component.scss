@@ -64,3 +64,19 @@
 .description {
   padding: 10px;
 }
+
+@media (max-width: 1000px) {
+  .content {
+    gap: 10px;
+  }
+  .primary-projects {
+    flex: 1;
+  }
+  .description {
+    font-size: 2vw;
+    padding-top: 0;
+  }
+  .techno {
+    height: 32px;
+  }
+}
