@@ -11,11 +11,15 @@ header {
 }
 .nav {
   display: flex;
-  gap: 5px;
 }
 h2 {
   margin: 0;
 }
 .lang {
   height: fit-content;
+  cursor: pointer;
+}
+.github {
+  height: 28px;
+  margin-left: 10px;
 }

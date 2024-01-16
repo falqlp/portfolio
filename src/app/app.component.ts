@@ -16,6 +16,7 @@ import { SwiperOptions } from 'swiper/types';
 import { register } from 'swiper/element/bundle';
 import { SecondaryProjectsComponent } from './components/secondary-projects/secondary-projects.component';
 import { EducationComponent } from './components/education/education.component';
+import { FirstSlideComponent } from './components/first-slide/first-slide.component';
 
 register();
 
@@ -32,6 +33,7 @@ register();
     PrimaryProjectsComponent,
     SecondaryProjectsComponent,
     EducationComponent,
+    FirstSlideComponent,
   ],
 })
 export class AppComponent implements AfterViewInit {

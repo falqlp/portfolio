@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --base-href \"https://falqlp.github.io/portfolio/\"\n",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --configuration development --base-href \"https://falqlp.github.io/portfolio/\"\n",
     "test": "ng test",
     "deploy": "ngh --dir=dist/portfolio/browser"
   },

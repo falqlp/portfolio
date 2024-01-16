@@ -10,3 +10,21 @@
 .swiper {
   height: calc(100vh - 82px);
 }
+
+@media (max-width: 550px) {
+  .swiper {
+    height: calc(100vh - 110px);
+  }
+  .swiper-slide {
+    height: calc(100% - 50px);
+  }
+}
+
+@media (max-width: 400px) {
+  .swiper {
+    height: calc(100vh - 135px);
+  }
+  .swiper-slide {
+    height: calc(100% - 82px);
+  }
+}

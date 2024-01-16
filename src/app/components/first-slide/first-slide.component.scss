@@ -1,0 +1,45 @@
+img {
+  height: 100%;
+  width: fit-content;
+}
+.content {
+  display: flex;
+  height: 100%;
+  font-size: 50px;
+  align-items: center;
+}
+.cursor {
+  border-right: 4px solid black;
+  animation: blinkCursor 0.75s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  0% {
+    border-right-color: black;
+  }
+  50% {
+    border-right-color: transparent;
+  }
+  100% {
+    border-right-color: black;
+  }
+}
+
+.writing-text {
+  font-size: 100px;
+  padding: 20px;
+}
+
+@media (max-width: 500px) {
+  .content {
+    flex-direction: column;
+  }
+  img {
+    width: 100%;
+    height: fit-content;
+  }
+  .writing-text {
+    font-size: 20px;
+    padding: 20px;
+  }
+}

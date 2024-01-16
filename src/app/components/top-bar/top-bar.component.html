@@ -3,9 +3,16 @@
     Falq Léo-Paul
   </h2>
   <div class="nav">
-    <button (click)="goTo(0)">{{ "PRIMARY_PROJECTS"|translate }}</button>
-    <button (click)="goTo(1)">{{ "SECONDARY_PROJECTS"|translate }}</button>
-    <button (click)="goTo(2)">{{ "EDUCATION"|translate }}</button>
-    <img class="lang" (click)="changeLanguage()" [src]="'https://flagsapi.com/'+(lang === 'fr-FR' ? 'FR' : 'GB')+'/flat/32.png'" [alt]="lang">
+    <button (click)="goTo(1)">{{ "PRIMARY_PROJECTS"|translate }}</button>
+    <button (click)="goTo(2)">{{ "SECONDARY_PROJECTS"|translate }}</button>
+    <button (click)="goTo(3)">{{ "EDUCATION"|translate }}</button>
+    <a href="https://github.com/falqlp">
+      <img class="github" src="assets/images/technologies/GitHub.png" alt="github">
+    </a>
+    <a href="https://www.linkedin.com/in/l%C3%A9o-paul-falq-245bbb290/">
+      <img class="github" src="assets/images/technologies/Linkedin.png" alt="linkedin">
+    </a>
+    <img class="lang" (click)="changeLanguage()"
+         [src]="'https://flagsapi.com/'+(lang === 'fr-FR' ? 'FR' : 'GB')+'/flat/32.png'" [alt]="lang">
   </div>
 </header>
