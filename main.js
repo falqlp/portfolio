@@ -60609,7 +60609,7 @@ var _SecondaryProjectsComponent = class _SecondaryProjectsComponent {
       technologies: ["HTML", "CSS", "PowerBI"]
     };
     this.htmlCssBdd = {
-      technologies: ["HTML", "CSS", "PHP", "MariaDB"]
+      technologies: ["HTML", "CSS", "PHP", "MariaDB", "Docker"]
     };
   }
 };
