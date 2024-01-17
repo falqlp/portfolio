@@ -42,5 +42,9 @@
   "AW_DESC1": "Pendant mon alternance chez Astrée Software, j'ai eu l'opportunité de contribuer, entre autres projets, au développement du logiciel phare de la société, Aquiweb.",
   "AW_DESC2": "Aquiweb, un système d'exécution de la production (MES pour Manufacturing Execution System), numérise les processus de production afin d'optimiser de façon durable la performance industrielle.",
   "AW_DESC3": "Ce projet chez Astrée Software a joué un rôle crucial dans mon parcours professionnel, car il a été mon introduction au monde du développement informatique",
-  "INTRO": "Apprenti Ingenieur Logiciel chez Astree Software"
+  "INTRO": "Apprenti Ingenieur Logiciel chez Astree Software",
+  "D3JS_DESC1": "Durant ma formation, nous avons réalisé un projet qui combinait deux disciplines : la datavisualisation et la programmation en langages de script",
+  "D3JS_DESC2": "L'objectif de ce projet était d'explorer la bibliothèque D3.js pour la visualisation de données. Nous nous sommes concentrés sur le thème des voitures électriques, en développant un outil qui aide à la prise de décision lors de l'achat d'une voiture électrique.",
+  "HTML_CSS_BDD_DESC1": "Pendant le cours sur les technologies web, nous avons réalisé un projet visant à établir une connexion entre une page web et une base de données",
+  "HTML_CSS_BDD_DESC2": "Ce projet a été l'occasion pour moi d'explorer de nouvelles technologies, notamment Docker et PHP."
 }

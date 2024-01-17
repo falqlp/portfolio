@@ -60579,16 +60579,45 @@ var MatCardModule = _MatCardModule;
 })();
 
 // src/app/components/secondary-projects/secondary-projects.component.ts
+function SecondaryProjectsComponent_p_10_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "p");
+    \u0275\u0275text(1);
+    \u0275\u0275pipe(2, "translate");
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const p_r2 = ctx.$implicit;
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, p_r2));
+  }
+}
+function SecondaryProjectsComponent_p_20_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "p");
+    \u0275\u0275text(1);
+    \u0275\u0275pipe(2, "translate");
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const p_r3 = ctx.$implicit;
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, p_r3));
+  }
+}
 var _SecondaryProjectsComponent = class _SecondaryProjectsComponent {
   constructor() {
     this.technologiesIconPath = "assets/images/technologies/";
     this.d3js = {
+      p: ["D3JS_DESC1", "D3JS_DESC2"],
       technologies: ["HTML", "CSS", "JavaScript", "D3js"]
     };
     this.eceau = {
+      p: ["D3JS_DESC1", "D3JS_DESC2"],
       technologies: ["HTML", "CSS", "PowerBI"]
     };
     this.htmlCssBdd = {
+      p: ["HTML_CSS_BDD_DESC1", "HTML_CSS_BDD_DESC2"],
       technologies: ["HTML", "CSS", "PHP", "MariaDB", "Docker"]
     };
   }
@@ -60596,48 +60625,56 @@ var _SecondaryProjectsComponent = class _SecondaryProjectsComponent {
 _SecondaryProjectsComponent.\u0275fac = function SecondaryProjectsComponent_Factory(t) {
   return new (t || _SecondaryProjectsComponent)();
 };
-_SecondaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _SecondaryProjectsComponent, selectors: [["app-secondary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 29, vars: 6, consts: [[1, "content"], [1, "secondary-project", "shadow"], [1, "card-title"], ["src", "assets/images/d3js/preview.png", "alt", "pm logo", 1, "img-d3js"], [1, "description"], [1, "logos", 3, "technologies"], ["src", "assets/images/html-css-bdd/preview2.png", "alt", "html-css-bdd preview", 1, "img-html-css-bdd"], [1, "eceau-img"], ["src", "assets/images/eceau/eceau%20logo.png", "alt", "eceau logo", 1, "img"]], template: function SecondaryProjectsComponent_Template(rf, ctx) {
+_SecondaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _SecondaryProjectsComponent, selectors: [["app-secondary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 33, vars: 8, consts: [[1, "content"], [1, "secondary-project", "shadow"], [1, "card-title"], ["src", "assets/images/d3js/preview.png", "alt", "pm logo", 1, "img-d3js"], [1, "description"], [4, "ngFor", "ngForOf"], ["href", "https://github.com/falqlp/dataviz"], [1, "logos", 3, "technologies"], ["src", "assets/images/html-css-bdd/preview2.png", "alt", "html-css-bdd preview", 1, "img-html-css-bdd"], ["href", "https://github.com/falqlp/html-css-bdd"], [1, "eceau-img"], ["src", "assets/images/eceau/eceau%20logo.png", "alt", "eceau logo", 1, "img"]], template: function SecondaryProjectsComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h3");
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "div", 0)(4, "div", 1)(5, "div")(6, "h3", 2);
-    \u0275\u0275text(7, " D3js ");
+    \u0275\u0275text(7, " D3.js ");
     \u0275\u0275elementEnd();
     \u0275\u0275element(8, "img", 3);
     \u0275\u0275elementStart(9, "div", 4);
-    \u0275\u0275text(10, "azegsdhjuyqs kgfuyzjg qshjdgjshqvdhj qshdghqsgfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs ");
+    \u0275\u0275template(10, SecondaryProjectsComponent_p_10_Template, 3, 3, "p", 5);
+    \u0275\u0275elementStart(11, "a", 6);
+    \u0275\u0275text(12, "Github");
+    \u0275\u0275elementEnd()()();
+    \u0275\u0275element(13, "app-techno-logos", 7);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(14, "div", 1)(15, "div")(16, "h3", 2);
+    \u0275\u0275text(17, " HTML CSS PHP ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(18, "img", 8);
+    \u0275\u0275elementStart(19, "div", 4);
+    \u0275\u0275template(20, SecondaryProjectsComponent_p_20_Template, 3, 3, "p", 5);
+    \u0275\u0275elementStart(21, "a", 9);
+    \u0275\u0275text(22, "Github");
+    \u0275\u0275elementEnd()()();
+    \u0275\u0275element(23, "app-techno-logos", 7);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(24, "div", 1)(25, "div")(26, "h3", 2);
+    \u0275\u0275text(27, " Ec'eau ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(28, "div", 10);
+    \u0275\u0275element(29, "img", 11);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(30, "div", 4);
+    \u0275\u0275text(31, "azegsdhjuy qskgfuyzjg qshjdgjshqvdhj qshdghqs gfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs ");
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(11, "app-techno-logos", 5);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(12, "div", 1)(13, "div")(14, "h3", 2);
-    \u0275\u0275text(15, " html-css-bdd-php ");
-    \u0275\u0275elementEnd();
-    \u0275\u0275element(16, "img", 6);
-    \u0275\u0275elementStart(17, "div", 4);
-    \u0275\u0275text(18, "azegsd hjuyqskgfuy zjg qshjdgj shqvdhj qshdghdqsgfvdsqghv qshdgsqhjgv jdshgbfjhs dghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs ");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275element(19, "app-techno-logos", 5);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(20, "div", 1)(21, "div")(22, "h3", 2);
-    \u0275\u0275text(23, " Ec'eau ");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(24, "div", 7);
-    \u0275\u0275element(25, "img", 8);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(26, "div", 4);
-    \u0275\u0275text(27, "azegsdhjuy qskgfuyzjg qshjdgjshqvdhj qshdghqs gfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs ");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275element(28, "app-techno-logos", 5);
+    \u0275\u0275element(32, "app-techno-logos", 7);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(2, 4, "SECONDARY_PROJECTS"), " :");
-    \u0275\u0275advance(10);
+    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(2, 6, "SECONDARY_PROJECTS"), " :");
+    \u0275\u0275advance(9);
+    \u0275\u0275property("ngForOf", ctx.d3js.p);
+    \u0275\u0275advance(3);
     \u0275\u0275property("technologies", ctx.d3js.technologies);
-    \u0275\u0275advance(8);
+    \u0275\u0275advance(7);
+    \u0275\u0275property("ngForOf", ctx.htmlCssBdd.p);
+    \u0275\u0275advance(3);
     \u0275\u0275property("technologies", ctx.htmlCssBdd.technologies);
     \u0275\u0275advance(9);
     \u0275\u0275property("technologies", ctx.eceau.technologies);
@@ -60645,10 +60682,11 @@ _SecondaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompon
 }, dependencies: [
   TranslateModule,
   TranslatePipe,
+  NgForOf,
   MatCardModule,
   MatTooltipModule,
   TechnoLogosComponent
-], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: 100%;\n}\n.secondary-project[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  background-color: #70aab7;\n  height: calc(100% - 45px);\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  padding-bottom: 10px;\n}\n.img[_ngcontent-%COMP%] {\n  max-height: 256px;\n}\n.techno[_ngcontent-%COMP%] {\n  height: 64px;\n}\n.logos[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  justify-content: flex-end;\n  padding-right: 10px;\n}\n.img-html-css-bdd[_ngcontent-%COMP%], .img-d3js[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.eceau-img[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 10px;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n  .img[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n}\n@media (max-width: 500px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n    flex-direction: column;\n    width: 100%;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n    width: 100%;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n  .img-html-css-bdd[_ngcontent-%COMP%], .img-d3js[_ngcontent-%COMP%], .img[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3NlY29uZGFyeS1wcm9qZWN0cy9zZWNvbmRhcnktcHJvamVjdHMuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLmNvbnRlbnQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZ2FwOiA1MHB4O1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5zZWNvbmRhcnktcHJvamVjdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIzXCIpO1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDQ1cHgpO1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHBhZGRpbmctYm90dG9tOiAxMHB4O1xufVxuLmltZyB7XG4gIG1heC1oZWlnaHQ6IDI1NnB4O1xufVxuXG4udGVjaG5vIHtcbiAgaGVpZ2h0OiA2NHB4O1xufVxuLmxvZ29zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBnYXA6IDEwcHg7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG59XG4uaW1nLWh0bWwtY3NzLWJkZCxcbi5pbWctZDNqcyB7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmVjZWF1LWltZyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG4uY2FyZC10aXRsZSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmRlc2NyaXB0aW9uIHtcbiAgcGFkZGluZzogMTBweDtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDEwMDBweCkge1xuICAuY29udGVudCB7XG4gICAgZ2FwOiAxMHB4O1xuICB9XG4gIC5zZWNvbmRhcnktcHJvamVjdCB7XG4gICAgZmxleDogMTtcbiAgfVxuICAuZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMnZ3O1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICB9XG4gIC50ZWNobm8ge1xuICAgIGhlaWdodDogMzJweDtcbiAgfVxuICAuaW1nIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNTAwcHgpIHtcbiAgLmNvbnRlbnQge1xuICAgIGdhcDogMTBweDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gIC5zZWNvbmRhcnktcHJvamVjdCB7XG4gICAgZmxleDogMTtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuICAuZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMnZ3O1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICB9XG4gIC50ZWNobm8ge1xuICAgIGhlaWdodDogMzJweDtcbiAgfVxuICAuaW1nLWh0bWwtY3NzLWJkZCxcbiAgLmltZy1kM2pzLFxuICAuaW1nIHtcbiAgICBkaXNwbGF5OiBub25lO1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTtBQUNBLG9CQUFBO0FBQ0EsVUFBQSxLQUFBLEtBQUEsRUFBQTtBQUNBLFNBQUE7QUFDQSxpQkFBQTtBQUNBLFlBQUE7QUFDQSxrQkFBQTs7QUFFRixDQUFBO0FBQ0UsY0FBQTs7QUFHRixDQUFBO0FBQ0UsVUFBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGFBQUE7QUFDQSxPQUFBO0FBQ0EsbUJBQUE7QUFDQSxpQkFBQTs7QUFFRixDQUFBO0FBQUEsQ0FBQTtBQUVFLFNBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTs7QUFHRixDQUFBO0FBQ0UsY0FBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQTs7QUFHRixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0FsREY7QUFtREksU0FBQTs7QUFFRixHQTlDRjtBQStDSSxVQUFBOztBQUVGLEdBWEY7QUFZSSxlQUFBO0FBQ0EsaUJBQUE7O0FBRUYsR0F0Q0Y7QUF1Q0ksWUFBQTs7QUFFRixHQTdDRjtBQThDSSxXQUFBOzs7QUFJSixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0FyRUY7QUFzRUksU0FBQTtBQUNBLG9CQUFBO0FBQ0EsV0FBQTs7QUFFRixHQW5FRjtBQW9FSSxVQUFBO0FBQ0EsV0FBQTs7QUFFRixHQWpDRjtBQWtDSSxlQUFBO0FBQ0EsaUJBQUE7O0FBRUYsR0E1REY7QUE2REksWUFBQTs7QUFFRixHQXJERjtFQXFERSxDQXJERjtFQXFERSxDQW5FRjtBQXNFSSxhQUFBOzs7IiwKICAibmFtZXMiOiBbXQp9Cg== */"] });
+], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: 100%;\n}\n.secondary-project[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  background-color: #70aab7;\n  height: calc(100% - 45px);\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  padding-bottom: 10px;\n}\n.img[_ngcontent-%COMP%] {\n  max-height: 256px;\n}\n.techno[_ngcontent-%COMP%] {\n  height: 64px;\n}\n.logos[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  justify-content: flex-end;\n  padding-right: 10px;\n}\n.img-html-css-bdd[_ngcontent-%COMP%], .img-d3js[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.eceau-img[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 0 10px 10px 10px;\n  text-align: justify;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n  .img[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n}\n@media (max-width: 500px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n    flex-direction: column;\n    width: 100%;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n    width: 100%;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n  .img-html-css-bdd[_ngcontent-%COMP%], .img-d3js[_ngcontent-%COMP%], .img[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3NlY29uZGFyeS1wcm9qZWN0cy9zZWNvbmRhcnktcHJvamVjdHMuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLmNvbnRlbnQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZ2FwOiA1MHB4O1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5zZWNvbmRhcnktcHJvamVjdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIzXCIpO1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDQ1cHgpO1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHBhZGRpbmctYm90dG9tOiAxMHB4O1xufVxuLmltZyB7XG4gIG1heC1oZWlnaHQ6IDI1NnB4O1xufVxuXG4udGVjaG5vIHtcbiAgaGVpZ2h0OiA2NHB4O1xufVxuLmxvZ29zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBnYXA6IDEwcHg7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG59XG4uaW1nLWh0bWwtY3NzLWJkZCxcbi5pbWctZDNqcyB7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmVjZWF1LWltZyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG4uY2FyZC10aXRsZSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmRlc2NyaXB0aW9uIHtcbiAgcGFkZGluZzogMCAxMHB4IDEwcHggMTBweDtcbiAgdGV4dC1hbGlnbjoganVzdGlmeTtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDEwMDBweCkge1xuICAuY29udGVudCB7XG4gICAgZ2FwOiAxMHB4O1xuICB9XG4gIC5zZWNvbmRhcnktcHJvamVjdCB7XG4gICAgZmxleDogMTtcbiAgfVxuICAuZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMnZ3O1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICB9XG4gIC50ZWNobm8ge1xuICAgIGhlaWdodDogMzJweDtcbiAgfVxuICAuaW1nIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNTAwcHgpIHtcbiAgLmNvbnRlbnQge1xuICAgIGdhcDogMTBweDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gIC5zZWNvbmRhcnktcHJvamVjdCB7XG4gICAgZmxleDogMTtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuICAuZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMnZ3O1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICB9XG4gIC50ZWNobm8ge1xuICAgIGhlaWdodDogMzJweDtcbiAgfVxuICAuaW1nLWh0bWwtY3NzLWJkZCxcbiAgLmltZy1kM2pzLFxuICAuaW1nIHtcbiAgICBkaXNwbGF5OiBub25lO1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTtBQUNBLG9CQUFBO0FBQ0EsVUFBQSxLQUFBLEtBQUEsRUFBQTtBQUNBLFNBQUE7QUFDQSxpQkFBQTtBQUNBLFlBQUE7QUFDQSxrQkFBQTs7QUFFRixDQUFBO0FBQ0UsY0FBQTs7QUFHRixDQUFBO0FBQ0UsVUFBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGFBQUE7QUFDQSxPQUFBO0FBQ0EsbUJBQUE7QUFDQSxpQkFBQTs7QUFFRixDQUFBO0FBQUEsQ0FBQTtBQUVFLFNBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTs7QUFHRixDQUFBO0FBQ0UsY0FBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQSxFQUFBLEtBQUEsS0FBQTtBQUNBLGNBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBbkRGO0FBb0RJLFNBQUE7O0FBRUYsR0EvQ0Y7QUFnREksVUFBQTs7QUFFRixHQVpGO0FBYUksZUFBQTtBQUNBLGlCQUFBOztBQUVGLEdBdkNGO0FBd0NJLFlBQUE7O0FBRUYsR0E5Q0Y7QUErQ0ksV0FBQTs7O0FBSUosT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBdEVGO0FBdUVJLFNBQUE7QUFDQSxvQkFBQTtBQUNBLFdBQUE7O0FBRUYsR0FwRUY7QUFxRUksVUFBQTtBQUNBLFdBQUE7O0FBRUYsR0FsQ0Y7QUFtQ0ksZUFBQTtBQUNBLGlCQUFBOztBQUVGLEdBN0RGO0FBOERJLFlBQUE7O0FBRUYsR0F0REY7RUFzREUsQ0F0REY7RUFzREUsQ0FwRUY7QUF1RUksYUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var SecondaryProjectsComponent = _SecondaryProjectsComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SecondaryProjectsComponent, { className: "SecondaryProjectsComponent", filePath: "src\\app\\components\\secondary-projects\\secondary-projects.component.ts", lineNumber: 21 });
