@@ -21,14 +21,17 @@ import { TechnoLogosComponent } from '../techno-logos/techno-logos.component';
 export class SecondaryProjectsComponent {
   protected readonly technologiesIconPath = 'assets/images/technologies/';
   protected d3js = {
+    p: ['D3JS_DESC1', 'D3JS_DESC2'],
     technologies: ['HTML', 'CSS', 'JavaScript', 'D3js'],
   };
 
   protected eceau = {
+    p: ['D3JS_DESC1', 'D3JS_DESC2'],
     technologies: ['HTML', 'CSS', 'PowerBI'],
   };
 
   protected htmlCssBdd = {
+    p: ['HTML_CSS_BDD_DESC1', 'HTML_CSS_BDD_DESC2'],
     technologies: ['HTML', 'CSS', 'PHP', 'MariaDB', 'Docker'],
   };
 }
