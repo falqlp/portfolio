@@ -3,11 +3,18 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgForOf } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { TechnoLogosComponent } from '../techno-logos/techno-logos.component';
 
 @Component({
   selector: 'app-secondary-projects',
   standalone: true,
-  imports: [TranslateModule, NgForOf, MatCardModule, MatTooltipModule],
+  imports: [
+    TranslateModule,
+    NgForOf,
+    MatCardModule,
+    MatTooltipModule,
+    TechnoLogosComponent,
+  ],
   templateUrl: './secondary-projects.component.html',
   styleUrl: './secondary-projects.component.scss',
 })

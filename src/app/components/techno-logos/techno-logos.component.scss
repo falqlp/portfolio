@@ -1,0 +1,15 @@
+.techno {
+  height: 48px;
+}
+
+@media (max-width: 1000px) {
+  .techno {
+    height: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .techno {
+    height: 16px;
+  }
+}

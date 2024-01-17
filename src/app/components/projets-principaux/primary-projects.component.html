@@ -7,17 +7,12 @@
         <img src="assets/images/pokemon-manager/pm_logo.png" alt="pm logo"/>
       </div>
       <div class="description">
-        <p>{{ "PM_DESC1"|translate }}</p>
-        <p>{{ "PM_DESC2"|translate }}</p>
-        <p>{{ "PM_DESC3"|translate }}</p>
+        <p *ngFor="let p of pokemonManager.p">{{ p|translate }}</p>
         <strong>{{ "WORK_IN_PROGRESS"|translate }} </strong>
         <a href="https://github.com/falqlp/PokemonManager">Github</a>
       </div>
     </div>
-    <div class="logos">
-      <img class="techno" *ngFor="let techno of pokemonManager.technologies"
-           [src]="technologiesIconPath + techno + '.png'" [alt]="techno" [matTooltip]="techno">
-    </div>
+    <app-techno-logos class="logos" [technologies]="pokemonManager.technologies"/>
   </div>
   <div class="primary-projects shadow">
     <div>
@@ -26,15 +21,10 @@
         <img src="assets/images/aquiweb/aquiweb.jpg" alt="aquiweb logo"/>
       </div>
       <div class="description">
-        <p>{{ "AW_DESC1"|translate }}</p>
-        <p>{{ "AW_DESC2"|translate }}</p>
-        <p>{{ "AW_DESC3"|translate }}</p>
+        <p *ngFor="let p of aquiweb.p">{{ p|translate }}</p>
         <a href="https://www.astree-software.fr/logiciel-mes/">{{ "MORE"|translate }}</a>
       </div>
     </div>
-    <div class="logos">
-      <img class="techno" *ngFor="let techno of aquiweb.technologies"
-           [src]="technologiesIconPath + techno + '.png'" [alt]="techno" [matTooltip]="techno">
-    </div>
+    <app-techno-logos class="logos" [technologies]="aquiweb.technologies"/>
   </div>
 </div>

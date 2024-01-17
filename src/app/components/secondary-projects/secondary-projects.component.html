@@ -10,10 +10,7 @@
         hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
       </div>
     </div>
-    <div class="logos">
-      <img class="techno" *ngFor="let techno of d3js.technologies" [src]="technologiesIconPath + techno + '.png'"
-           [alt]="techno" [matTooltip]="techno">
-    </div>
+    <app-techno-logos class="logos" [technologies]="d3js.technologies"/>
   </div>
   <div class="secondary-project shadow">
     <div>
@@ -26,10 +23,7 @@
         hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
       </div>
     </div>
-    <div class="logos">
-      <img class="techno" *ngFor="let techno of htmlCssBdd.technologies"
-           [src]="technologiesIconPath + techno + '.png'" [alt]="techno" [matTooltip]="techno">
-    </div>
+    <app-techno-logos class="logos" [technologies]="htmlCssBdd.technologies"/>
   </div>
   <div class="secondary-project shadow">
     <div>
@@ -44,9 +38,6 @@
         hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
       </div>
     </div>
-    <div class="logos">
-      <img class="techno" *ngFor="let techno of eceau.technologies" [src]="technologiesIconPath + techno + '.png'"
-           [alt]="techno" [matTooltip]="techno">
-    </div>
+    <app-techno-logos class="logos" [technologies]="eceau.technologies"/>
   </div>
 </div>
