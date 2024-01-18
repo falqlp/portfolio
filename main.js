@@ -62647,7 +62647,7 @@ var MatIconModule = _MatIconModule;
 })();
 
 // src/app/components/education/education.component.ts
-function EducationComponent_mat_expansion_panel_17_span_5_Template(rf, ctx) {
+function EducationComponent_mat_expansion_panel_19_span_5_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "span");
     \u0275\u0275text(1);
@@ -62655,28 +62655,60 @@ function EducationComponent_mat_expansion_panel_17_span_5_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const skill_r3 = ctx.$implicit;
-    const i_r4 = ctx.index;
-    const subject_r1 = \u0275\u0275nextContext().$implicit;
+    const skill_r4 = ctx.$implicit;
+    const i_r5 = ctx.index;
+    const subject_r2 = \u0275\u0275nextContext().$implicit;
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate2("", \u0275\u0275pipeBind1(2, 2, skill_r3), "", subject_r1.skills.length !== i_r4 + 1 ? ", " : "", "");
+    \u0275\u0275textInterpolate2("", \u0275\u0275pipeBind1(2, 2, skill_r4), "", subject_r2.skills.length !== i_r5 + 1 ? ", " : "", "");
   }
 }
-function EducationComponent_mat_expansion_panel_17_Template(rf, ctx) {
+function EducationComponent_mat_expansion_panel_19_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-expansion-panel")(1, "mat-expansion-panel-header")(2, "mat-panel-title");
     \u0275\u0275text(3);
     \u0275\u0275pipe(4, "translate");
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(5, EducationComponent_mat_expansion_panel_17_span_5_Template, 3, 4, "span", 7);
+    \u0275\u0275template(5, EducationComponent_mat_expansion_panel_19_span_5_Template, 3, 4, "span", 7);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const subject_r1 = ctx.$implicit;
+    const subject_r2 = ctx.$implicit;
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, subject_r1.title), " ");
+    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, subject_r2.title), " ");
     \u0275\u0275advance(2);
-    \u0275\u0275property("ngForOf", subject_r1.skills);
+    \u0275\u0275property("ngForOf", subject_r2.skills);
+  }
+}
+function EducationComponent_mat_expansion_panel_23_span_5_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "span");
+    \u0275\u0275text(1);
+    \u0275\u0275pipe(2, "translate");
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const skill_r9 = ctx.$implicit;
+    const i_r10 = ctx.index;
+    const subject_r7 = \u0275\u0275nextContext().$implicit;
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate2("", \u0275\u0275pipeBind1(2, 2, skill_r9), "", subject_r7.skills.length !== i_r10 + 1 ? ", " : "", "");
+  }
+}
+function EducationComponent_mat_expansion_panel_23_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "mat-expansion-panel")(1, "mat-expansion-panel-header")(2, "mat-panel-title");
+    \u0275\u0275text(3);
+    \u0275\u0275pipe(4, "translate");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275template(5, EducationComponent_mat_expansion_panel_23_span_5_Template, 3, 4, "span", 7);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const subject_r7 = ctx.$implicit;
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, subject_r7.title), " ");
+    \u0275\u0275advance(2);
+    \u0275\u0275property("ngForOf", subject_r7.skills);
   }
 }
 var _EducationComponent = class _EducationComponent {
@@ -62742,7 +62774,7 @@ var _EducationComponent = class _EducationComponent {
 _EducationComponent.\u0275fac = function EducationComponent_Factory(t) {
   return new (t || _EducationComponent)();
 };
-_EducationComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _EducationComponent, selectors: [["app-education"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 18, vars: 1, consts: [[1, "chrono"], [1, "graph"], [1, "bar"], [1, "disk"], [1, "content"], [1, "telecom", "shadow"], ["src", "assets/images/telecom/telecom.png", "alt", "telecom"], [4, "ngFor", "ngForOf"]], template: function EducationComponent_Template(rf, ctx) {
+_EducationComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _EducationComponent, selectors: [["app-education"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 24, vars: 2, consts: [[1, "chrono"], [1, "graph"], [1, "bar"], [1, "disk"], [1, "content"], [1, "telecom", "shadow"], ["src", "assets/images/telecom/telecom.png", "alt", "telecom"], [4, "ngFor", "ngForOf"]], template: function EducationComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0)(1, "div", 1);
     \u0275\u0275element(2, "div", 2)(3, "div", 3)(4, "div", 3)(5, "div", 3);
@@ -62758,15 +62790,24 @@ _EducationComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
     \u0275\u0275elementEnd()()();
     \u0275\u0275elementStart(13, "div", 4)(14, "div", 5);
     \u0275\u0275element(15, "img", 6);
-    \u0275\u0275elementStart(16, "mat-accordion");
-    \u0275\u0275template(17, EducationComponent_mat_expansion_panel_17_Template, 6, 4, "mat-expansion-panel", 7);
+    \u0275\u0275elementStart(16, "mat-accordion")(17, "h3");
+    \u0275\u0275text(18, "Data Engineering:");
+    \u0275\u0275elementEnd();
+    \u0275\u0275template(19, EducationComponent_mat_expansion_panel_19_Template, 6, 4, "mat-expansion-panel", 7);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(20, "div", 5);
+    \u0275\u0275element(21, "img", 6);
+    \u0275\u0275elementStart(22, "mat-accordion");
+    \u0275\u0275template(23, EducationComponent_mat_expansion_panel_23_Template, 6, 4, "mat-expansion-panel", 7);
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
-    \u0275\u0275advance(17);
+    \u0275\u0275advance(19);
+    \u0275\u0275property("ngForOf", ctx.telecom.subjects);
+    \u0275\u0275advance(4);
     \u0275\u0275property("ngForOf", ctx.telecom.subjects);
   }
-}, dependencies: [MatExpansionModule, MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, TranslateModule, TranslatePipe, NgForOf, MatIconModule], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding: 15px;\n  height: calc(100% - 25px);\n  gap: 20px;\n}\nimg[_ngcontent-%COMP%] {\n  height: fit-content;\n  width: 50%;\n}\n.chrono[_ngcontent-%COMP%] {\n  display: flex;\n  height: calc(100% - 50px);\n}\nul[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 5px;\n}\n.bar[_ngcontent-%COMP%] {\n  border-radius: 10px;\n  position: absolute;\n  left: 5px;\n  background-color: black;\n  width: 10px;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.graph[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.disk[_ngcontent-%COMP%] {\n  padding: 10px;\n  border-radius: 10px;\n  background-color: black;\n}\nli[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.telecom[_ngcontent-%COMP%] {\n  background-color: #70aab7;\n  border-radius: 3px;\n  height: 50%;\n  display: flex;\n  padding: 10px;\n  width: 95%;\n}\np[_ngcontent-%COMP%] {\n  margin: 4px 0;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n}\n@media (max-width: 500px) {\n  .telecom[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2VkdWNhdGlvbi9lZHVjYXRpb24uY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxNXB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDI1cHgpO1xuICBnYXA6IDIwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICB3aWR0aDogNTAlO1xufVxuXG4uY2hyb25vIHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiBjYWxjKDEwMCUgLSA1MHB4KTtcbn1cbnVsIHtcbiAgbWFyZ2luOiAwO1xuICBwYWRkaW5nOiA1cHg7XG59XG4uYmFyIHtcbiAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiA1cHg7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICB3aWR0aDogMTBweDtcbiAgaGVpZ2h0OiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uZ3JhcGgge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogMTAwJTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuLmRpc2sge1xuICBwYWRkaW5nOiAxMHB4O1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbn1cbmxpIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuXG4udGVsZWNvbSB7XG4gIGJhY2tncm91bmQtY29sb3I6IG1hcC5nZXQoJGNvbG9yLXBhbGV0dGUsIFwiM1wiKTtcbiAgYm9yZGVyLXJhZGl1czogM3B4O1xuICBoZWlnaHQ6IDUwJTtcbiAgZGlzcGxheTogZmxleDtcbiAgcGFkZGluZzogMTBweDtcbiAgd2lkdGg6IDk1JTtcbn1cblxucCB7XG4gIG1hcmdpbjogNHB4IDA7XG59XG5cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA1MDBweCkge1xuICAudGVsZWNvbSB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgfVxufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUdBO0FBQ0UsV0FBQTtBQUNBLG1CQUFBO0FBQ0EsU0FBQTtBQUNBLFdBQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBO0FBQ0EsT0FBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxTQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsVUFBQSxLQUFBLEtBQUEsRUFBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxXQUFBOztBQUVGLENBQUE7QUFDRSxpQkFBQTtBQUNBLFlBQUE7QUFDQSxRQUFBO0FBQ0Esb0JBQUE7QUFDQSxTQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxZQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBO0FBQ0EsaUJBQUE7QUFDQSxvQkFBQTs7QUFFRjtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUdGLENBQUE7QUFDRSxvQkFBQTtBQUNBLGlCQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxXQUFBO0FBQ0EsU0FBQTs7QUFHRjtBQUNFLFVBQUEsSUFBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQTtBQUNBLFNBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBbkJGO0FBb0JJLG9CQUFBOzs7IiwKICAibmFtZXMiOiBbXQp9Cg== */"] });
+}, dependencies: [MatExpansionModule, MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, TranslateModule, TranslatePipe, NgForOf, MatIconModule], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding: 15px;\n  height: calc(100% - 25px);\n  gap: 20px;\n}\nimg[_ngcontent-%COMP%] {\n  height: fit-content;\n  width: 50%;\n}\n.chrono[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n}\nul[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 5px;\n}\n.bar[_ngcontent-%COMP%] {\n  border-radius: 10px;\n  position: absolute;\n  left: 5px;\n  background-color: black;\n  width: 10px;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.graph[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.disk[_ngcontent-%COMP%] {\n  padding: 10px;\n  border-radius: 10px;\n  background-color: black;\n}\nli[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.telecom[_ngcontent-%COMP%] {\n  background-color: #70aab7;\n  border-radius: 3px;\n  height: 50%;\n  display: flex;\n  padding: 10px;\n  width: calc(100% - 50px);\n}\np[_ngcontent-%COMP%] {\n  margin: 4px 0;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  gap: 15px;\n}\n@media (max-width: 500px) {\n  [_nghost-%COMP%] {\n    height: calc(100% - 80px);\n  }\n  .telecom[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2VkdWNhdGlvbi9lZHVjYXRpb24uY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxNXB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDI1cHgpO1xuICBnYXA6IDIwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICB3aWR0aDogNTAlO1xufVxuXG4uY2hyb25vIHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xufVxudWwge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDVweDtcbn1cbi5iYXIge1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDVweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIHdpZHRoOiAxMHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbi5ncmFwaCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uZGlzayB7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xufVxubGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi50ZWxlY29tIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIzXCIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIGhlaWdodDogNTAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiAxMHB4O1xuICB3aWR0aDogY2FsYygxMDAlIC0gNTBweCk7XG59XG5cbnAge1xuICBtYXJnaW46IDRweCAwO1xufVxuXG4uY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHdpZHRoOiAxMDAlO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IDE1cHg7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA1MDBweCkge1xuICA6aG9zdCB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMCUgLSA4MHB4KTtcbiAgfVxuICAudGVsZWNvbSB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgfVxufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUdBO0FBQ0UsV0FBQTtBQUNBLG1CQUFBO0FBQ0EsU0FBQTtBQUNBLFdBQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBO0FBQ0EsT0FBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxTQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsVUFBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxXQUFBOztBQUVGLENBQUE7QUFDRSxpQkFBQTtBQUNBLFlBQUE7QUFDQSxRQUFBO0FBQ0Esb0JBQUE7QUFDQSxTQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxZQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBO0FBQ0EsaUJBQUE7QUFDQSxvQkFBQTs7QUFFRjtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUdGLENBQUE7QUFDRSxvQkFBQTtBQUNBLGlCQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxXQUFBO0FBQ0EsU0FBQSxLQUFBLEtBQUEsRUFBQTs7QUFHRjtBQUNFLFVBQUEsSUFBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQTtBQUNBLFNBQUE7QUFDQSxrQkFBQTtBQUNBLE9BQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFO0FBQ0UsWUFBQSxLQUFBLEtBQUEsRUFBQTs7QUFFRixHQXhCRjtBQXlCSSxvQkFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var EducationComponent = _EducationComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(EducationComponent, { className: "EducationComponent", filePath: "src\\app\\components\\education\\education.component.ts", lineNumber: 14 });
