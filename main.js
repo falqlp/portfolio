@@ -47502,6 +47502,30 @@ function mixinDisabled(base) {
     }
   };
 }
+function mixinColor(base, defaultColor) {
+  return class extends base {
+    get color() {
+      return this._color;
+    }
+    set color(value) {
+      const colorPalette = value || this.defaultColor;
+      if (colorPalette !== this._color) {
+        if (this._color) {
+          this._elementRef.nativeElement.classList.remove(`mat-${this._color}`);
+        }
+        if (colorPalette) {
+          this._elementRef.nativeElement.classList.add(`mat-${colorPalette}`);
+        }
+        this._color = colorPalette;
+      }
+    }
+    constructor(...args) {
+      super(...args);
+      this.defaultColor = defaultColor;
+      this.color = defaultColor;
+    }
+  };
+}
 function mixinTabIndex(base, defaultTabIndex = 0) {
   return class extends base {
     get tabIndex() {
@@ -50238,7 +50262,7 @@ _PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponen
     \u0275\u0275advance(2);
     \u0275\u0275property("technologies", ctx.aquiweb.technologies);
   }
-}, dependencies: [NgForOf, TranslateModule, TranslatePipe, MatTooltipModule, TechnoLogosComponent], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: 100%;\n}\n.primary-projects[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  background-color: #70aab7;\n  gap: 10px;\n  height: calc(100% - 45px);\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  justify-content: space-between;\n}\nimg[_ngcontent-%COMP%] {\n  max-height: 180px;\n  width: fit-content;\n}\n.techno[_ngcontent-%COMP%] {\n  height: 48px;\n}\n.logos[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  padding: 10px;\n  justify-content: flex-end;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 10px;\n  text-align: justify;\n  font-size: 16px;\n}\n.img-background[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .primary-projects[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  img[_ngcontent-%COMP%] {\n    height: 100px;\n  }\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n}\n@media (max-width: 400px) {\n  .techno[_ngcontent-%COMP%] {\n    height: 16px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3Byb2pldHMtcHJpbmNpcGF1eC9wcmltYXJ5LXByb2plY3RzLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG46aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG59XG5cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGdhcDogNTBweDtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuXG4ucHJpbWFyeS1wcm9qZWN0cyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGJhY2tncm91bmQtY29sb3I6IG1hcC5nZXQoJGNvbG9yLXBhbGV0dGUsIFwiM1wiKTtcbiAgZ2FwOiAxMHB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDQ1cHgpO1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbmltZyB7XG4gIG1heC1oZWlnaHQ6IDE4MHB4O1xuICB3aWR0aDogZml0LWNvbnRlbnQ7XG59XG5cbi50ZWNobm8ge1xuICBoZWlnaHQ6IDQ4cHg7XG59XG4ubG9nb3Mge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIGdhcDogMTBweDtcbiAgcGFkZGluZzogMTBweDtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbn1cbi5jYXJkLXRpdGxlIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuLmRlc2NyaXB0aW9uIHtcbiAgcGFkZGluZzogMTBweDtcbiAgdGV4dC1hbGlnbjoganVzdGlmeTtcbiAgZm9udC1zaXplOiAxNnB4O1xufVxuXG4uaW1nLWJhY2tncm91bmQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDEwMDBweCkge1xuICAuY29udGVudCB7XG4gICAgZ2FwOiAxMHB4O1xuICB9XG4gIC5wcmltYXJ5LXByb2plY3RzIHtcbiAgICBmbGV4OiAxO1xuICB9XG4gIC5kZXNjcmlwdGlvbiB7XG4gICAgZm9udC1zaXplOiAydnc7XG4gICAgcGFkZGluZy10b3A6IDA7XG4gIH1cbiAgaW1nIHtcbiAgICBoZWlnaHQ6IDEwMHB4O1xuICB9XG4gIC50ZWNobm8ge1xuICAgIGhlaWdodDogMzJweDtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNDAwcHgpIHtcbiAgLnRlY2hubyB7XG4gICAgaGVpZ2h0OiAxNnB4O1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxvQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBO0FBQ0EsU0FBQTtBQUNBLGlCQUFBO0FBQ0EsWUFBQTtBQUNBLG1CQUFBOztBQUVGO0FBQ0UsY0FBQTtBQUNBLFNBQUE7O0FBR0YsQ0FBQTtBQUNFLFVBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxhQUFBO0FBQ0EsT0FBQTtBQUNBLFdBQUE7QUFDQSxtQkFBQTs7QUFFRixDQUFBO0FBQ0UsY0FBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGNBQUE7QUFDQSxhQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsbUJBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBaERGO0FBaURJLFNBQUE7O0FBRUYsR0E1Q0Y7QUE2Q0ksVUFBQTs7QUFFRixHQWxCRjtBQW1CSSxlQUFBO0FBQ0EsaUJBQUE7O0FBRUY7QUFDRSxZQUFBOztBQUVGLEdBdENGO0FBdUNJLFlBQUE7OztBQUlKLE9BQUEsQ0FBQSxTQUFBLEVBQUE7QUFDRSxHQTVDRjtBQTZDSSxZQUFBOzs7IiwKICAibmFtZXMiOiBbXQp9Cg== */"] });
+}, dependencies: [NgForOf, TranslateModule, TranslatePipe, MatTooltipModule, TechnoLogosComponent], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: 100%;\n}\n.primary-projects[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  background-color: #70aab7;\n  gap: 10px;\n  height: calc(100% - 45px);\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  justify-content: space-between;\n}\nimg[_ngcontent-%COMP%] {\n  height: 180px;\n  width: 180px;\n}\n.techno[_ngcontent-%COMP%] {\n  height: 48px;\n}\n.logos[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  padding: 10px;\n  justify-content: flex-end;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 10px;\n  text-align: justify;\n  font-size: 16px;\n}\n.img-background[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .primary-projects[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  img[_ngcontent-%COMP%] {\n    height: 100px;\n    width: 100px;\n  }\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n}\n@media (max-width: 400px) {\n  .techno[_ngcontent-%COMP%] {\n    height: 16px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3Byb2pldHMtcHJpbmNpcGF1eC9wcmltYXJ5LXByb2plY3RzLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG46aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG59XG5cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGdhcDogNTBweDtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuXG4ucHJpbWFyeS1wcm9qZWN0cyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGJhY2tncm91bmQtY29sb3I6IG1hcC5nZXQoJGNvbG9yLXBhbGV0dGUsIFwiM1wiKTtcbiAgZ2FwOiAxMHB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDQ1cHgpO1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbmltZyB7XG4gIGhlaWdodDogMTgwcHg7XG4gIHdpZHRoOiAxODBweDtcbn1cblxuLnRlY2hubyB7XG4gIGhlaWdodDogNDhweDtcbn1cbi5sb2dvcyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgZ2FwOiAxMHB4O1xuICBwYWRkaW5nOiAxMHB4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xufVxuLmNhcmQtdGl0bGUge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4uZGVzY3JpcHRpb24ge1xuICBwYWRkaW5nOiAxMHB4O1xuICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi5pbWctYmFja2dyb3VuZCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogMTAwMHB4KSB7XG4gIC5jb250ZW50IHtcbiAgICBnYXA6IDEwcHg7XG4gIH1cbiAgLnByaW1hcnktcHJvamVjdHMge1xuICAgIGZsZXg6IDE7XG4gIH1cbiAgLmRlc2NyaXB0aW9uIHtcbiAgICBmb250LXNpemU6IDJ2dztcbiAgICBwYWRkaW5nLXRvcDogMDtcbiAgfVxuICBpbWcge1xuICAgIGhlaWdodDogMTAwcHg7XG4gICAgd2lkdGg6IDEwMHB4O1xuICB9XG4gIC50ZWNobm8ge1xuICAgIGhlaWdodDogMzJweDtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNDAwcHgpIHtcbiAgLnRlY2hubyB7XG4gICAgaGVpZ2h0OiAxNnB4O1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxvQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBO0FBQ0EsU0FBQTtBQUNBLGlCQUFBO0FBQ0EsWUFBQTtBQUNBLG1CQUFBOztBQUVGO0FBQ0UsVUFBQTtBQUNBLFNBQUE7O0FBR0YsQ0FBQTtBQUNFLFVBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxhQUFBO0FBQ0EsT0FBQTtBQUNBLFdBQUE7QUFDQSxtQkFBQTs7QUFFRixDQUFBO0FBQ0UsY0FBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGNBQUE7QUFDQSxhQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsbUJBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBaERGO0FBaURJLFNBQUE7O0FBRUYsR0E1Q0Y7QUE2Q0ksVUFBQTs7QUFFRixHQWxCRjtBQW1CSSxlQUFBO0FBQ0EsaUJBQUE7O0FBRUY7QUFDRSxZQUFBO0FBQ0EsV0FBQTs7QUFFRixHQXZDRjtBQXdDSSxZQUFBOzs7QUFJSixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0E3Q0Y7QUE4Q0ksWUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var PrimaryProjectsComponent = _PrimaryProjectsComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PrimaryProjectsComponent, { className: "PrimaryProjectsComponent", filePath: "src\\app\\components\\projets-principaux\\primary-projects.component.ts", lineNumber: 14 });
@@ -61739,102 +61763,1011 @@ var MatExpansionModule = _MatExpansionModule;
   }], null, null);
 })();
 
+// node_modules/@angular/material/fesm2022/icon.mjs
+var _c06 = ["*"];
+var policy2;
+function getPolicy2() {
+  if (policy2 === void 0) {
+    policy2 = null;
+    if (typeof window !== "undefined") {
+      const ttWindow = window;
+      if (ttWindow.trustedTypes !== void 0) {
+        policy2 = ttWindow.trustedTypes.createPolicy("angular#components", {
+          createHTML: (s) => s
+        });
+      }
+    }
+  }
+  return policy2;
+}
+function trustedHTMLFromString2(html) {
+  return getPolicy2()?.createHTML(html) || html;
+}
+function getMatIconNameNotFoundError(iconName) {
+  return Error(`Unable to find icon with the name "${iconName}"`);
+}
+function getMatIconNoHttpProviderError() {
+  return Error("Could not find HttpClient provider for use with Angular Material icons. Please include the HttpClientModule from @angular/common/http in your app imports.");
+}
+function getMatIconFailedToSanitizeUrlError(url) {
+  return Error(`The URL provided to MatIconRegistry was not trusted as a resource URL via Angular's DomSanitizer. Attempted URL was "${url}".`);
+}
+function getMatIconFailedToSanitizeLiteralError(literal) {
+  return Error(`The literal provided to MatIconRegistry was not trusted as safe HTML by Angular's DomSanitizer. Attempted literal was "${literal}".`);
+}
+var SvgIconConfig = class {
+  constructor(url, svgText, options) {
+    this.url = url;
+    this.svgText = svgText;
+    this.options = options;
+  }
+};
+var _MatIconRegistry = class _MatIconRegistry {
+  constructor(_httpClient, _sanitizer, document2, _errorHandler) {
+    this._httpClient = _httpClient;
+    this._sanitizer = _sanitizer;
+    this._errorHandler = _errorHandler;
+    this._svgIconConfigs = /* @__PURE__ */ new Map();
+    this._iconSetConfigs = /* @__PURE__ */ new Map();
+    this._cachedIconsByUrl = /* @__PURE__ */ new Map();
+    this._inProgressUrlFetches = /* @__PURE__ */ new Map();
+    this._fontCssClassesByAlias = /* @__PURE__ */ new Map();
+    this._resolvers = [];
+    this._defaultFontSetClass = ["material-icons", "mat-ligature-font"];
+    this._document = document2;
+  }
+  /**
+   * Registers an icon by URL in the default namespace.
+   * @param iconName Name under which the icon should be registered.
+   * @param url
+   */
+  addSvgIcon(iconName, url, options) {
+    return this.addSvgIconInNamespace("", iconName, url, options);
+  }
+  /**
+   * Registers an icon using an HTML string in the default namespace.
+   * @param iconName Name under which the icon should be registered.
+   * @param literal SVG source of the icon.
+   */
+  addSvgIconLiteral(iconName, literal, options) {
+    return this.addSvgIconLiteralInNamespace("", iconName, literal, options);
+  }
+  /**
+   * Registers an icon by URL in the specified namespace.
+   * @param namespace Namespace in which the icon should be registered.
+   * @param iconName Name under which the icon should be registered.
+   * @param url
+   */
+  addSvgIconInNamespace(namespace, iconName, url, options) {
+    return this._addSvgIconConfig(namespace, iconName, new SvgIconConfig(url, null, options));
+  }
+  /**
+   * Registers an icon resolver function with the registry. The function will be invoked with the
+   * name and namespace of an icon when the registry tries to resolve the URL from which to fetch
+   * the icon. The resolver is expected to return a `SafeResourceUrl` that points to the icon,
+   * an object with the icon URL and icon options, or `null` if the icon is not supported. Resolvers
+   * will be invoked in the order in which they have been registered.
+   * @param resolver Resolver function to be registered.
+   */
+  addSvgIconResolver(resolver) {
+    this._resolvers.push(resolver);
+    return this;
+  }
+  /**
+   * Registers an icon using an HTML string in the specified namespace.
+   * @param namespace Namespace in which the icon should be registered.
+   * @param iconName Name under which the icon should be registered.
+   * @param literal SVG source of the icon.
+   */
+  addSvgIconLiteralInNamespace(namespace, iconName, literal, options) {
+    const cleanLiteral = this._sanitizer.sanitize(SecurityContext.HTML, literal);
+    if (!cleanLiteral) {
+      throw getMatIconFailedToSanitizeLiteralError(literal);
+    }
+    const trustedLiteral = trustedHTMLFromString2(cleanLiteral);
+    return this._addSvgIconConfig(namespace, iconName, new SvgIconConfig("", trustedLiteral, options));
+  }
+  /**
+   * Registers an icon set by URL in the default namespace.
+   * @param url
+   */
+  addSvgIconSet(url, options) {
+    return this.addSvgIconSetInNamespace("", url, options);
+  }
+  /**
+   * Registers an icon set using an HTML string in the default namespace.
+   * @param literal SVG source of the icon set.
+   */
+  addSvgIconSetLiteral(literal, options) {
+    return this.addSvgIconSetLiteralInNamespace("", literal, options);
+  }
+  /**
+   * Registers an icon set by URL in the specified namespace.
+   * @param namespace Namespace in which to register the icon set.
+   * @param url
+   */
+  addSvgIconSetInNamespace(namespace, url, options) {
+    return this._addSvgIconSetConfig(namespace, new SvgIconConfig(url, null, options));
+  }
+  /**
+   * Registers an icon set using an HTML string in the specified namespace.
+   * @param namespace Namespace in which to register the icon set.
+   * @param literal SVG source of the icon set.
+   */
+  addSvgIconSetLiteralInNamespace(namespace, literal, options) {
+    const cleanLiteral = this._sanitizer.sanitize(SecurityContext.HTML, literal);
+    if (!cleanLiteral) {
+      throw getMatIconFailedToSanitizeLiteralError(literal);
+    }
+    const trustedLiteral = trustedHTMLFromString2(cleanLiteral);
+    return this._addSvgIconSetConfig(namespace, new SvgIconConfig("", trustedLiteral, options));
+  }
+  /**
+   * Defines an alias for CSS class names to be used for icon fonts. Creating an matIcon
+   * component with the alias as the fontSet input will cause the class name to be applied
+   * to the `<mat-icon>` element.
+   *
+   * If the registered font is a ligature font, then don't forget to also include the special
+   * class `mat-ligature-font` to allow the usage via attribute. So register like this:
+   *
+   * ```ts
+   * iconRegistry.registerFontClassAlias('f1', 'font1 mat-ligature-font');
+   * ```
+   *
+   * And use like this:
+   *
+   * ```html
+   * <mat-icon fontSet="f1" fontIcon="home"></mat-icon>
+   * ```
+   *
+   * @param alias Alias for the font.
+   * @param classNames Class names override to be used instead of the alias.
+   */
+  registerFontClassAlias(alias, classNames = alias) {
+    this._fontCssClassesByAlias.set(alias, classNames);
+    return this;
+  }
+  /**
+   * Returns the CSS class name associated with the alias by a previous call to
+   * registerFontClassAlias. If no CSS class has been associated, returns the alias unmodified.
+   */
+  classNameForFontAlias(alias) {
+    return this._fontCssClassesByAlias.get(alias) || alias;
+  }
+  /**
+   * Sets the CSS classes to be used for icon fonts when an `<mat-icon>` component does not
+   * have a fontSet input value, and is not loading an icon by name or URL.
+   */
+  setDefaultFontSetClass(...classNames) {
+    this._defaultFontSetClass = classNames;
+    return this;
+  }
+  /**
+   * Returns the CSS classes to be used for icon fonts when an `<mat-icon>` component does not
+   * have a fontSet input value, and is not loading an icon by name or URL.
+   */
+  getDefaultFontSetClass() {
+    return this._defaultFontSetClass;
+  }
+  /**
+   * Returns an Observable that produces the icon (as an `<svg>` DOM element) from the given URL.
+   * The response from the URL may be cached so this will not always cause an HTTP request, but
+   * the produced element will always be a new copy of the originally fetched icon. (That is,
+   * it will not contain any modifications made to elements previously returned).
+   *
+   * @param safeUrl URL from which to fetch the SVG icon.
+   */
+  getSvgIconFromUrl(safeUrl) {
+    const url = this._sanitizer.sanitize(SecurityContext.RESOURCE_URL, safeUrl);
+    if (!url) {
+      throw getMatIconFailedToSanitizeUrlError(safeUrl);
+    }
+    const cachedIcon = this._cachedIconsByUrl.get(url);
+    if (cachedIcon) {
+      return of(cloneSvg(cachedIcon));
+    }
+    return this._loadSvgIconFromConfig(new SvgIconConfig(safeUrl, null)).pipe(tap((svg) => this._cachedIconsByUrl.set(url, svg)), map((svg) => cloneSvg(svg)));
+  }
+  /**
+   * Returns an Observable that produces the icon (as an `<svg>` DOM element) with the given name
+   * and namespace. The icon must have been previously registered with addIcon or addIconSet;
+   * if not, the Observable will throw an error.
+   *
+   * @param name Name of the icon to be retrieved.
+   * @param namespace Namespace in which to look for the icon.
+   */
+  getNamedSvgIcon(name, namespace = "") {
+    const key = iconKey(namespace, name);
+    let config2 = this._svgIconConfigs.get(key);
+    if (config2) {
+      return this._getSvgFromConfig(config2);
+    }
+    config2 = this._getIconConfigFromResolvers(namespace, name);
+    if (config2) {
+      this._svgIconConfigs.set(key, config2);
+      return this._getSvgFromConfig(config2);
+    }
+    const iconSetConfigs = this._iconSetConfigs.get(namespace);
+    if (iconSetConfigs) {
+      return this._getSvgFromIconSetConfigs(name, iconSetConfigs);
+    }
+    return throwError(getMatIconNameNotFoundError(key));
+  }
+  ngOnDestroy() {
+    this._resolvers = [];
+    this._svgIconConfigs.clear();
+    this._iconSetConfigs.clear();
+    this._cachedIconsByUrl.clear();
+  }
+  /**
+   * Returns the cached icon for a SvgIconConfig if available, or fetches it from its URL if not.
+   */
+  _getSvgFromConfig(config2) {
+    if (config2.svgText) {
+      return of(cloneSvg(this._svgElementFromConfig(config2)));
+    } else {
+      return this._loadSvgIconFromConfig(config2).pipe(map((svg) => cloneSvg(svg)));
+    }
+  }
+  /**
+   * Attempts to find an icon with the specified name in any of the SVG icon sets.
+   * First searches the available cached icons for a nested element with a matching name, and
+   * if found copies the element to a new `<svg>` element. If not found, fetches all icon sets
+   * that have not been cached, and searches again after all fetches are completed.
+   * The returned Observable produces the SVG element if possible, and throws
+   * an error if no icon with the specified name can be found.
+   */
+  _getSvgFromIconSetConfigs(name, iconSetConfigs) {
+    const namedIcon = this._extractIconWithNameFromAnySet(name, iconSetConfigs);
+    if (namedIcon) {
+      return of(namedIcon);
+    }
+    const iconSetFetchRequests = iconSetConfigs.filter((iconSetConfig) => !iconSetConfig.svgText).map((iconSetConfig) => {
+      return this._loadSvgIconSetFromConfig(iconSetConfig).pipe(catchError((err) => {
+        const url = this._sanitizer.sanitize(SecurityContext.RESOURCE_URL, iconSetConfig.url);
+        const errorMessage = `Loading icon set URL: ${url} failed: ${err.message}`;
+        this._errorHandler.handleError(new Error(errorMessage));
+        return of(null);
+      }));
+    });
+    return forkJoin(iconSetFetchRequests).pipe(map(() => {
+      const foundIcon = this._extractIconWithNameFromAnySet(name, iconSetConfigs);
+      if (!foundIcon) {
+        throw getMatIconNameNotFoundError(name);
+      }
+      return foundIcon;
+    }));
+  }
+  /**
+   * Searches the cached SVG elements for the given icon sets for a nested icon element whose "id"
+   * tag matches the specified name. If found, copies the nested element to a new SVG element and
+   * returns it. Returns null if no matching element is found.
+   */
+  _extractIconWithNameFromAnySet(iconName, iconSetConfigs) {
+    for (let i = iconSetConfigs.length - 1; i >= 0; i--) {
+      const config2 = iconSetConfigs[i];
+      if (config2.svgText && config2.svgText.toString().indexOf(iconName) > -1) {
+        const svg = this._svgElementFromConfig(config2);
+        const foundIcon = this._extractSvgIconFromSet(svg, iconName, config2.options);
+        if (foundIcon) {
+          return foundIcon;
+        }
+      }
+    }
+    return null;
+  }
+  /**
+   * Loads the content of the icon URL specified in the SvgIconConfig and creates an SVG element
+   * from it.
+   */
+  _loadSvgIconFromConfig(config2) {
+    return this._fetchIcon(config2).pipe(tap((svgText) => config2.svgText = svgText), map(() => this._svgElementFromConfig(config2)));
+  }
+  /**
+   * Loads the content of the icon set URL specified in the
+   * SvgIconConfig and attaches it to the config.
+   */
+  _loadSvgIconSetFromConfig(config2) {
+    if (config2.svgText) {
+      return of(null);
+    }
+    return this._fetchIcon(config2).pipe(tap((svgText) => config2.svgText = svgText));
+  }
+  /**
+   * Searches the cached element of the given SvgIconConfig for a nested icon element whose "id"
+   * tag matches the specified name. If found, copies the nested element to a new SVG element and
+   * returns it. Returns null if no matching element is found.
+   */
+  _extractSvgIconFromSet(iconSet, iconName, options) {
+    const iconSource = iconSet.querySelector(`[id="${iconName}"]`);
+    if (!iconSource) {
+      return null;
+    }
+    const iconElement = iconSource.cloneNode(true);
+    iconElement.removeAttribute("id");
+    if (iconElement.nodeName.toLowerCase() === "svg") {
+      return this._setSvgAttributes(iconElement, options);
+    }
+    if (iconElement.nodeName.toLowerCase() === "symbol") {
+      return this._setSvgAttributes(this._toSvgElement(iconElement), options);
+    }
+    const svg = this._svgElementFromString(trustedHTMLFromString2("<svg></svg>"));
+    svg.appendChild(iconElement);
+    return this._setSvgAttributes(svg, options);
+  }
+  /**
+   * Creates a DOM element from the given SVG string.
+   */
+  _svgElementFromString(str) {
+    const div = this._document.createElement("DIV");
+    div.innerHTML = str;
+    const svg = div.querySelector("svg");
+    if (!svg) {
+      throw Error("<svg> tag not found");
+    }
+    return svg;
+  }
+  /**
+   * Converts an element into an SVG node by cloning all of its children.
+   */
+  _toSvgElement(element) {
+    const svg = this._svgElementFromString(trustedHTMLFromString2("<svg></svg>"));
+    const attributes = element.attributes;
+    for (let i = 0; i < attributes.length; i++) {
+      const {
+        name,
+        value
+      } = attributes[i];
+      if (name !== "id") {
+        svg.setAttribute(name, value);
+      }
+    }
+    for (let i = 0; i < element.childNodes.length; i++) {
+      if (element.childNodes[i].nodeType === this._document.ELEMENT_NODE) {
+        svg.appendChild(element.childNodes[i].cloneNode(true));
+      }
+    }
+    return svg;
+  }
+  /**
+   * Sets the default attributes for an SVG element to be used as an icon.
+   */
+  _setSvgAttributes(svg, options) {
+    svg.setAttribute("fit", "");
+    svg.setAttribute("height", "100%");
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    svg.setAttribute("focusable", "false");
+    if (options && options.viewBox) {
+      svg.setAttribute("viewBox", options.viewBox);
+    }
+    return svg;
+  }
+  /**
+   * Returns an Observable which produces the string contents of the given icon. Results may be
+   * cached, so future calls with the same URL may not cause another HTTP request.
+   */
+  _fetchIcon(iconConfig) {
+    const {
+      url: safeUrl,
+      options
+    } = iconConfig;
+    const withCredentials = options?.withCredentials ?? false;
+    if (!this._httpClient) {
+      throw getMatIconNoHttpProviderError();
+    }
+    if (safeUrl == null) {
+      throw Error(`Cannot fetch icon from URL "${safeUrl}".`);
+    }
+    const url = this._sanitizer.sanitize(SecurityContext.RESOURCE_URL, safeUrl);
+    if (!url) {
+      throw getMatIconFailedToSanitizeUrlError(safeUrl);
+    }
+    const inProgressFetch = this._inProgressUrlFetches.get(url);
+    if (inProgressFetch) {
+      return inProgressFetch;
+    }
+    const req = this._httpClient.get(url, {
+      responseType: "text",
+      withCredentials
+    }).pipe(map((svg) => {
+      return trustedHTMLFromString2(svg);
+    }), finalize(() => this._inProgressUrlFetches.delete(url)), share());
+    this._inProgressUrlFetches.set(url, req);
+    return req;
+  }
+  /**
+   * Registers an icon config by name in the specified namespace.
+   * @param namespace Namespace in which to register the icon config.
+   * @param iconName Name under which to register the config.
+   * @param config Config to be registered.
+   */
+  _addSvgIconConfig(namespace, iconName, config2) {
+    this._svgIconConfigs.set(iconKey(namespace, iconName), config2);
+    return this;
+  }
+  /**
+   * Registers an icon set config in the specified namespace.
+   * @param namespace Namespace in which to register the icon config.
+   * @param config Config to be registered.
+   */
+  _addSvgIconSetConfig(namespace, config2) {
+    const configNamespace = this._iconSetConfigs.get(namespace);
+    if (configNamespace) {
+      configNamespace.push(config2);
+    } else {
+      this._iconSetConfigs.set(namespace, [config2]);
+    }
+    return this;
+  }
+  /** Parses a config's text into an SVG element. */
+  _svgElementFromConfig(config2) {
+    if (!config2.svgElement) {
+      const svg = this._svgElementFromString(config2.svgText);
+      this._setSvgAttributes(svg, config2.options);
+      config2.svgElement = svg;
+    }
+    return config2.svgElement;
+  }
+  /** Tries to create an icon config through the registered resolver functions. */
+  _getIconConfigFromResolvers(namespace, name) {
+    for (let i = 0; i < this._resolvers.length; i++) {
+      const result = this._resolvers[i](name, namespace);
+      if (result) {
+        return isSafeUrlWithOptions(result) ? new SvgIconConfig(result.url, null, result.options) : new SvgIconConfig(result, null);
+      }
+    }
+    return void 0;
+  }
+};
+_MatIconRegistry.\u0275fac = function MatIconRegistry_Factory(t) {
+  return new (t || _MatIconRegistry)(\u0275\u0275inject(HttpClient, 8), \u0275\u0275inject(DomSanitizer), \u0275\u0275inject(DOCUMENT2, 8), \u0275\u0275inject(ErrorHandler));
+};
+_MatIconRegistry.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+  token: _MatIconRegistry,
+  factory: _MatIconRegistry.\u0275fac,
+  providedIn: "root"
+});
+var MatIconRegistry = _MatIconRegistry;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatIconRegistry, [{
+    type: Injectable,
+    args: [{
+      providedIn: "root"
+    }]
+  }], function() {
+    return [{
+      type: HttpClient,
+      decorators: [{
+        type: Optional
+      }]
+    }, {
+      type: DomSanitizer
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Optional
+      }, {
+        type: Inject,
+        args: [DOCUMENT2]
+      }]
+    }, {
+      type: ErrorHandler
+    }];
+  }, null);
+})();
+function ICON_REGISTRY_PROVIDER_FACTORY(parentRegistry, httpClient, sanitizer, errorHandler2, document2) {
+  return parentRegistry || new MatIconRegistry(httpClient, sanitizer, document2, errorHandler2);
+}
+var ICON_REGISTRY_PROVIDER = {
+  // If there is already an MatIconRegistry available, use that. Otherwise, provide a new one.
+  provide: MatIconRegistry,
+  deps: [[new Optional(), new SkipSelf(), MatIconRegistry], [new Optional(), HttpClient], DomSanitizer, ErrorHandler, [new Optional(), DOCUMENT2]],
+  useFactory: ICON_REGISTRY_PROVIDER_FACTORY
+};
+function cloneSvg(svg) {
+  return svg.cloneNode(true);
+}
+function iconKey(namespace, name) {
+  return namespace + ":" + name;
+}
+function isSafeUrlWithOptions(value) {
+  return !!(value.url && value.options);
+}
+var _MatIconBase = mixinColor(class {
+  constructor(_elementRef) {
+    this._elementRef = _elementRef;
+  }
+});
+var MAT_ICON_DEFAULT_OPTIONS = new InjectionToken("MAT_ICON_DEFAULT_OPTIONS");
+var MAT_ICON_LOCATION = new InjectionToken("mat-icon-location", {
+  providedIn: "root",
+  factory: MAT_ICON_LOCATION_FACTORY
+});
+function MAT_ICON_LOCATION_FACTORY() {
+  const _document2 = inject(DOCUMENT2);
+  const _location = _document2 ? _document2.location : null;
+  return {
+    // Note that this needs to be a function, rather than a property, because Angular
+    // will only resolve it once, but we want the current path on each call.
+    getPathname: () => _location ? _location.pathname + _location.search : ""
+  };
+}
+var funcIriAttributes = ["clip-path", "color-profile", "src", "cursor", "fill", "filter", "marker", "marker-start", "marker-mid", "marker-end", "mask", "stroke"];
+var funcIriAttributeSelector = funcIriAttributes.map((attr) => `[${attr}]`).join(", ");
+var funcIriPattern = /^url\(['"]?#(.*?)['"]?\)$/;
+var _MatIcon = class _MatIcon extends _MatIconBase {
+  /**
+   * Whether the icon should be inlined, automatically sizing the icon to match the font size of
+   * the element the icon is contained in.
+   */
+  get inline() {
+    return this._inline;
+  }
+  set inline(inline) {
+    this._inline = coerceBooleanProperty(inline);
+  }
+  /** Name of the icon in the SVG icon set. */
+  get svgIcon() {
+    return this._svgIcon;
+  }
+  set svgIcon(value) {
+    if (value !== this._svgIcon) {
+      if (value) {
+        this._updateSvgIcon(value);
+      } else if (this._svgIcon) {
+        this._clearSvgElement();
+      }
+      this._svgIcon = value;
+    }
+  }
+  /** Font set that the icon is a part of. */
+  get fontSet() {
+    return this._fontSet;
+  }
+  set fontSet(value) {
+    const newValue = this._cleanupFontValue(value);
+    if (newValue !== this._fontSet) {
+      this._fontSet = newValue;
+      this._updateFontIconClasses();
+    }
+  }
+  /** Name of an icon within a font set. */
+  get fontIcon() {
+    return this._fontIcon;
+  }
+  set fontIcon(value) {
+    const newValue = this._cleanupFontValue(value);
+    if (newValue !== this._fontIcon) {
+      this._fontIcon = newValue;
+      this._updateFontIconClasses();
+    }
+  }
+  constructor(elementRef, _iconRegistry, ariaHidden, _location, _errorHandler, defaults2) {
+    super(elementRef);
+    this._iconRegistry = _iconRegistry;
+    this._location = _location;
+    this._errorHandler = _errorHandler;
+    this._inline = false;
+    this._previousFontSetClass = [];
+    this._currentIconFetch = Subscription.EMPTY;
+    if (defaults2) {
+      if (defaults2.color) {
+        this.color = this.defaultColor = defaults2.color;
+      }
+      if (defaults2.fontSet) {
+        this.fontSet = defaults2.fontSet;
+      }
+    }
+    if (!ariaHidden) {
+      elementRef.nativeElement.setAttribute("aria-hidden", "true");
+    }
+  }
+  /**
+   * Splits an svgIcon binding value into its icon set and icon name components.
+   * Returns a 2-element array of [(icon set), (icon name)].
+   * The separator for the two fields is ':'. If there is no separator, an empty
+   * string is returned for the icon set and the entire value is returned for
+   * the icon name. If the argument is falsy, returns an array of two empty strings.
+   * Throws an error if the name contains two or more ':' separators.
+   * Examples:
+   *   `'social:cake' -> ['social', 'cake']
+   *   'penguin' -> ['', 'penguin']
+   *   null -> ['', '']
+   *   'a:b:c' -> (throws Error)`
+   */
+  _splitIconName(iconName) {
+    if (!iconName) {
+      return ["", ""];
+    }
+    const parts = iconName.split(":");
+    switch (parts.length) {
+      case 1:
+        return ["", parts[0]];
+      case 2:
+        return parts;
+      default:
+        throw Error(`Invalid icon name: "${iconName}"`);
+    }
+  }
+  ngOnInit() {
+    this._updateFontIconClasses();
+  }
+  ngAfterViewChecked() {
+    const cachedElements = this._elementsWithExternalReferences;
+    if (cachedElements && cachedElements.size) {
+      const newPath = this._location.getPathname();
+      if (newPath !== this._previousPath) {
+        this._previousPath = newPath;
+        this._prependPathToReferences(newPath);
+      }
+    }
+  }
+  ngOnDestroy() {
+    this._currentIconFetch.unsubscribe();
+    if (this._elementsWithExternalReferences) {
+      this._elementsWithExternalReferences.clear();
+    }
+  }
+  _usingFontIcon() {
+    return !this.svgIcon;
+  }
+  _setSvgElement(svg) {
+    this._clearSvgElement();
+    const path = this._location.getPathname();
+    this._previousPath = path;
+    this._cacheChildrenWithExternalReferences(svg);
+    this._prependPathToReferences(path);
+    this._elementRef.nativeElement.appendChild(svg);
+  }
+  _clearSvgElement() {
+    const layoutElement = this._elementRef.nativeElement;
+    let childCount = layoutElement.childNodes.length;
+    if (this._elementsWithExternalReferences) {
+      this._elementsWithExternalReferences.clear();
+    }
+    while (childCount--) {
+      const child = layoutElement.childNodes[childCount];
+      if (child.nodeType !== 1 || child.nodeName.toLowerCase() === "svg") {
+        child.remove();
+      }
+    }
+  }
+  _updateFontIconClasses() {
+    if (!this._usingFontIcon()) {
+      return;
+    }
+    const elem = this._elementRef.nativeElement;
+    const fontSetClasses = (this.fontSet ? this._iconRegistry.classNameForFontAlias(this.fontSet).split(/ +/) : this._iconRegistry.getDefaultFontSetClass()).filter((className) => className.length > 0);
+    this._previousFontSetClass.forEach((className) => elem.classList.remove(className));
+    fontSetClasses.forEach((className) => elem.classList.add(className));
+    this._previousFontSetClass = fontSetClasses;
+    if (this.fontIcon !== this._previousFontIconClass && !fontSetClasses.includes("mat-ligature-font")) {
+      if (this._previousFontIconClass) {
+        elem.classList.remove(this._previousFontIconClass);
+      }
+      if (this.fontIcon) {
+        elem.classList.add(this.fontIcon);
+      }
+      this._previousFontIconClass = this.fontIcon;
+    }
+  }
+  /**
+   * Cleans up a value to be used as a fontIcon or fontSet.
+   * Since the value ends up being assigned as a CSS class, we
+   * have to trim the value and omit space-separated values.
+   */
+  _cleanupFontValue(value) {
+    return typeof value === "string" ? value.trim().split(" ")[0] : value;
+  }
+  /**
+   * Prepends the current path to all elements that have an attribute pointing to a `FuncIRI`
+   * reference. This is required because WebKit browsers require references to be prefixed with
+   * the current path, if the page has a `base` tag.
+   */
+  _prependPathToReferences(path) {
+    const elements = this._elementsWithExternalReferences;
+    if (elements) {
+      elements.forEach((attrs, element) => {
+        attrs.forEach((attr) => {
+          element.setAttribute(attr.name, `url('${path}#${attr.value}')`);
+        });
+      });
+    }
+  }
+  /**
+   * Caches the children of an SVG element that have `url()`
+   * references that we need to prefix with the current path.
+   */
+  _cacheChildrenWithExternalReferences(element) {
+    const elementsWithFuncIri = element.querySelectorAll(funcIriAttributeSelector);
+    const elements = this._elementsWithExternalReferences = this._elementsWithExternalReferences || /* @__PURE__ */ new Map();
+    for (let i = 0; i < elementsWithFuncIri.length; i++) {
+      funcIriAttributes.forEach((attr) => {
+        const elementWithReference = elementsWithFuncIri[i];
+        const value = elementWithReference.getAttribute(attr);
+        const match2 = value ? value.match(funcIriPattern) : null;
+        if (match2) {
+          let attributes = elements.get(elementWithReference);
+          if (!attributes) {
+            attributes = [];
+            elements.set(elementWithReference, attributes);
+          }
+          attributes.push({
+            name: attr,
+            value: match2[1]
+          });
+        }
+      });
+    }
+  }
+  /** Sets a new SVG icon with a particular name. */
+  _updateSvgIcon(rawName) {
+    this._svgNamespace = null;
+    this._svgName = null;
+    this._currentIconFetch.unsubscribe();
+    if (rawName) {
+      const [namespace, iconName] = this._splitIconName(rawName);
+      if (namespace) {
+        this._svgNamespace = namespace;
+      }
+      if (iconName) {
+        this._svgName = iconName;
+      }
+      this._currentIconFetch = this._iconRegistry.getNamedSvgIcon(iconName, namespace).pipe(take(1)).subscribe((svg) => this._setSvgElement(svg), (err) => {
+        const errorMessage = `Error retrieving icon ${namespace}:${iconName}! ${err.message}`;
+        this._errorHandler.handleError(new Error(errorMessage));
+      });
+    }
+  }
+};
+_MatIcon.\u0275fac = function MatIcon_Factory(t) {
+  return new (t || _MatIcon)(\u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(MatIconRegistry), \u0275\u0275injectAttribute("aria-hidden"), \u0275\u0275directiveInject(MAT_ICON_LOCATION), \u0275\u0275directiveInject(ErrorHandler), \u0275\u0275directiveInject(MAT_ICON_DEFAULT_OPTIONS, 8));
+};
+_MatIcon.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+  type: _MatIcon,
+  selectors: [["mat-icon"]],
+  hostAttrs: ["role", "img", 1, "mat-icon", "notranslate"],
+  hostVars: 8,
+  hostBindings: function MatIcon_HostBindings(rf, ctx) {
+    if (rf & 2) {
+      \u0275\u0275attribute("data-mat-icon-type", ctx._usingFontIcon() ? "font" : "svg")("data-mat-icon-name", ctx._svgName || ctx.fontIcon)("data-mat-icon-namespace", ctx._svgNamespace || ctx.fontSet)("fontIcon", ctx._usingFontIcon() ? ctx.fontIcon : null);
+      \u0275\u0275classProp("mat-icon-inline", ctx.inline)("mat-icon-no-color", ctx.color !== "primary" && ctx.color !== "accent" && ctx.color !== "warn");
+    }
+  },
+  inputs: {
+    color: "color",
+    inline: "inline",
+    svgIcon: "svgIcon",
+    fontSet: "fontSet",
+    fontIcon: "fontIcon"
+  },
+  exportAs: ["matIcon"],
+  features: [\u0275\u0275InheritDefinitionFeature],
+  ngContentSelectors: _c06,
+  decls: 1,
+  vars: 0,
+  template: function MatIcon_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275projectionDef();
+      \u0275\u0275projection(0);
+    }
+  },
+  styles: [".mat-icon{-webkit-user-select:none;user-select:none;background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px;overflow:hidden}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}.mat-icon.mat-ligature-font[fontIcon]::before{content:attr(fontIcon)}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}"],
+  encapsulation: 2,
+  changeDetection: 0
+});
+var MatIcon = _MatIcon;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatIcon, [{
+    type: Component,
+    args: [{
+      template: "<ng-content></ng-content>",
+      selector: "mat-icon",
+      exportAs: "matIcon",
+      inputs: ["color"],
+      host: {
+        "role": "img",
+        "class": "mat-icon notranslate",
+        "[attr.data-mat-icon-type]": '_usingFontIcon() ? "font" : "svg"',
+        "[attr.data-mat-icon-name]": "_svgName || fontIcon",
+        "[attr.data-mat-icon-namespace]": "_svgNamespace || fontSet",
+        "[attr.fontIcon]": "_usingFontIcon() ? fontIcon : null",
+        "[class.mat-icon-inline]": "inline",
+        "[class.mat-icon-no-color]": 'color !== "primary" && color !== "accent" && color !== "warn"'
+      },
+      encapsulation: ViewEncapsulation$1.None,
+      changeDetection: ChangeDetectionStrategy.OnPush,
+      styles: [".mat-icon{-webkit-user-select:none;user-select:none;background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px;overflow:hidden}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}.mat-icon.mat-ligature-font[fontIcon]::before{content:attr(fontIcon)}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}"]
+    }]
+  }], function() {
+    return [{
+      type: ElementRef
+    }, {
+      type: MatIconRegistry
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Attribute,
+        args: ["aria-hidden"]
+      }]
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Inject,
+        args: [MAT_ICON_LOCATION]
+      }]
+    }, {
+      type: ErrorHandler
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Optional
+      }, {
+        type: Inject,
+        args: [MAT_ICON_DEFAULT_OPTIONS]
+      }]
+    }];
+  }, {
+    inline: [{
+      type: Input
+    }],
+    svgIcon: [{
+      type: Input
+    }],
+    fontSet: [{
+      type: Input
+    }],
+    fontIcon: [{
+      type: Input
+    }]
+  });
+})();
+var _MatIconModule = class _MatIconModule {
+};
+_MatIconModule.\u0275fac = function MatIconModule_Factory(t) {
+  return new (t || _MatIconModule)();
+};
+_MatIconModule.\u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+  type: _MatIconModule
+});
+_MatIconModule.\u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+  imports: [MatCommonModule, MatCommonModule]
+});
+var MatIconModule = _MatIconModule;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatIconModule, [{
+    type: NgModule,
+    args: [{
+      imports: [MatCommonModule],
+      exports: [MatIcon, MatCommonModule],
+      declarations: [MatIcon]
+    }]
+  }], null, null);
+})();
+
 // src/app/components/education/education.component.ts
+function EducationComponent_mat_expansion_panel_17_p_5_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "p");
+    \u0275\u0275text(1);
+    \u0275\u0275pipe(2, "translate");
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const skill_r3 = ctx.$implicit;
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, skill_r3));
+  }
+}
+function EducationComponent_mat_expansion_panel_17_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "mat-expansion-panel")(1, "mat-expansion-panel-header")(2, "mat-panel-title");
+    \u0275\u0275text(3);
+    \u0275\u0275pipe(4, "translate");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275template(5, EducationComponent_mat_expansion_panel_17_p_5_Template, 3, 3, "p", 7);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const subject_r1 = ctx.$implicit;
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, subject_r1.title), " ");
+    \u0275\u0275advance(2);
+    \u0275\u0275property("ngForOf", subject_r1.skills);
+  }
+}
 var _EducationComponent = class _EducationComponent {
+  constructor() {
+    this.telecom = {
+      subjects: [
+        {
+          title: "Data",
+          skills: [
+            "RELATIONAL_DATABASES",
+            "NOSQL",
+            "DATA_BACKUP",
+            "DATA_VISUALIZATION",
+            "COMPUTING_AND_PROGRAMMING_TOOLS"
+          ]
+        },
+        {
+          title: "DEV",
+          skills: [
+            "ALGORITHMS_AND_DATA_STRUCTURES",
+            "LINUX_SYSTEMS_AND_TOOLS",
+            "WEB_TECHNOLOGIES",
+            "OBJECT_ORIENTED_PROGRAMMING",
+            "SCRIPTING_LANGUAGES"
+          ]
+        },
+        {
+          title: "CAPTURE_TRANSMISSION_ELECTRONICS",
+          skills: [
+            "DATA_CAPTURE_INSTRUMENTATION",
+            "PHYSICS_OF_TRANSMISSIONS",
+            "COMPONENTS_FOR_EXECUTION_ARCHITECTURE",
+            "TELECOMMUNICATIONS_CHAIN",
+            "NETWORK_PRINCIPLES"
+          ]
+        },
+        {
+          title: "SCIENTIFIC_FUNDAMENTALS",
+          skills: [
+            "MATHEMATICAL_TECHNIQUES",
+            "PROBABILITIES",
+            "STATISTICS",
+            "ADVANCED_STATISTICS"
+          ]
+        },
+        {
+          title: "PROFESSIONAL_ENVIRONMENT",
+          skills: [
+            "CREATIVITY_TECHNIQUES",
+            "PROJECT_MANAGEMENT",
+            "MULTIDISCIPLINARY_WORKSHOP",
+            "FINANCIAL_MANAGEMENT",
+            "ENGLISH",
+            "USAGE_DESIGN",
+            "DIGITAL_LEGISLATION",
+            "WRITTEN_EXPRESSION_TECHNIQUES"
+          ]
+        }
+      ]
+    };
+  }
 };
 _EducationComponent.\u0275fac = function EducationComponent_Factory(t) {
   return new (t || _EducationComponent)();
 };
-_EducationComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _EducationComponent, selectors: [["app-education"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 64, vars: 93, consts: [[1, "telecom", "shadow"], ["src", "assets/images/telecom/telecom.png", "alt", "telecom"]], template: function EducationComponent_Template(rf, ctx) {
+_EducationComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _EducationComponent, selectors: [["app-education"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 18, vars: 1, consts: [[1, "chrono"], [1, "graph"], [1, "bar"], [1, "disk"], [1, "content"], [1, "telecom", "shadow"], ["src", "assets/images/telecom/telecom.png", "alt", "telecom"], [4, "ngFor", "ngForOf"]], template: function EducationComponent_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 0);
-    \u0275\u0275element(1, "img", 1);
-    \u0275\u0275elementStart(2, "mat-accordion")(3, "mat-expansion-panel")(4, "mat-expansion-panel-header")(5, "mat-panel-title");
-    \u0275\u0275text(6, " Data ");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(7, "p");
-    \u0275\u0275text(8);
-    \u0275\u0275pipe(9, "translate");
-    \u0275\u0275pipe(10, "translate");
-    \u0275\u0275pipe(11, "translate");
-    \u0275\u0275pipe(12, "translate");
-    \u0275\u0275pipe(13, "translate");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(14, "mat-expansion-panel")(15, "mat-expansion-panel-header")(16, "mat-panel-title");
-    \u0275\u0275text(17);
-    \u0275\u0275pipe(18, "translate");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(19, "p");
-    \u0275\u0275text(20);
-    \u0275\u0275pipe(21, "translate");
-    \u0275\u0275pipe(22, "translate");
-    \u0275\u0275pipe(23, "translate");
-    \u0275\u0275pipe(24, "translate");
-    \u0275\u0275pipe(25, "translate");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(26, "mat-expansion-panel")(27, "mat-expansion-panel-header")(28, "mat-panel-title");
-    \u0275\u0275text(29);
-    \u0275\u0275pipe(30, "translate");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(31, "p");
-    \u0275\u0275text(32);
-    \u0275\u0275pipe(33, "translate");
-    \u0275\u0275pipe(34, "translate");
-    \u0275\u0275pipe(35, "translate");
-    \u0275\u0275pipe(36, "translate");
-    \u0275\u0275pipe(37, "translate");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(38, "mat-expansion-panel")(39, "mat-expansion-panel-header")(40, "mat-panel-title");
-    \u0275\u0275text(41);
-    \u0275\u0275pipe(42, "translate");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(43, "p");
-    \u0275\u0275text(44);
-    \u0275\u0275pipe(45, "translate");
-    \u0275\u0275pipe(46, "translate");
-    \u0275\u0275pipe(47, "translate");
-    \u0275\u0275pipe(48, "translate");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(49, "mat-expansion-panel")(50, "mat-expansion-panel-header")(51, "mat-panel-title");
-    \u0275\u0275text(52);
-    \u0275\u0275pipe(53, "translate");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(54, "p");
-    \u0275\u0275text(55);
-    \u0275\u0275pipe(56, "translate");
-    \u0275\u0275pipe(57, "translate");
-    \u0275\u0275pipe(58, "translate");
-    \u0275\u0275pipe(59, "translate");
-    \u0275\u0275pipe(60, "translate");
-    \u0275\u0275pipe(61, "translate");
-    \u0275\u0275pipe(62, "translate");
-    \u0275\u0275pipe(63, "translate");
-    \u0275\u0275elementEnd()()()();
+    \u0275\u0275elementStart(0, "div", 0)(1, "div", 1);
+    \u0275\u0275element(2, "div", 2)(3, "div", 3)(4, "div", 3)(5, "div", 3);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(6, "li")(7, "ul");
+    \u0275\u0275text(8, "2025");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(9, "ul");
+    \u0275\u0275text(10, "2022");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(11, "ul");
+    \u0275\u0275text(12, "2020");
+    \u0275\u0275elementEnd()()();
+    \u0275\u0275elementStart(13, "div", 4)(14, "div", 5);
+    \u0275\u0275element(15, "img", 6);
+    \u0275\u0275elementStart(16, "mat-accordion");
+    \u0275\u0275template(17, EducationComponent_mat_expansion_panel_17_Template, 6, 4, "mat-expansion-panel", 7);
+    \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
-    \u0275\u0275advance(8);
-    \u0275\u0275textInterpolate5("", \u0275\u0275pipeBind1(9, 31, "RELATIONAL_DATABASES"), ", ", \u0275\u0275pipeBind1(10, 33, "NOSQL"), ", ", \u0275\u0275pipeBind1(11, 35, "DATA_BACKUP"), ", ", \u0275\u0275pipeBind1(12, 37, "DATA_VISUALIZATION"), ", ", \u0275\u0275pipeBind1(13, 39, "COMPUTING_AND_PROGRAMMING_TOOLS"), "");
-    \u0275\u0275advance(9);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(18, 41, "DEV"), " ");
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate5(" ", \u0275\u0275pipeBind1(21, 43, "ALGORITHMS_AND_DATA_STRUCTURES"), ", ", \u0275\u0275pipeBind1(22, 45, "LINUX_SYSTEMS_AND_TOOLS"), ", ", \u0275\u0275pipeBind1(23, 47, "WEB_TECHNOLOGIES"), ", ", \u0275\u0275pipeBind1(24, 49, "OBJECT_ORIENTED_PROGRAMMING"), ", ", \u0275\u0275pipeBind1(25, 51, "SCRIPTING_LANGUAGES"), " ");
-    \u0275\u0275advance(9);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(30, 53, "CAPTURE_TRANSMISSION_ELECTRONICS"), " ");
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate5(" ", \u0275\u0275pipeBind1(33, 55, "DATA_CAPTURE_INSTRUMENTATION"), ", ", \u0275\u0275pipeBind1(34, 57, "PHYSICS_OF_TRANSMISSIONS"), ", ", \u0275\u0275pipeBind1(35, 59, "COMPONENTS_FOR_EXECUTION_ARCHITECTURE"), ", ", \u0275\u0275pipeBind1(36, 61, "TELECOMMUNICATIONS_CHAIN"), ", ", \u0275\u0275pipeBind1(37, 63, "NETWORK_PRINCIPLES"), " ");
-    \u0275\u0275advance(9);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(42, 65, "SCIENTIFIC_FUNDAMENTALS"), " ");
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate4(" ", \u0275\u0275pipeBind1(45, 67, "MATHEMATICAL_TECHNIQUES"), ", ", \u0275\u0275pipeBind1(46, 69, "PROBABILITIES"), ", ", \u0275\u0275pipeBind1(47, 71, "STATISTICS"), ", ", \u0275\u0275pipeBind1(48, 73, "ADVANCED_STATISTICS"), " ");
-    \u0275\u0275advance(8);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(53, 75, "PROFESSIONAL_ENVIRONMENT"), " ");
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate8(" ", \u0275\u0275pipeBind1(56, 77, "CREATIVITY_TECHNIQUES"), ", ", \u0275\u0275pipeBind1(57, 79, "PROJECT_MANAGEMENT"), ", ", \u0275\u0275pipeBind1(58, 81, "MULTIDISCIPLINARY_WORKSHOP"), ", ", \u0275\u0275pipeBind1(59, 83, "FINANCIAL_MANAGEMENT"), ", ", \u0275\u0275pipeBind1(60, 85, "ENGLISH"), ", ", \u0275\u0275pipeBind1(61, 87, "USAGE_DESIGN"), ", ", \u0275\u0275pipeBind1(62, 89, "DIGITAL_LEGISLATION"), ", ", \u0275\u0275pipeBind1(63, 91, "WRITTEN_EXPRESSION_TECHNIQUES"), " ");
+    \u0275\u0275advance(17);
+    \u0275\u0275property("ngForOf", ctx.telecom.subjects);
   }
-}, dependencies: [MatExpansionModule, MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, TranslateModule, TranslatePipe], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding: 15px;\n}\nimg[_ngcontent-%COMP%] {\n  height: fit-content;\n}\n.telecom[_ngcontent-%COMP%] {\n  background-color: #70aab7;\n  border-radius: 3px;\n  height: calc(100% - 45px);\n  display: flex;\n  padding: 10px;\n  width: 95%;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2VkdWNhdGlvbi9lZHVjYXRpb24uY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxNXB4O1xufVxuaW1nIHtcbiAgaGVpZ2h0OiBmaXQtY29udGVudDtcbn1cblxuLnRlbGVjb20ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBtYXAuZ2V0KCRjb2xvci1wYWxldHRlLCBcIjNcIik7XG4gIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgaGVpZ2h0OiBjYWxjKDEwMCUgLSA0NXB4KTtcbiAgZGlzcGxheTogZmxleDtcbiAgcGFkZGluZzogMTBweDtcbiAgd2lkdGg6IDk1JTtcbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFHQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLFNBQUE7QUFDQSxXQUFBOztBQUVGO0FBQ0UsVUFBQTs7QUFHRixDQUFBO0FBQ0Usb0JBQUE7QUFDQSxpQkFBQTtBQUNBLFVBQUEsS0FBQSxLQUFBLEVBQUE7QUFDQSxXQUFBO0FBQ0EsV0FBQTtBQUNBLFNBQUE7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
+}, dependencies: [MatExpansionModule, MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, TranslateModule, TranslatePipe, NgForOf, MatIconModule], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding: 15px;\n  height: calc(100% - 25px);\n  gap: 20px;\n}\nimg[_ngcontent-%COMP%] {\n  height: fit-content;\n}\n.chrono[_ngcontent-%COMP%] {\n  border-radius: 3px;\n  height: calc(100% - 20px);\n  display: flex;\n  padding: 10px;\n}\nul[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 5px;\n}\n.bar[_ngcontent-%COMP%] {\n  position: absolute;\n  left: 5px;\n  background-color: black;\n  width: 10px;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.graph[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.disk[_ngcontent-%COMP%] {\n  padding: 10px;\n  border-radius: 10px;\n  background-color: black;\n}\nli[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.telecom[_ngcontent-%COMP%] {\n  background-color: #70aab7;\n  border-radius: 3px;\n  height: 50%;\n  display: flex;\n  padding: 10px;\n  width: 95%;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2VkdWNhdGlvbi9lZHVjYXRpb24uY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxNXB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDI1cHgpO1xuICBnYXA6IDIwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xufVxuXG4uY2hyb25vIHtcbiAgLy9iYWNrZ3JvdW5kLWNvbG9yOiBtYXAuZ2V0KCRjb2xvci1wYWxldHRlLCBcIjNcIik7XG4gIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgaGVpZ2h0OiBjYWxjKDEwMCUgLSAyMHB4KTtcbiAgZGlzcGxheTogZmxleDtcbiAgcGFkZGluZzogMTBweDtcbn1cbnVsIHtcbiAgbWFyZ2luOiAwO1xuICBwYWRkaW5nOiA1cHg7XG59XG4uYmFyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiA1cHg7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICB3aWR0aDogMTBweDtcbiAgaGVpZ2h0OiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uZ3JhcGgge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogMTAwJTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuLmRpc2sge1xuICBwYWRkaW5nOiAxMHB4O1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbn1cbmxpIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuXG4udGVsZWNvbSB7XG4gIGJhY2tncm91bmQtY29sb3I6IG1hcC5nZXQoJGNvbG9yLXBhbGV0dGUsIFwiM1wiKTtcbiAgYm9yZGVyLXJhZGl1czogM3B4O1xuICBoZWlnaHQ6IDUwJTtcbiAgZGlzcGxheTogZmxleDtcbiAgcGFkZGluZzogMTBweDtcbiAgd2lkdGg6IDk1JTtcbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFHQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLFNBQUE7QUFDQSxXQUFBO0FBQ0EsVUFBQSxLQUFBLEtBQUEsRUFBQTtBQUNBLE9BQUE7O0FBRUY7QUFDRSxVQUFBOztBQUdGLENBQUE7QUFFRSxpQkFBQTtBQUNBLFVBQUEsS0FBQSxLQUFBLEVBQUE7QUFDQSxXQUFBO0FBQ0EsV0FBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxXQUFBOztBQUVGLENBQUE7QUFDRSxZQUFBO0FBQ0EsUUFBQTtBQUNBLG9CQUFBO0FBQ0EsU0FBQTtBQUNBLFVBQUE7QUFDQSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTs7QUFFRixDQUFBO0FBQ0UsWUFBQTtBQUNBLFVBQUE7QUFDQSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGlCQUFBO0FBQ0Esb0JBQUE7O0FBRUY7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTs7QUFHRixDQUFBO0FBQ0Usb0JBQUE7QUFDQSxpQkFBQTtBQUNBLFVBQUE7QUFDQSxXQUFBO0FBQ0EsV0FBQTtBQUNBLFNBQUE7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var EducationComponent = _EducationComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(EducationComponent, { className: "EducationComponent", filePath: "src\\app\\components\\education\\education.component.ts", lineNumber: 12 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(EducationComponent, { className: "EducationComponent", filePath: "src\\app\\components\\education\\education.component.ts", lineNumber: 14 });
 })();
 
 // src/app/components/first-slide/first-slide.component.ts
@@ -61889,21 +62822,21 @@ _FirstSlideComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ t
     \u0275\u0275advance();
     \u0275\u0275property("ngClass", ctx.isTypingCompleted ? "" : "cursor");
   }
-}, dependencies: [NgClass], styles: ["\n\nimg[_ngcontent-%COMP%] {\n  height: 100%;\n  width: fit-content;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n  font-size: 50px;\n  align-items: center;\n}\n.cursor[_ngcontent-%COMP%] {\n  border-right: 4px solid black;\n  animation: _ngcontent-%COMP%_blinkCursor 0.75s step-end infinite;\n}\n@keyframes _ngcontent-%COMP%_blinkCursor {\n  0% {\n    border-right-color: black;\n  }\n  50% {\n    border-right-color: transparent;\n  }\n  100% {\n    border-right-color: black;\n  }\n}\n.writing-text[_ngcontent-%COMP%] {\n  font-size: 100px;\n  padding: 20px;\n}\n@media (max-width: 500px) {\n  .content[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n  img[_ngcontent-%COMP%] {\n    width: 100%;\n    height: fit-content;\n  }\n  .writing-text[_ngcontent-%COMP%] {\n    font-size: 20px;\n    padding: 20px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2ZpcnN0LXNsaWRlL2ZpcnN0LXNsaWRlLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJpbWcge1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiBmaXQtY29udGVudDtcbn1cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xuICBmb250LXNpemU6IDUwcHg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4uY3Vyc29yIHtcbiAgYm9yZGVyLXJpZ2h0OiA0cHggc29saWQgYmxhY2s7XG4gIGFuaW1hdGlvbjogYmxpbmtDdXJzb3IgMC43NXMgc3RlcC1lbmQgaW5maW5pdGU7XG59XG5cbkBrZXlmcmFtZXMgYmxpbmtDdXJzb3Ige1xuICAwJSB7XG4gICAgYm9yZGVyLXJpZ2h0LWNvbG9yOiBibGFjaztcbiAgfVxuICA1MCUge1xuICAgIGJvcmRlci1yaWdodC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIH1cbiAgMTAwJSB7XG4gICAgYm9yZGVyLXJpZ2h0LWNvbG9yOiBibGFjaztcbiAgfVxufVxuXG4ud3JpdGluZy10ZXh0IHtcbiAgZm9udC1zaXplOiAxMDBweDtcbiAgcGFkZGluZzogMjBweDtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDUwMHB4KSB7XG4gIC5jb250ZW50IHtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB9XG4gIGltZyB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiBmaXQtY29udGVudDtcbiAgfVxuICAud3JpdGluZy10ZXh0IHtcbiAgICBmb250LXNpemU6IDIwcHg7XG4gICAgcGFkZGluZzogMjBweDtcbiAgfVxufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUFBO0FBQ0UsVUFBQTtBQUNBLFNBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxVQUFBO0FBQ0EsYUFBQTtBQUNBLGVBQUE7O0FBRUYsQ0FBQTtBQUNFLGdCQUFBLElBQUEsTUFBQTtBQUNBLGFBQUEsWUFBQSxNQUFBLFNBQUE7O0FBR0YsV0FIRTtBQUlBO0FBQ0Usd0JBQUE7O0FBRUY7QUFDRSx3QkFBQTs7QUFFRjtBQUNFLHdCQUFBOzs7QUFJSixDQUFBO0FBQ0UsYUFBQTtBQUNBLFdBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBN0JGO0FBOEJJLG9CQUFBOztBQUVGO0FBQ0UsV0FBQTtBQUNBLFlBQUE7O0FBRUYsR0FiRjtBQWNJLGVBQUE7QUFDQSxhQUFBOzs7IiwKICAibmFtZXMiOiBbXQp9Cg== */"] });
+}, dependencies: [NgClass], styles: ["\n\nimg[_ngcontent-%COMP%] {\n  height: 100%;\n  width: fit-content;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n  font-size: 50px;\n  align-items: center;\n}\n.cursor[_ngcontent-%COMP%] {\n  border-right: 4px solid black;\n  animation: _ngcontent-%COMP%_blinkCursor 0.75s step-end infinite;\n}\n@keyframes _ngcontent-%COMP%_blinkCursor {\n  0% {\n    border-right-color: black;\n  }\n  50% {\n    border-right-color: transparent;\n  }\n  100% {\n    border-right-color: black;\n  }\n}\n.writing-text[_ngcontent-%COMP%] {\n  font-size: 100px;\n  padding: 20px;\n}\n@media (max-width: 500px) {\n  .content[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n  img[_ngcontent-%COMP%] {\n    width: 50%;\n    height: fit-content;\n  }\n  .writing-text[_ngcontent-%COMP%] {\n    font-size: 30px;\n    padding: 20px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2ZpcnN0LXNsaWRlL2ZpcnN0LXNsaWRlLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJpbWcge1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiBmaXQtY29udGVudDtcbn1cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xuICBmb250LXNpemU6IDUwcHg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4uY3Vyc29yIHtcbiAgYm9yZGVyLXJpZ2h0OiA0cHggc29saWQgYmxhY2s7XG4gIGFuaW1hdGlvbjogYmxpbmtDdXJzb3IgMC43NXMgc3RlcC1lbmQgaW5maW5pdGU7XG59XG5cbkBrZXlmcmFtZXMgYmxpbmtDdXJzb3Ige1xuICAwJSB7XG4gICAgYm9yZGVyLXJpZ2h0LWNvbG9yOiBibGFjaztcbiAgfVxuICA1MCUge1xuICAgIGJvcmRlci1yaWdodC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIH1cbiAgMTAwJSB7XG4gICAgYm9yZGVyLXJpZ2h0LWNvbG9yOiBibGFjaztcbiAgfVxufVxuXG4ud3JpdGluZy10ZXh0IHtcbiAgZm9udC1zaXplOiAxMDBweDtcbiAgcGFkZGluZzogMjBweDtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDUwMHB4KSB7XG4gIC5jb250ZW50IHtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB9XG4gIGltZyB7XG4gICAgd2lkdGg6IDUwJTtcbiAgICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICB9XG4gIC53cml0aW5nLXRleHQge1xuICAgIGZvbnQtc2l6ZTogMzBweDtcbiAgICBwYWRkaW5nOiAyMHB4O1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQUE7QUFDRSxVQUFBO0FBQ0EsU0FBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLFVBQUE7QUFDQSxhQUFBO0FBQ0EsZUFBQTs7QUFFRixDQUFBO0FBQ0UsZ0JBQUEsSUFBQSxNQUFBO0FBQ0EsYUFBQSxZQUFBLE1BQUEsU0FBQTs7QUFHRixXQUhFO0FBSUE7QUFDRSx3QkFBQTs7QUFFRjtBQUNFLHdCQUFBOztBQUVGO0FBQ0Usd0JBQUE7OztBQUlKLENBQUE7QUFDRSxhQUFBO0FBQ0EsV0FBQTs7QUFHRixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0E3QkY7QUE4Qkksb0JBQUE7O0FBRUY7QUFDRSxXQUFBO0FBQ0EsWUFBQTs7QUFFRixHQWJGO0FBY0ksZUFBQTtBQUNBLGFBQUE7OzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
 var FirstSlideComponent = _FirstSlideComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FirstSlideComponent, { className: "FirstSlideComponent", filePath: "src\\app\\components\\first-slide\\first-slide.component.ts", lineNumber: 13 });
 })();
 
 // src/app/app.component.ts
-var _c06 = ["swiperContainer"];
+var _c07 = ["swiperContainer"];
 register();
 var _AppComponent = class _AppComponent {
   constructor() {
     this.title = "portfolio";
     this.swiper = Swiper;
   }
-  onResize(event2) {
+  onResize() {
     this.updateSize();
   }
   ngAfterViewInit() {
@@ -61915,6 +62848,7 @@ var _AppComponent = class _AppComponent {
     };
     Object.assign(this.swiperContainer.nativeElement, swiperOption);
     this.swiperContainer.nativeElement.initialize();
+    this.goToSlide(4);
   }
   updateSize() {
     this.swiperContainer.nativeElement.height = window.innerHeight - 82;
@@ -61928,7 +62862,7 @@ _AppComponent.\u0275fac = function AppComponent_Factory(t) {
 };
 _AppComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], viewQuery: function AppComponent_Query(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275viewQuery(_c06, 5);
+    \u0275\u0275viewQuery(_c07, 5);
   }
   if (rf & 2) {
     let _t;
