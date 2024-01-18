@@ -15,13 +15,30 @@
   <div class="telecom shadow">
     <img src="assets/images/telecom/telecom.png" alt="telecom"/>
     <mat-accordion>
+      <h3>Data Engineering:</h3>
       <mat-expansion-panel *ngFor="let subject of telecom.subjects">
         <mat-expansion-panel-header>
           <mat-panel-title>
             {{ subject.title|translate }}
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <p *ngFor="let skill of subject.skills">{{ skill|translate }}</p>
+        <span
+          *ngFor="let skill of subject.skills; let i=index">{{ skill|translate }}{{ subject.skills.length !== i + 1 ? ', ' : '' }}</span>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="telecom shadow">
+    <img src="assets/images/telecom/telecom.png" alt="telecom"/>
+    <mat-accordion>
+      <h3>Data Engineering:</h3>
+      <mat-expansion-panel *ngFor="let subject of telecom.subjects">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ subject.title|translate }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <span
+          *ngFor="let skill of subject.skills; let i=index">{{ skill|translate }}{{ subject.skills.length !== i + 1 ? ', ' : '' }}</span>
       </mat-expansion-panel>
     </mat-accordion>
   </div>
