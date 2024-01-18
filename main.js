@@ -61845,8 +61845,13 @@ var _FirstSlideComponent = class _FirstSlideComponent {
     this.isTypingCompleted = false;
     this.index = 0;
   }
+  ngOnDestroy() {
+    window.removeEventListener("load", this.initTypeWriter);
+  }
   ngOnInit() {
-    this.translateService.get("INTRO").subscribe(console.log);
+    window.addEventListener("load", () => this.initTypeWriter());
+  }
+  initTypeWriter() {
     this.translateService.onLangChange.asObservable().pipe(startWith(null)).subscribe(() => {
       this.index = 0;
       this.texteAnime = "";
