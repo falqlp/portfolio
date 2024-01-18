@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { startWith } from 'rxjs';
@@ -10,15 +10,22 @@ import { startWith } from 'rxjs';
   templateUrl: './first-slide.component.html',
   styleUrl: './first-slide.component.scss',
 })
-export class FirstSlideComponent implements OnInit {
+export class FirstSlideComponent implements OnInit, OnDestroy {
   protected texteAnime = '';
   protected isTypingCompleted = false;
   private index = 0;
 
   constructor(protected translateService: TranslateService) {}
 
+  public ngOnDestroy(): void {
+    window.removeEventListener('load', this.initTypeWriter);
+  }
+
   public ngOnInit(): void {
-    this.translateService.get('INTRO').subscribe(console.log);
+    window.addEventListener('load', () => this.initTypeWriter());
+  }
+
+  protected initTypeWriter(): void {
     this.translateService.onLangChange
       .asObservable()
       .pipe(startWith(null))

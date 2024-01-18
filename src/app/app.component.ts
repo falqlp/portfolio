@@ -41,11 +41,11 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('swiperContainer') protected swiperContainer: ElementRef;
   protected swiper = Swiper;
   @HostListener('window:resize', ['$event'])
-  onResize(event: Event): void {
+  onResize(): void {
     this.updateSize();
   }
 
-  ngAfterViewInit(): void {
+  public ngAfterViewInit(): void {
     const swiperOption: SwiperOptions = {
       effect: 'slide',
       slidesPerView: 1,
@@ -54,6 +54,7 @@ export class AppComponent implements AfterViewInit {
     };
     Object.assign(this.swiperContainer.nativeElement, swiperOption);
     this.swiperContainer.nativeElement.initialize();
+    this.goToSlide(4);
   }
 
   protected updateSize(): void {
