@@ -50173,7 +50173,6 @@ function PrimaryProjectsComponent_p_26_Template(rf, ctx) {
 }
 var _PrimaryProjectsComponent = class _PrimaryProjectsComponent {
   constructor() {
-    this.technologiesIconPath = "assets/images/technologies/";
     this.pokemonManager = {
       p: ["PM_DESC1", "PM_DESC2", "PM_DESC3"],
       technologies: [
@@ -62656,7 +62655,7 @@ var MatIconModule = _MatIconModule;
 })();
 
 // src/app/components/education/education.component.ts
-function EducationComponent_mat_expansion_panel_19_span_5_Template(rf, ctx) {
+function EducationComponent_div_14_mat_expansion_panel_5_span_5_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "span");
     \u0275\u0275text(1);
@@ -62664,120 +62663,144 @@ function EducationComponent_mat_expansion_panel_19_span_5_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const skill_r4 = ctx.$implicit;
-    const i_r5 = ctx.index;
-    const subject_r2 = \u0275\u0275nextContext().$implicit;
+    const skill_r5 = ctx.$implicit;
+    const i_r6 = ctx.index;
+    const subject_r3 = \u0275\u0275nextContext().$implicit;
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate2("", \u0275\u0275pipeBind1(2, 2, skill_r4), "", subject_r2.skills.length !== i_r5 + 1 ? ", " : "", "");
+    \u0275\u0275textInterpolate2("", \u0275\u0275pipeBind1(2, 2, skill_r5), "", subject_r3.skills.length !== i_r6 + 1 ? ", " : "", "");
   }
 }
-function EducationComponent_mat_expansion_panel_19_Template(rf, ctx) {
+function EducationComponent_div_14_mat_expansion_panel_5_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-expansion-panel")(1, "mat-expansion-panel-header")(2, "mat-panel-title");
     \u0275\u0275text(3);
     \u0275\u0275pipe(4, "translate");
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(5, EducationComponent_mat_expansion_panel_19_span_5_Template, 3, 4, "span", 7);
+    \u0275\u0275template(5, EducationComponent_div_14_mat_expansion_panel_5_span_5_Template, 3, 4, "span", 8);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const subject_r2 = ctx.$implicit;
+    const subject_r3 = ctx.$implicit;
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, subject_r2.title), " ");
+    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, subject_r3.title), " ");
     \u0275\u0275advance(2);
-    \u0275\u0275property("ngForOf", subject_r2.skills);
+    \u0275\u0275property("ngForOf", subject_r3.skills);
   }
 }
-function EducationComponent_mat_expansion_panel_25_span_5_Template(rf, ctx) {
+function EducationComponent_div_14_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "span");
-    \u0275\u0275text(1);
-    \u0275\u0275pipe(2, "translate");
+    \u0275\u0275elementStart(0, "div", 6);
+    \u0275\u0275element(1, "img", 7);
+    \u0275\u0275elementStart(2, "mat-accordion")(3, "h3");
+    \u0275\u0275text(4);
     \u0275\u0275elementEnd();
-  }
-  if (rf & 2) {
-    const skill_r9 = ctx.$implicit;
-    const i_r10 = ctx.index;
-    const subject_r7 = \u0275\u0275nextContext().$implicit;
-    \u0275\u0275advance();
-    \u0275\u0275textInterpolate2("", \u0275\u0275pipeBind1(2, 2, skill_r9), "", subject_r7.skills.length !== i_r10 + 1 ? ", " : "", "");
-  }
-}
-function EducationComponent_mat_expansion_panel_25_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "mat-expansion-panel")(1, "mat-expansion-panel-header")(2, "mat-panel-title");
-    \u0275\u0275text(3);
-    \u0275\u0275pipe(4, "translate");
+    \u0275\u0275template(5, EducationComponent_div_14_mat_expansion_panel_5_Template, 6, 4, "mat-expansion-panel", 8);
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(5, EducationComponent_mat_expansion_panel_25_span_5_Template, 3, 4, "span", 7);
-    \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const subject_r7 = ctx.$implicit;
+    const education_r1 = ctx.$implicit;
+    \u0275\u0275advance();
+    \u0275\u0275property("src", education_r1.img, \u0275\u0275sanitizeUrl)("alt", education_r1.title);
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, subject_r7.title), " ");
-    \u0275\u0275advance(2);
-    \u0275\u0275property("ngForOf", subject_r7.skills);
+    \u0275\u0275textInterpolate1("", education_r1.title, ":");
+    \u0275\u0275advance();
+    \u0275\u0275property("ngForOf", education_r1.subjects);
   }
 }
 var _EducationComponent = class _EducationComponent {
   constructor() {
-    this.telecom = {
-      subjects: [
-        {
-          title: "Data",
-          skills: [
-            "RELATIONAL_DATABASES",
-            "NOSQL",
-            "DATA_BACKUP",
-            "DATA_VISUALIZATION",
-            "COMPUTING_AND_PROGRAMMING_TOOLS"
-          ]
-        },
-        {
-          title: "DEV",
-          skills: [
-            "ALGORITHMS_AND_DATA_STRUCTURES",
-            "LINUX_SYSTEMS_AND_TOOLS",
-            "WEB_TECHNOLOGIES",
-            "OBJECT_ORIENTED_PROGRAMMING",
-            "SCRIPTING_LANGUAGES"
-          ]
-        },
-        {
-          title: "CAPTURE_TRANSMISSION_ELECTRONICS",
-          skills: [
-            "DATA_CAPTURE_INSTRUMENTATION",
-            "PHYSICS_OF_TRANSMISSIONS",
-            "COMPONENTS_FOR_EXECUTION_ARCHITECTURE",
-            "TELECOMMUNICATIONS_CHAIN",
-            "NETWORK_PRINCIPLES"
-          ]
-        },
-        {
-          title: "SCIENTIFIC_FUNDAMENTALS",
-          skills: [
-            "MATHEMATICAL_TECHNIQUES",
-            "PROBABILITIES",
-            "STATISTICS",
-            "ADVANCED_STATISTICS"
-          ]
-        },
-        {
-          title: "PROFESSIONAL_ENVIRONMENT",
-          skills: [
-            "CREATIVITY_TECHNIQUES",
-            "PROJECT_MANAGEMENT",
-            "MULTIDISCIPLINARY_WORKSHOP",
-            "FINANCIAL_MANAGEMENT",
-            "ENGLISH",
-            "USAGE_DESIGN",
-            "DIGITAL_LEGISLATION",
-            "WRITTEN_EXPRESSION_TECHNIQUES"
-          ]
-        }
-      ]
-    };
+    this.educations = [
+      {
+        title: "Data engineering",
+        img: "assets/images/telecom/telecom.png",
+        subjects: [
+          {
+            title: "Data",
+            skills: [
+              "RELATIONAL_DATABASES",
+              "NOSQL",
+              "DATA_BACKUP",
+              "DATA_VISUALIZATION",
+              "COMPUTING_AND_PROGRAMMING_TOOLS"
+            ]
+          },
+          {
+            title: "DEV",
+            skills: [
+              "ALGORITHMS_AND_DATA_STRUCTURES",
+              "LINUX_SYSTEMS_AND_TOOLS",
+              "WEB_TECHNOLOGIES",
+              "OBJECT_ORIENTED_PROGRAMMING",
+              "SCRIPTING_LANGUAGES"
+            ]
+          },
+          {
+            title: "CAPTURE_TRANSMISSION_ELECTRONICS",
+            skills: [
+              "DATA_CAPTURE_INSTRUMENTATION",
+              "PHYSICS_OF_TRANSMISSIONS",
+              "COMPONENTS_FOR_EXECUTION_ARCHITECTURE",
+              "TELECOMMUNICATIONS_CHAIN",
+              "NETWORK_PRINCIPLES"
+            ]
+          },
+          {
+            title: "SCIENTIFIC_FUNDAMENTALS",
+            skills: [
+              "MATHEMATICAL_TECHNIQUES",
+              "PROBABILITIES",
+              "STATISTICS",
+              "ADVANCED_STATISTICS"
+            ]
+          },
+          {
+            title: "PROFESSIONAL_ENVIRONMENT",
+            skills: [
+              "CREATIVITY_TECHNIQUES",
+              "PROJECT_MANAGEMENT",
+              "MULTIDISCIPLINARY_WORKSHOP",
+              "FINANCIAL_MANAGEMENT",
+              "ENGLISH",
+              "USAGE_DESIGN",
+              "DIGITAL_LEGISLATION",
+              "WRITTEN_EXPRESSION_TECHNIQUES"
+            ]
+          }
+        ]
+      },
+      {
+        title: "DUT Mesures Physiques",
+        img: "assets/images/iut/iut-logo.png",
+        subjects: [
+          {
+            title: "PHYSICS",
+            skills: [
+              "THERMODYNAMICS",
+              "ELECTRICITY_AND_ELECTRONICS",
+              "MECHANICS_AND_MATERIAL_RESISTANCE",
+              "OPTICAL_SYSTEMS",
+              "FLUID_MECHANICS_AND_VACUUM_TECHNOLOGY"
+            ]
+          },
+          {
+            title: "CHEMISTRY",
+            skills: [
+              "ATOMIC_AND_MOLECULAR_STRUCTURES",
+              "REDOX_CHEMICAL_KINETICS",
+              "SPECTROSCOPIC_TECHNOLOGY"
+            ]
+          },
+          {
+            title: "SCIENTIFIC_FUNDAMENTALS",
+            skills: ["MATHEMATICS", "COMPUTER_SCIENCE"]
+          },
+          {
+            title: "PROFESSIONAL_ENVIRONMENT",
+            skills: ["ENGLISH", "EXPRESSION_COMMUNICATION"]
+          }
+        ]
+      }
+    ];
     this.iut = {
       subjects: [
         {
@@ -62813,7 +62836,7 @@ var _EducationComponent = class _EducationComponent {
 _EducationComponent.\u0275fac = function EducationComponent_Factory(t) {
   return new (t || _EducationComponent)();
 };
-_EducationComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _EducationComponent, selectors: [["app-education"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 26, vars: 2, consts: [[1, "chrono"], [1, "graph"], [1, "bar"], [1, "disk"], [1, "content"], [1, "telecom", "shadow"], ["src", "assets/images/telecom/telecom.png", "alt", "telecom"], [4, "ngFor", "ngForOf"], ["src", "../../../assets/images/iut/iut-logo.png", "alt", "telecom"]], template: function EducationComponent_Template(rf, ctx) {
+_EducationComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _EducationComponent, selectors: [["app-education"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 15, vars: 1, consts: [[1, "chrono"], [1, "graph"], [1, "bar"], [1, "disk"], [1, "content"], ["class", "education shadow", 4, "ngFor", "ngForOf"], [1, "education", "shadow"], [3, "src", "alt"], [4, "ngFor", "ngForOf"]], template: function EducationComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0)(1, "div", 1);
     \u0275\u0275element(2, "div", 2)(3, "div", 3)(4, "div", 3)(5, "div", 3);
@@ -62827,28 +62850,15 @@ _EducationComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
     \u0275\u0275elementStart(11, "ul");
     \u0275\u0275text(12, "2020");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(13, "div", 4)(14, "div", 5);
-    \u0275\u0275element(15, "img", 6);
-    \u0275\u0275elementStart(16, "mat-accordion")(17, "h3");
-    \u0275\u0275text(18, "Data Engineering:");
+    \u0275\u0275elementStart(13, "div", 4);
+    \u0275\u0275template(14, EducationComponent_div_14_Template, 6, 4, "div", 5);
     \u0275\u0275elementEnd();
-    \u0275\u0275template(19, EducationComponent_mat_expansion_panel_19_Template, 6, 4, "mat-expansion-panel", 7);
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(20, "div", 5);
-    \u0275\u0275element(21, "img", 8);
-    \u0275\u0275elementStart(22, "mat-accordion")(23, "h3");
-    \u0275\u0275text(24, "DUT Mesures Physiques:");
-    \u0275\u0275elementEnd();
-    \u0275\u0275template(25, EducationComponent_mat_expansion_panel_25_Template, 6, 4, "mat-expansion-panel", 7);
-    \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
-    \u0275\u0275advance(19);
-    \u0275\u0275property("ngForOf", ctx.telecom.subjects);
-    \u0275\u0275advance(6);
-    \u0275\u0275property("ngForOf", ctx.iut.subjects);
+    \u0275\u0275advance(14);
+    \u0275\u0275property("ngForOf", ctx.educations);
   }
-}, dependencies: [MatExpansionModule, MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, TranslateModule, TranslatePipe, NgForOf, MatIconModule], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding: 15px;\n  height: calc(100% - 25px);\n  gap: 20px;\n}\nimg[_ngcontent-%COMP%] {\n  height: fit-content;\n  width: 50%;\n}\n.chrono[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n}\nul[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 5px;\n}\n.bar[_ngcontent-%COMP%] {\n  border-radius: 10px;\n  position: absolute;\n  left: 5px;\n  background-color: black;\n  width: 10px;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.graph[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.disk[_ngcontent-%COMP%] {\n  padding: 10px;\n  border-radius: 10px;\n  background-color: black;\n}\nli[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.telecom[_ngcontent-%COMP%] {\n  background-color: #70aab7;\n  border-radius: 3px;\n  height: 50%;\n  display: flex;\n  padding: 10px;\n  width: calc(100% - 50px);\n}\np[_ngcontent-%COMP%] {\n  margin: 4px 0;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  gap: 25px;\n}\n@media (max-width: 500px) {\n  [_nghost-%COMP%] {\n    height: calc(100% - 80px);\n  }\n  .telecom[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n  .mat-expansion-panel-header[_ngcontent-%COMP%] {\n    height: 36px;\n  }\n  .mat-expansion-panel-spacing[_ngcontent-%COMP%] {\n    margin: 10px 0;\n  }\n  h3[_ngcontent-%COMP%] {\n    margin: 0 0 10px 0;\n  }\n  img[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2VkdWNhdGlvbi9lZHVjYXRpb24uY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxNXB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDI1cHgpO1xuICBnYXA6IDIwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICB3aWR0aDogNTAlO1xufVxuXG4uY2hyb25vIHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xufVxudWwge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDVweDtcbn1cbi5iYXIge1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDVweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIHdpZHRoOiAxMHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbi5ncmFwaCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uZGlzayB7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xufVxubGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi50ZWxlY29tIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIyXCIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIGhlaWdodDogNTAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiAxMHB4O1xuICB3aWR0aDogY2FsYygxMDAlIC0gNTBweCk7XG59XG5cbnAge1xuICBtYXJnaW46IDRweCAwO1xufVxuXG4uY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHdpZHRoOiAxMDAlO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IDI1cHg7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA1MDBweCkge1xuICA6aG9zdCB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMCUgLSA4MHB4KTtcbiAgfVxuICAudGVsZWNvbSB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgfVxuICAubWF0LWV4cGFuc2lvbi1wYW5lbC1oZWFkZXIge1xuICAgIGhlaWdodDogMzZweDtcbiAgfVxuICAubWF0LWV4cGFuc2lvbi1wYW5lbC1zcGFjaW5nIHtcbiAgICBtYXJnaW46IDEwcHggMDtcbiAgfVxuICBoMyB7XG4gICAgbWFyZ2luOiAwIDAgMTBweCAwO1xuICB9XG4gIGltZyB7XG4gICAgZGlzcGxheTogbm9uZTtcbiAgfVxufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUdBO0FBQ0UsV0FBQTtBQUNBLG1CQUFBO0FBQ0EsU0FBQTtBQUNBLFdBQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBO0FBQ0EsT0FBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxTQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsVUFBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxXQUFBOztBQUVGLENBQUE7QUFDRSxpQkFBQTtBQUNBLFlBQUE7QUFDQSxRQUFBO0FBQ0Esb0JBQUE7QUFDQSxTQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxZQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBO0FBQ0EsaUJBQUE7QUFDQSxvQkFBQTs7QUFFRjtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUdGLENBQUE7QUFDRSxvQkFBQTtBQUNBLGlCQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxXQUFBO0FBQ0EsU0FBQSxLQUFBLEtBQUEsRUFBQTs7QUFHRjtBQUNFLFVBQUEsSUFBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQTtBQUNBLFNBQUE7QUFDQSxrQkFBQTtBQUNBLE9BQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFO0FBQ0UsWUFBQSxLQUFBLEtBQUEsRUFBQTs7QUFFRixHQXhCRjtBQXlCSSxvQkFBQTs7QUFFRixHQUFBO0FBQ0UsWUFBQTs7QUFFRixHQUFBO0FBQ0UsWUFBQSxLQUFBOztBQUVGO0FBQ0UsWUFBQSxFQUFBLEVBQUEsS0FBQTs7QUFFRjtBQUNFLGFBQUE7OzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
+}, dependencies: [MatExpansionModule, MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, TranslateModule, TranslatePipe, NgForOf, MatIconModule], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding: 15px;\n  height: calc(100% - 25px);\n  gap: 20px;\n}\nimg[_ngcontent-%COMP%] {\n  height: fit-content;\n  width: 50%;\n}\n.chrono[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n}\nul[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 5px;\n}\n.bar[_ngcontent-%COMP%] {\n  border-radius: 10px;\n  position: absolute;\n  left: 5px;\n  background-color: black;\n  width: 10px;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.graph[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.disk[_ngcontent-%COMP%] {\n  padding: 10px;\n  border-radius: 10px;\n  background-color: black;\n}\nli[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.education[_ngcontent-%COMP%] {\n  background-color: #70aab7;\n  border-radius: 3px;\n  height: 50%;\n  display: flex;\n  padding: 10px;\n  width: calc(100% - 50px);\n}\np[_ngcontent-%COMP%] {\n  margin: 4px 0;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  gap: 25px;\n}\n@media (max-width: 500px) {\n  [_nghost-%COMP%] {\n    height: calc(100% - 80px);\n  }\n  .telecom[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n  .mat-expansion-panel-header[_ngcontent-%COMP%] {\n    height: 36px;\n  }\n  .mat-expansion-panel-spacing[_ngcontent-%COMP%] {\n    margin: 10px 0;\n  }\n  h3[_ngcontent-%COMP%] {\n    margin: 0 0 10px 0;\n  }\n  img[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2VkdWNhdGlvbi9lZHVjYXRpb24uY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxNXB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDI1cHgpO1xuICBnYXA6IDIwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICB3aWR0aDogNTAlO1xufVxuXG4uY2hyb25vIHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xufVxudWwge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDVweDtcbn1cbi5iYXIge1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDVweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIHdpZHRoOiAxMHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbi5ncmFwaCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uZGlzayB7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xufVxubGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi5lZHVjYXRpb24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBtYXAuZ2V0KCRjb2xvci1wYWxldHRlLCBcIjJcIik7XG4gIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgaGVpZ2h0OiA1MCU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIHdpZHRoOiBjYWxjKDEwMCUgLSA1MHB4KTtcbn1cblxucCB7XG4gIG1hcmdpbjogNHB4IDA7XG59XG5cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgd2lkdGg6IDEwMCU7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGdhcDogMjVweDtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDUwMHB4KSB7XG4gIDpob3N0IHtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDgwcHgpO1xuICB9XG4gIC50ZWxlY29tIHtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB9XG4gIC5tYXQtZXhwYW5zaW9uLXBhbmVsLWhlYWRlciB7XG4gICAgaGVpZ2h0OiAzNnB4O1xuICB9XG4gIC5tYXQtZXhwYW5zaW9uLXBhbmVsLXNwYWNpbmcge1xuICAgIG1hcmdpbjogMTBweCAwO1xuICB9XG4gIGgzIHtcbiAgICBtYXJnaW46IDAgMCAxMHB4IDA7XG4gIH1cbiAgaW1nIHtcbiAgICBkaXNwbGF5OiBub25lO1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0EsbUJBQUE7QUFDQSxTQUFBO0FBQ0EsV0FBQTtBQUNBLFVBQUEsS0FBQSxLQUFBLEVBQUE7QUFDQSxPQUFBOztBQUVGO0FBQ0UsVUFBQTtBQUNBLFNBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxVQUFBOztBQUVGO0FBQ0UsVUFBQTtBQUNBLFdBQUE7O0FBRUYsQ0FBQTtBQUNFLGlCQUFBO0FBQ0EsWUFBQTtBQUNBLFFBQUE7QUFDQSxvQkFBQTtBQUNBLFNBQUE7QUFDQSxVQUFBO0FBQ0EsV0FBQTtBQUNBLGtCQUFBO0FBQ0EsbUJBQUE7O0FBRUYsQ0FBQTtBQUNFLFlBQUE7QUFDQSxVQUFBO0FBQ0EsV0FBQTtBQUNBLGtCQUFBO0FBQ0EsbUJBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxpQkFBQTtBQUNBLG9CQUFBOztBQUVGO0FBQ0UsV0FBQTtBQUNBLGtCQUFBO0FBQ0EsbUJBQUE7O0FBR0YsQ0FBQTtBQUNFLG9CQUFBO0FBQ0EsaUJBQUE7QUFDQSxVQUFBO0FBQ0EsV0FBQTtBQUNBLFdBQUE7QUFDQSxTQUFBLEtBQUEsS0FBQSxFQUFBOztBQUdGO0FBQ0UsVUFBQSxJQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsU0FBQTtBQUNBLGtCQUFBO0FBQ0EsT0FBQTs7QUFHRixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0U7QUFDRSxZQUFBLEtBQUEsS0FBQSxFQUFBOztBQUVGLEdBQUE7QUFDRSxvQkFBQTs7QUFFRixHQUFBO0FBQ0UsWUFBQTs7QUFFRixHQUFBO0FBQ0UsWUFBQSxLQUFBOztBQUVGO0FBQ0UsWUFBQSxFQUFBLEVBQUEsS0FBQTs7QUFFRjtBQUNFLGFBQUE7OzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
 var EducationComponent = _EducationComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(EducationComponent, { className: "EducationComponent", filePath: "src\\app\\components\\education\\education.component.ts", lineNumber: 14 });
