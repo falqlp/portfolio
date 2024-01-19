@@ -12,26 +12,11 @@
   </li>
 </div>
 <div class="content">
-  <div class="telecom shadow">
-    <img src="assets/images/telecom/telecom.png" alt="telecom"/>
+  <div class="education shadow" *ngFor="let education of educations">
+    <img [src]="education.img" [alt]="education.title"/>
     <mat-accordion>
-      <h3>Data Engineering:</h3>
-      <mat-expansion-panel *ngFor="let subject of telecom.subjects">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            {{ subject.title|translate }}
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <span
-          *ngFor="let skill of subject.skills; let i=index">{{ skill|translate }}{{ subject.skills.length !== i + 1 ? ', ' : '' }}</span>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </div>
-  <div class="telecom shadow">
-    <img src="../../../assets/images/iut/iut-logo.png" alt="telecom"/>
-    <mat-accordion>
-      <h3>DUT Mesures Physiques:</h3>
-      <mat-expansion-panel *ngFor="let subject of iut.subjects">
+      <h3>{{education.title}}:</h3>
+      <mat-expansion-panel *ngFor="let subject of education.subjects">
         <mat-expansion-panel-header>
           <mat-panel-title>
             {{ subject.title|translate }}

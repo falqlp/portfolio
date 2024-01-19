@@ -12,7 +12,6 @@ import { TechnoLogosComponent } from '../techno-logos/techno-logos.component';
   styleUrl: './primary-projects.component.scss',
 })
 export class PrimaryProjectsComponent {
-  protected readonly technologiesIconPath = 'assets/images/technologies/';
   protected pokemonManager = {
     p: ['PM_DESC1', 'PM_DESC2', 'PM_DESC3'],
     technologies: [

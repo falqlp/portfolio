@@ -4,7 +4,6 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
   ElementRef,
   HostListener,
-  Input,
   ViewChild,
 } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
