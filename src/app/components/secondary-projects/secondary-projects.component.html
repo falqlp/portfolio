@@ -1,44 +1,16 @@
 <h3>{{ "SECONDARY_PROJECTS"|translate }} :</h3>
 <div class="content">
-  <div class="secondary-project shadow">
+  <div class="secondary-project shadow" *ngFor="let project of projects">
     <div>
       <h3 class="card-title">
-        D3.js
+        {{ project.title }}
       </h3>
-      <img class="img-d3js" src="assets/images/d3js/preview.png" alt="pm logo"/>
+      <img class="preview" [src]="project.img" [alt]="project.title">
       <div class="description">
-        <p *ngFor="let p of d3js.p">{{ p|translate }}</p>
-        <a href="https://github.com/falqlp/dataviz">Github</a>
+        <p *ngFor="let p of project.p">{{ p|translate }}</p>
+        <a *ngIf="project.a" [href]="project.a">Github</a>
       </div>
     </div>
-    <app-techno-logos class="logos" [technologies]="d3js.technologies"/>
-  </div>
-  <div class="secondary-project shadow">
-    <div>
-      <h3 class="card-title">
-        HTML CSS PHP
-      </h3>
-      <img class="img-html-css-bdd" src="assets/images/html-css-bdd/preview2.png" alt="html-css-bdd preview"/>
-      <div class="description">
-        <p *ngFor="let p of htmlCssBdd.p">{{ p|translate }}</p>
-        <a href="https://github.com/falqlp/html-css-bdd">Github</a>
-      </div>
-    </div>
-    <app-techno-logos class="logos" [technologies]="htmlCssBdd.technologies"/>
-  </div>
-  <div class="secondary-project shadow">
-    <div>
-      <h3 class="card-title">
-        Ec'eau
-      </h3>
-      <div class="eceau-img">
-        <img class="img" src="assets/images/eceau/eceau%20logo.png" alt="eceau logo"/>
-      </div>
-      <div class="description">azegsdhjuy qskgfuyzjg qshjdgjshqvdhj qshdghqs gfvdsqghv qshdgsqhjgv
-        jdshgbfjhsdghfjhsdfhgb
-        hsqdgfhsdghfghdsgf sdhfghsjdghfdjs
-      </div>
-    </div>
-    <app-techno-logos class="logos" [technologies]="eceau.technologies"/>
+    <app-techno-logos [technologies]="project.technologies"/>
   </div>
 </div>
