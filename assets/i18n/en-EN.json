@@ -44,5 +44,22 @@
   "AW_DESC3": "This project at Astrée Software played a crucial role in my professional journey as it was my introduction to the world of software development.",
   "INTRO": "Software Engineering in Apprentiship at Astree Software",
   "D3JS_DESC1": "During my engineering studies, we undertook a project that combined two disciplines: data visualization and scripting language programming.",
-  "D3JS_DESC2": "The goal of this project was to explore the D3.js library for data visualization. We focused on electric cars, developing a tool that assists in making informed decisions when purchasing an electric vehicle."
+  "D3JS_DESC2": "The goal of this project was to explore the D3.js library for data visualization. We focused on electric cars, developing a tool that assists in making informed decisions when purchasing an electric vehicle.",
+  "HTML_CSS_BDD_DESC1": "During the web technology course, we carried out a project aimed at establishing a connection between a web page and a database",
+  "HTML_CSS_BDD_DESC2": "This project gave me the opportunity to explore new technologies, particularly Docker and PHP.",
+  "PHYSICS": "Physics",
+  "THERMODYNAMICS": "Thermodynamics",
+  "ELECTRICITY_AND_ELECTRONICS": "Electricity and Electronics",
+  "MECHANICS_AND_MATERIAL_RESISTANCE": "Mechanics and Material Resistance",
+  "OPTICAL_SYSTEMS": "Optical Systems",
+  "FLUID_MECHANICS_AND_VACUUM_TECHNOLOGY": "Fluid Mechanics and Vacuum Technology",
+  "CHEMISTRY": "Chemistry",
+  "ATOMIC_AND_MOLECULAR_STRUCTURES": "Atomic and Molecular Structures",
+  "REDOX_CHEMICAL_KINETICS": "Redox Chemical Kinetics",
+  "SPECTROSCOPIC_TECHNOLOGY": "Spectroscopic Technology",
+  "MATHEMATICS": "Mathematics",
+  "COMPUTER_SCIENCE": "Computer Science",
+  "EXPRESSION_COMMUNICATION": "Expression and Communication",
+  "PORTFOLIO_DESC1": "Through this portfolio project, I have designed and developed a showcase of my skills and projects as a developer. The aim was to create a space that represents me professionally, highlighting my work.",
+  "PORTFOLIO_DESC2": "This portfolio is a reflection of my journey, my passion for software development, and my commitment to staying at the forefront of technology in a dynamic professional environment."
 }

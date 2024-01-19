@@ -46,5 +46,20 @@
   "D3JS_DESC1": "Durant ma formation, nous avons réalisé un projet qui combinait deux disciplines : la datavisualisation et la programmation en langages de script",
   "D3JS_DESC2": "L'objectif de ce projet était d'explorer la bibliothèque D3.js pour la visualisation de données. Nous nous sommes concentrés sur le thème des voitures électriques, en développant un outil qui aide à la prise de décision lors de l'achat d'une voiture électrique.",
   "HTML_CSS_BDD_DESC1": "Pendant le cours sur les technologies web, nous avons réalisé un projet visant à établir une connexion entre une page web et une base de données",
-  "HTML_CSS_BDD_DESC2": "Ce projet a été l'occasion pour moi d'explorer de nouvelles technologies, notamment Docker et PHP."
+  "HTML_CSS_BDD_DESC2": "Ce projet a été l'occasion pour moi d'explorer de nouvelles technologies, notamment Docker et PHP.",
+  "PHYSICS": "Physique",
+  "THERMODYNAMICS": "Thermodynamique",
+  "ELECTRICITY_AND_ELECTRONICS": "Électricité et électronique",
+  "MECHANICS_AND_MATERIAL_RESISTANCE": "Mécanique et résistance des matériaux",
+  "OPTICAL_SYSTEMS": "Systèmes optiques",
+  "FLUID_MECHANICS_AND_VACUUM_TECHNOLOGY": "Mécanique des fluides et technologie du vide",
+  "CHEMISTRY": "Chimie",
+  "ATOMIC_AND_MOLECULAR_STRUCTURES": "Structures atomiques et moléculaires",
+  "REDOX_CHEMICAL_KINETICS": "Cinétique chimique et réactions d'oxydoréduction",
+  "SPECTROSCOPIC_TECHNOLOGY": "Technologie spectroscopique",
+  "MATHEMATICS": "Mathématiques",
+  "COMPUTER_SCIENCE": "Informatique",
+  "EXPRESSION_COMMUNICATION": "Expression et communication",
+  "PORTFOLIO_DESC1": "À travers ce projet de portfolio, j'ai conçu et développé une vitrine de mes compétences et de mes projets en tant que développeur. L'objectif était de créer un espace qui me représente professionnellement, mettant en avant mes travaux.",
+  "PORTFOLIO_DESC2": "Ce portfolio est le reflet de mon parcours, de ma passion pour le développement logiciel et de mon engagement à rester à la pointe de la technologie dans un environnement professionnel dynamique."
 }

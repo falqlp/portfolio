@@ -2832,6 +2832,12 @@ p {
   transform: translateY(-5px);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
+.mat-expansion-panel-header,
+.mat-expansion-panel-body,
+.mat-expansion-panel,
+.mat-expansion-panel-header:hover {
+  background-color: #3b7682 !important;
+}
 
 /* angular:styles/global:styles */
 /*# sourceMappingURL=styles.css.map */

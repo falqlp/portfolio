@@ -50138,7 +50138,7 @@ _TechnoLogosComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ 
   if (rf & 2) {
     \u0275\u0275property("ngForOf", ctx.technologies);
   }
-}, dependencies: [MatTooltipModule, MatTooltip, NgForOf], styles: ["\n\n.techno[_ngcontent-%COMP%] {\n  height: 48px;\n}\n@media (max-width: 1000px) {\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n}\n@media (max-width: 400px) {\n  .techno[_ngcontent-%COMP%] {\n    height: 16px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3RlY2huby1sb2dvcy90ZWNobm8tbG9nb3MuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIi50ZWNobm8ge1xuICBoZWlnaHQ6IDQ4cHg7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAxMDAwcHgpIHtcbiAgLnRlY2hubyB7XG4gICAgaGVpZ2h0OiAzMnB4O1xuICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA0MDBweCkge1xuICAudGVjaG5vIHtcbiAgICBoZWlnaHQ6IDE2cHg7XG4gIH1cbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBQSxDQUFBO0FBQ0UsVUFBQTs7QUFHRixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0FMRjtBQU1JLFlBQUE7OztBQUlKLE9BQUEsQ0FBQSxTQUFBLEVBQUE7QUFDRSxHQVhGO0FBWUksWUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
+}, dependencies: [MatTooltipModule, MatTooltip, NgForOf], styles: ["\n\n.techno[_ngcontent-%COMP%] {\n  height: 48px;\n}\n@media (max-width: 1000px) {\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n}\n@media (max-width: 400px) {\n  .techno[_ngcontent-%COMP%] {\n    height: 16px;\n  }\n}\n[_nghost-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  justify-content: flex-end;\n  padding-right: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3RlY2huby1sb2dvcy90ZWNobm8tbG9nb3MuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIi50ZWNobm8ge1xuICBoZWlnaHQ6IDQ4cHg7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAxMDAwcHgpIHtcbiAgLnRlY2hubyB7XG4gICAgaGVpZ2h0OiAzMnB4O1xuICB9XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA0MDBweCkge1xuICAudGVjaG5vIHtcbiAgICBoZWlnaHQ6IDE2cHg7XG4gIH1cbn1cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBnYXA6IDEwcHg7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQUEsQ0FBQTtBQUNFLFVBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBTEY7QUFNSSxZQUFBOzs7QUFJSixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0FYRjtBQVlJLFlBQUE7OztBQUdKO0FBQ0UsV0FBQTtBQUNBLGFBQUE7QUFDQSxPQUFBO0FBQ0EsbUJBQUE7QUFDQSxpQkFBQTs7IiwKICAibmFtZXMiOiBbXQp9Cg== */"] });
 var TechnoLogosComponent = _TechnoLogosComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TechnoLogosComponent, { className: "TechnoLogosComponent", filePath: "src\\app\\components\\techno-logos\\techno-logos.component.ts", lineNumber: 12 });
@@ -50205,7 +50205,7 @@ var _PrimaryProjectsComponent = class _PrimaryProjectsComponent {
 _PrimaryProjectsComponent.\u0275fac = function PrimaryProjectsComponent_Factory(t) {
   return new (t || _PrimaryProjectsComponent)();
 };
-_PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrimaryProjectsComponent, selectors: [["app-primary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 31, vars: 16, consts: [[1, "content"], [1, "primary-projects", "shadow"], [1, "card-title"], [1, "img-background", 2, "background-color", "#fcf5e6"], ["src", "assets/images/pokemon-manager/pm_logo.png", "alt", "pm logo"], [1, "description"], [4, "ngFor", "ngForOf"], ["href", "https://github.com/falqlp/PokemonManager"], [1, "logos", 3, "technologies"], [1, "img-background", 2, "background-color", "#2A353B"], ["src", "assets/images/aquiweb/aquiweb.jpg", "alt", "aquiweb logo"], ["href", "https://www.astree-software.fr/logiciel-mes/"]], template: function PrimaryProjectsComponent_Template(rf, ctx) {
+_PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrimaryProjectsComponent, selectors: [["app-primary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 31, vars: 16, consts: [[1, "content"], [1, "primary-projects", "shadow"], [1, "card-title"], [1, "img-background", 2, "background-color", "#fcf5e6"], ["src", "assets/images/pokemon-manager/pm_logo.png", "alt", "pm logo"], [1, "description"], [4, "ngFor", "ngForOf"], ["href", "https://github.com/falqlp/PokemonManager"], [3, "technologies"], [1, "img-background", 2, "background-color", "#2A353B"], ["src", "assets/images/aquiweb/aquiweb.jpg", "alt", "aquiweb logo"], ["href", "https://www.astree-software.fr/logiciel-mes/"]], template: function PrimaryProjectsComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h3");
     \u0275\u0275text(1);
@@ -50262,7 +50262,7 @@ _PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponen
     \u0275\u0275advance(2);
     \u0275\u0275property("technologies", ctx.aquiweb.technologies);
   }
-}, dependencies: [NgForOf, TranslateModule, TranslatePipe, MatTooltipModule, TechnoLogosComponent], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: 100%;\n}\n.primary-projects[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  background-color: #70aab7;\n  gap: 10px;\n  height: calc(100% - 45px);\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  justify-content: space-between;\n}\nimg[_ngcontent-%COMP%] {\n  height: 180px;\n  width: 180px;\n}\n.techno[_ngcontent-%COMP%] {\n  height: 48px;\n}\n.logos[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  padding: 10px;\n  justify-content: flex-end;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 10px;\n  text-align: justify;\n  font-size: 16px;\n}\n.img-background[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .primary-projects[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  img[_ngcontent-%COMP%] {\n    height: 100px;\n    width: 100px;\n  }\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n}\n@media (max-width: 400px) {\n  .techno[_ngcontent-%COMP%] {\n    height: 16px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3Byb2pldHMtcHJpbmNpcGF1eC9wcmltYXJ5LXByb2plY3RzLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG46aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG59XG5cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGdhcDogNTBweDtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuXG4ucHJpbWFyeS1wcm9qZWN0cyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGJhY2tncm91bmQtY29sb3I6IG1hcC5nZXQoJGNvbG9yLXBhbGV0dGUsIFwiM1wiKTtcbiAgZ2FwOiAxMHB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDQ1cHgpO1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbmltZyB7XG4gIGhlaWdodDogMTgwcHg7XG4gIHdpZHRoOiAxODBweDtcbn1cblxuLnRlY2hubyB7XG4gIGhlaWdodDogNDhweDtcbn1cbi5sb2dvcyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgZ2FwOiAxMHB4O1xuICBwYWRkaW5nOiAxMHB4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xufVxuLmNhcmQtdGl0bGUge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4uZGVzY3JpcHRpb24ge1xuICBwYWRkaW5nOiAxMHB4O1xuICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi5pbWctYmFja2dyb3VuZCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogMTAwMHB4KSB7XG4gIC5jb250ZW50IHtcbiAgICBnYXA6IDEwcHg7XG4gIH1cbiAgLnByaW1hcnktcHJvamVjdHMge1xuICAgIGZsZXg6IDE7XG4gIH1cbiAgLmRlc2NyaXB0aW9uIHtcbiAgICBmb250LXNpemU6IDJ2dztcbiAgICBwYWRkaW5nLXRvcDogMDtcbiAgfVxuICBpbWcge1xuICAgIGhlaWdodDogMTAwcHg7XG4gICAgd2lkdGg6IDEwMHB4O1xuICB9XG4gIC50ZWNobm8ge1xuICAgIGhlaWdodDogMzJweDtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNDAwcHgpIHtcbiAgLnRlY2hubyB7XG4gICAgaGVpZ2h0OiAxNnB4O1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxvQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBO0FBQ0EsU0FBQTtBQUNBLGlCQUFBO0FBQ0EsWUFBQTtBQUNBLG1CQUFBOztBQUVGO0FBQ0UsVUFBQTtBQUNBLFNBQUE7O0FBR0YsQ0FBQTtBQUNFLFVBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxhQUFBO0FBQ0EsT0FBQTtBQUNBLFdBQUE7QUFDQSxtQkFBQTs7QUFFRixDQUFBO0FBQ0UsY0FBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGNBQUE7QUFDQSxhQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsbUJBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBaERGO0FBaURJLFNBQUE7O0FBRUYsR0E1Q0Y7QUE2Q0ksVUFBQTs7QUFFRixHQWxCRjtBQW1CSSxlQUFBO0FBQ0EsaUJBQUE7O0FBRUY7QUFDRSxZQUFBO0FBQ0EsV0FBQTs7QUFFRixHQXZDRjtBQXdDSSxZQUFBOzs7QUFJSixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0E3Q0Y7QUE4Q0ksWUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
+}, dependencies: [NgForOf, TranslateModule, TranslatePipe, MatTooltipModule, TechnoLogosComponent], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: 100%;\n}\n.primary-projects[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  background-color: #70aab7;\n  gap: 10px;\n  height: calc(100% - 45px);\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  justify-content: space-between;\n  padding-bottom: 10px;\n}\nimg[_ngcontent-%COMP%] {\n  height: 180px;\n  width: 180px;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 10px;\n  text-align: justify;\n  font-size: 16px;\n}\n.img-background[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .primary-projects[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  img[_ngcontent-%COMP%] {\n    height: 100px;\n    width: 100px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3Byb2pldHMtcHJpbmNpcGF1eC9wcmltYXJ5LXByb2plY3RzLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG46aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG59XG5cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGdhcDogNTBweDtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuXG4ucHJpbWFyeS1wcm9qZWN0cyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGJhY2tncm91bmQtY29sb3I6IG1hcC5nZXQoJGNvbG9yLXBhbGV0dGUsIFwiMlwiKTtcbiAgZ2FwOiAxMHB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDQ1cHgpO1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgcGFkZGluZy1ib3R0b206IDEwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IDE4MHB4O1xuICB3aWR0aDogMTgwcHg7XG59XG4uY2FyZC10aXRsZSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5kZXNjcmlwdGlvbiB7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIHRleHQtYWxpZ246IGp1c3RpZnk7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuLmltZy1iYWNrZ3JvdW5kIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAxMDAwcHgpIHtcbiAgLmNvbnRlbnQge1xuICAgIGdhcDogMTBweDtcbiAgfVxuICAucHJpbWFyeS1wcm9qZWN0cyB7XG4gICAgZmxleDogMTtcbiAgfVxuICAuZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMnZ3O1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICB9XG4gIGltZyB7XG4gICAgaGVpZ2h0OiAxMDBweDtcbiAgICB3aWR0aDogMTAwcHg7XG4gIH1cbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFHQTtBQUNFLFdBQUE7QUFDQSxrQkFBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQTtBQUNBLG1CQUFBO0FBQ0EsT0FBQTtBQUNBLFVBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG9CQUFBO0FBQ0EsT0FBQTtBQUNBLFVBQUEsS0FBQSxLQUFBLEVBQUE7QUFDQSxTQUFBO0FBQ0EsaUJBQUE7QUFDQSxZQUFBO0FBQ0EsbUJBQUE7QUFDQSxrQkFBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxTQUFBOztBQUVGLENBQUE7QUFDRSxjQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBO0FBQ0EsY0FBQTtBQUNBLGFBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTs7QUFHRixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0F0Q0Y7QUF1Q0ksU0FBQTs7QUFFRixHQWxDRjtBQW1DSSxVQUFBOztBQUVGLEdBbEJGO0FBbUJJLGVBQUE7QUFDQSxpQkFBQTs7QUFFRjtBQUNFLFlBQUE7QUFDQSxXQUFBOzs7IiwKICAibmFtZXMiOiBbXQp9Cg== */"] });
 var PrimaryProjectsComponent = _PrimaryProjectsComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PrimaryProjectsComponent, { className: "PrimaryProjectsComponent", filePath: "src\\app\\components\\projets-principaux\\primary-projects.component.ts", lineNumber: 14 });
@@ -60603,7 +60603,7 @@ var MatCardModule = _MatCardModule;
 })();
 
 // src/app/components/secondary-projects/secondary-projects.component.ts
-function SecondaryProjectsComponent_p_10_Template(rf, ctx) {
+function SecondaryProjectsComponent_div_4_p_6_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "p");
     \u0275\u0275text(1);
@@ -60611,27 +60611,50 @@ function SecondaryProjectsComponent_p_10_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const p_r2 = ctx.$implicit;
+    const p_r4 = ctx.$implicit;
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, p_r2));
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, p_r4));
   }
 }
-function SecondaryProjectsComponent_p_20_Template(rf, ctx) {
+function SecondaryProjectsComponent_div_4_a_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "p");
-    \u0275\u0275text(1);
-    \u0275\u0275pipe(2, "translate");
+    \u0275\u0275elementStart(0, "a", 9);
+    \u0275\u0275text(1, "Github");
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const p_r3 = ctx.$implicit;
+    const project_r1 = \u0275\u0275nextContext().$implicit;
+    \u0275\u0275property("href", project_r1.a, \u0275\u0275sanitizeUrl);
+  }
+}
+function SecondaryProjectsComponent_div_4_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 2)(1, "div")(2, "h3", 3);
+    \u0275\u0275text(3);
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(4, "img", 4);
+    \u0275\u0275elementStart(5, "div", 5);
+    \u0275\u0275template(6, SecondaryProjectsComponent_div_4_p_6_Template, 3, 3, "p", 6)(7, SecondaryProjectsComponent_div_4_a_7_Template, 2, 1, "a", 7);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275element(8, "app-techno-logos", 8);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const project_r1 = ctx.$implicit;
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate1(" ", project_r1.title, " ");
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, p_r3));
+    \u0275\u0275property("src", project_r1.img, \u0275\u0275sanitizeUrl)("alt", project_r1.title);
+    \u0275\u0275advance(2);
+    \u0275\u0275property("ngForOf", project_r1.p);
+    \u0275\u0275advance();
+    \u0275\u0275property("ngIf", project_r1.a);
+    \u0275\u0275advance();
+    \u0275\u0275property("technologies", project_r1.technologies);
   }
 }
 var _SecondaryProjectsComponent = class _SecondaryProjectsComponent {
   constructor() {
-    this.technologiesIconPath = "assets/images/technologies/";
     this.d3js = {
       p: ["D3JS_DESC1", "D3JS_DESC2"],
       technologies: ["HTML", "CSS", "JavaScript", "D3js"]
@@ -60644,64 +60667,49 @@ var _SecondaryProjectsComponent = class _SecondaryProjectsComponent {
       p: ["HTML_CSS_BDD_DESC1", "HTML_CSS_BDD_DESC2"],
       technologies: ["HTML", "CSS", "PHP", "MariaDB", "Docker"]
     };
+    this.projects = [
+      {
+        title: "D3.js",
+        p: ["D3JS_DESC1", "D3JS_DESC2"],
+        a: "https://github.com/falqlp/dataviz",
+        img: "assets/images/d3js/preview.png",
+        technologies: ["HTML", "CSS", "JavaScript", "D3js"]
+      },
+      {
+        title: "HTML CSS PHP",
+        p: ["HTML_CSS_BDD_DESC1", "HTML_CSS_BDD_DESC2"],
+        a: "https://github.com/falqlp/html-css-bdd",
+        img: "assets/images/html-css-bdd/preview2.png",
+        technologies: ["HTML", "CSS", "PHP", "MariaDB", "Docker"]
+      },
+      {
+        title: "Portfolio",
+        p: ["PORTFOLIO_DESC1", "PORTFOLIO_DESC2"],
+        a: "https://github.com/falqlp/portfolio",
+        img: "assets/images/portfolio/portfolio-preview.png",
+        technologies: ["HTML", "CSS", "SCSS", "Angular"]
+      }
+    ];
   }
 };
 _SecondaryProjectsComponent.\u0275fac = function SecondaryProjectsComponent_Factory(t) {
   return new (t || _SecondaryProjectsComponent)();
 };
-_SecondaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _SecondaryProjectsComponent, selectors: [["app-secondary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 33, vars: 8, consts: [[1, "content"], [1, "secondary-project", "shadow"], [1, "card-title"], ["src", "assets/images/d3js/preview.png", "alt", "pm logo", 1, "img-d3js"], [1, "description"], [4, "ngFor", "ngForOf"], ["href", "https://github.com/falqlp/dataviz"], [1, "logos", 3, "technologies"], ["src", "assets/images/html-css-bdd/preview2.png", "alt", "html-css-bdd preview", 1, "img-html-css-bdd"], ["href", "https://github.com/falqlp/html-css-bdd"], [1, "eceau-img"], ["src", "assets/images/eceau/eceau%20logo.png", "alt", "eceau logo", 1, "img"]], template: function SecondaryProjectsComponent_Template(rf, ctx) {
+_SecondaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _SecondaryProjectsComponent, selectors: [["app-secondary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 5, vars: 4, consts: [[1, "content"], ["class", "secondary-project shadow", 4, "ngFor", "ngForOf"], [1, "secondary-project", "shadow"], [1, "card-title"], [1, "preview", 3, "src", "alt"], [1, "description"], [4, "ngFor", "ngForOf"], [3, "href", 4, "ngIf"], [3, "technologies"], [3, "href"]], template: function SecondaryProjectsComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h3");
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 0)(4, "div", 1)(5, "div")(6, "h3", 2);
-    \u0275\u0275text(7, " D3.js ");
+    \u0275\u0275elementStart(3, "div", 0);
+    \u0275\u0275template(4, SecondaryProjectsComponent_div_4_Template, 9, 6, "div", 1);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(8, "img", 3);
-    \u0275\u0275elementStart(9, "div", 4);
-    \u0275\u0275template(10, SecondaryProjectsComponent_p_10_Template, 3, 3, "p", 5);
-    \u0275\u0275elementStart(11, "a", 6);
-    \u0275\u0275text(12, "Github");
-    \u0275\u0275elementEnd()()();
-    \u0275\u0275element(13, "app-techno-logos", 7);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(14, "div", 1)(15, "div")(16, "h3", 2);
-    \u0275\u0275text(17, " HTML CSS PHP ");
-    \u0275\u0275elementEnd();
-    \u0275\u0275element(18, "img", 8);
-    \u0275\u0275elementStart(19, "div", 4);
-    \u0275\u0275template(20, SecondaryProjectsComponent_p_20_Template, 3, 3, "p", 5);
-    \u0275\u0275elementStart(21, "a", 9);
-    \u0275\u0275text(22, "Github");
-    \u0275\u0275elementEnd()()();
-    \u0275\u0275element(23, "app-techno-logos", 7);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(24, "div", 1)(25, "div")(26, "h3", 2);
-    \u0275\u0275text(27, " Ec'eau ");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(28, "div", 10);
-    \u0275\u0275element(29, "img", 11);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(30, "div", 4);
-    \u0275\u0275text(31, "azegsdhjuy qskgfuyzjg qshjdgjshqvdhj qshdghqs gfvdsqghv qshdgsqhjgv jdshgbfjhsdghfjhsdfhgb hsqdgfhsdghfghdsgf sdhfghsjdghfdjs ");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275element(32, "app-techno-logos", 7);
-    \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(2, 6, "SECONDARY_PROJECTS"), " :");
-    \u0275\u0275advance(9);
-    \u0275\u0275property("ngForOf", ctx.d3js.p);
+    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(2, 2, "SECONDARY_PROJECTS"), " :");
     \u0275\u0275advance(3);
-    \u0275\u0275property("technologies", ctx.d3js.technologies);
-    \u0275\u0275advance(7);
-    \u0275\u0275property("ngForOf", ctx.htmlCssBdd.p);
-    \u0275\u0275advance(3);
-    \u0275\u0275property("technologies", ctx.htmlCssBdd.technologies);
-    \u0275\u0275advance(9);
-    \u0275\u0275property("technologies", ctx.eceau.technologies);
+    \u0275\u0275property("ngForOf", ctx.projects);
   }
 }, dependencies: [
   TranslateModule,
@@ -60709,11 +60717,12 @@ _SecondaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompon
   NgForOf,
   MatCardModule,
   MatTooltipModule,
-  TechnoLogosComponent
-], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: 100%;\n}\n.secondary-project[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  background-color: #70aab7;\n  height: calc(100% - 45px);\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  padding-bottom: 10px;\n}\n.img[_ngcontent-%COMP%] {\n  max-height: 256px;\n}\n.techno[_ngcontent-%COMP%] {\n  height: 64px;\n}\n.logos[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  justify-content: flex-end;\n  padding-right: 10px;\n}\n.img-html-css-bdd[_ngcontent-%COMP%], .img-d3js[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.eceau-img[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 0 10px 10px 10px;\n  text-align: justify;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n  .img[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n}\n@media (max-width: 500px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n    flex-direction: column;\n    width: 100%;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n    width: 100%;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  .techno[_ngcontent-%COMP%] {\n    height: 32px;\n  }\n  .img-html-css-bdd[_ngcontent-%COMP%], .img-d3js[_ngcontent-%COMP%], .img[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3NlY29uZGFyeS1wcm9qZWN0cy9zZWNvbmRhcnktcHJvamVjdHMuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLmNvbnRlbnQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZ2FwOiA1MHB4O1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5zZWNvbmRhcnktcHJvamVjdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIzXCIpO1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDQ1cHgpO1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHBhZGRpbmctYm90dG9tOiAxMHB4O1xufVxuLmltZyB7XG4gIG1heC1oZWlnaHQ6IDI1NnB4O1xufVxuXG4udGVjaG5vIHtcbiAgaGVpZ2h0OiA2NHB4O1xufVxuLmxvZ29zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBnYXA6IDEwcHg7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG59XG4uaW1nLWh0bWwtY3NzLWJkZCxcbi5pbWctZDNqcyB7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmVjZWF1LWltZyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG4uY2FyZC10aXRsZSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmRlc2NyaXB0aW9uIHtcbiAgcGFkZGluZzogMCAxMHB4IDEwcHggMTBweDtcbiAgdGV4dC1hbGlnbjoganVzdGlmeTtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDEwMDBweCkge1xuICAuY29udGVudCB7XG4gICAgZ2FwOiAxMHB4O1xuICB9XG4gIC5zZWNvbmRhcnktcHJvamVjdCB7XG4gICAgZmxleDogMTtcbiAgfVxuICAuZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMnZ3O1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICB9XG4gIC50ZWNobm8ge1xuICAgIGhlaWdodDogMzJweDtcbiAgfVxuICAuaW1nIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNTAwcHgpIHtcbiAgLmNvbnRlbnQge1xuICAgIGdhcDogMTBweDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gIC5zZWNvbmRhcnktcHJvamVjdCB7XG4gICAgZmxleDogMTtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuICAuZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMnZ3O1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICB9XG4gIC50ZWNobm8ge1xuICAgIGhlaWdodDogMzJweDtcbiAgfVxuICAuaW1nLWh0bWwtY3NzLWJkZCxcbiAgLmltZy1kM2pzLFxuICAuaW1nIHtcbiAgICBkaXNwbGF5OiBub25lO1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTtBQUNBLG9CQUFBO0FBQ0EsVUFBQSxLQUFBLEtBQUEsRUFBQTtBQUNBLFNBQUE7QUFDQSxpQkFBQTtBQUNBLFlBQUE7QUFDQSxrQkFBQTs7QUFFRixDQUFBO0FBQ0UsY0FBQTs7QUFHRixDQUFBO0FBQ0UsVUFBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGFBQUE7QUFDQSxPQUFBO0FBQ0EsbUJBQUE7QUFDQSxpQkFBQTs7QUFFRixDQUFBO0FBQUEsQ0FBQTtBQUVFLFNBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTs7QUFHRixDQUFBO0FBQ0UsY0FBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQSxFQUFBLEtBQUEsS0FBQTtBQUNBLGNBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBbkRGO0FBb0RJLFNBQUE7O0FBRUYsR0EvQ0Y7QUFnREksVUFBQTs7QUFFRixHQVpGO0FBYUksZUFBQTtBQUNBLGlCQUFBOztBQUVGLEdBdkNGO0FBd0NJLFlBQUE7O0FBRUYsR0E5Q0Y7QUErQ0ksV0FBQTs7O0FBSUosT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBdEVGO0FBdUVJLFNBQUE7QUFDQSxvQkFBQTtBQUNBLFdBQUE7O0FBRUYsR0FwRUY7QUFxRUksVUFBQTtBQUNBLFdBQUE7O0FBRUYsR0FsQ0Y7QUFtQ0ksZUFBQTtBQUNBLGlCQUFBOztBQUVGLEdBN0RGO0FBOERJLFlBQUE7O0FBRUYsR0F0REY7RUFzREUsQ0F0REY7RUFzREUsQ0FwRUY7QUF1RUksYUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
+  TechnoLogosComponent,
+  NgIf
+], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: 100%;\n}\n.secondary-project[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  background-color: #70aab7;\n  height: calc(100% - 45px);\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  padding-bottom: 10px;\n}\n.preview[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 0 10px 10px 10px;\n  text-align: justify;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n}\n@media (max-width: 500px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n    flex-direction: column;\n    width: 100%;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n    width: 100%;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  .preview[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL3NlY29uZGFyeS1wcm9qZWN0cy9zZWNvbmRhcnktcHJvamVjdHMuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLmNvbnRlbnQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZ2FwOiA1MHB4O1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5zZWNvbmRhcnktcHJvamVjdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIyXCIpO1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDQ1cHgpO1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHBhZGRpbmctYm90dG9tOiAxMHB4O1xufVxuLnByZXZpZXcge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmNhcmQtdGl0bGUge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5kZXNjcmlwdGlvbiB7XG4gIHBhZGRpbmc6IDAgMTBweCAxMHB4IDEwcHg7XG4gIHRleHQtYWxpZ246IGp1c3RpZnk7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAxMDAwcHgpIHtcbiAgLmNvbnRlbnQge1xuICAgIGdhcDogMTBweDtcbiAgfVxuICAuc2Vjb25kYXJ5LXByb2plY3Qge1xuICAgIGZsZXg6IDE7XG4gIH1cbiAgLmRlc2NyaXB0aW9uIHtcbiAgICBmb250LXNpemU6IDJ2dztcbiAgICBwYWRkaW5nLXRvcDogMDtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNTAwcHgpIHtcbiAgLmNvbnRlbnQge1xuICAgIGdhcDogMTBweDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gIC5zZWNvbmRhcnktcHJvamVjdCB7XG4gICAgZmxleDogMTtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuICAuZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMnZ3O1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICB9XG4gIC5wcmV2aWV3IHtcbiAgICBkaXNwbGF5OiBub25lO1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTtBQUNBLG9CQUFBO0FBQ0EsVUFBQSxLQUFBLEtBQUEsRUFBQTtBQUNBLFNBQUE7QUFDQSxpQkFBQTtBQUNBLFlBQUE7QUFDQSxrQkFBQTs7QUFFRixDQUFBO0FBQ0UsU0FBQTs7QUFHRixDQUFBO0FBQ0UsY0FBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQSxFQUFBLEtBQUEsS0FBQTtBQUNBLGNBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBaENGO0FBaUNJLFNBQUE7O0FBRUYsR0E1QkY7QUE2QkksVUFBQTs7QUFFRixHQVpGO0FBYUksZUFBQTtBQUNBLGlCQUFBOzs7QUFJSixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0E3Q0Y7QUE4Q0ksU0FBQTtBQUNBLG9CQUFBO0FBQ0EsV0FBQTs7QUFFRixHQTNDRjtBQTRDSSxVQUFBO0FBQ0EsV0FBQTs7QUFFRixHQTVCRjtBQTZCSSxlQUFBO0FBQ0EsaUJBQUE7O0FBRUYsR0F4Q0Y7QUF5Q0ksYUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var SecondaryProjectsComponent = _SecondaryProjectsComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SecondaryProjectsComponent, { className: "SecondaryProjectsComponent", filePath: "src\\app\\components\\secondary-projects\\secondary-projects.component.ts", lineNumber: 21 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SecondaryProjectsComponent, { className: "SecondaryProjectsComponent", filePath: "src\\app\\components\\secondary-projects\\secondary-projects.component.ts", lineNumber: 22 });
 })();
 
 // node_modules/@angular/cdk/fesm2022/accordion.mjs
@@ -62772,56 +62781,30 @@ var _EducationComponent = class _EducationComponent {
     this.iut = {
       subjects: [
         {
-          title: "Data",
+          title: "PHYSICS",
           skills: [
-            "RELATIONAL_DATABASES",
-            "NOSQL",
-            "DATA_BACKUP",
-            "DATA_VISUALIZATION",
-            "COMPUTING_AND_PROGRAMMING_TOOLS"
+            "THERMODYNAMICS",
+            "ELECTRICITY_AND_ELECTRONICS",
+            "MECHANICS_AND_MATERIAL_RESISTANCE",
+            "OPTICAL_SYSTEMS",
+            "FLUID_MECHANICS_AND_VACUUM_TECHNOLOGY"
           ]
         },
         {
-          title: "DEV",
+          title: "CHEMISTRY",
           skills: [
-            "ALGORITHMS_AND_DATA_STRUCTURES",
-            "LINUX_SYSTEMS_AND_TOOLS",
-            "WEB_TECHNOLOGIES",
-            "OBJECT_ORIENTED_PROGRAMMING",
-            "SCRIPTING_LANGUAGES"
-          ]
-        },
-        {
-          title: "CAPTURE_TRANSMISSION_ELECTRONICS",
-          skills: [
-            "DATA_CAPTURE_INSTRUMENTATION",
-            "PHYSICS_OF_TRANSMISSIONS",
-            "COMPONENTS_FOR_EXECUTION_ARCHITECTURE",
-            "TELECOMMUNICATIONS_CHAIN",
-            "NETWORK_PRINCIPLES"
+            "ATOMIC_AND_MOLECULAR_STRUCTURES",
+            "REDOX_CHEMICAL_KINETICS",
+            "SPECTROSCOPIC_TECHNOLOGY"
           ]
         },
         {
           title: "SCIENTIFIC_FUNDAMENTALS",
-          skills: [
-            "MATHEMATICAL_TECHNIQUES",
-            "PROBABILITIES",
-            "STATISTICS",
-            "ADVANCED_STATISTICS"
-          ]
+          skills: ["MATHEMATICS", "COMPUTER_SCIENCE"]
         },
         {
           title: "PROFESSIONAL_ENVIRONMENT",
-          skills: [
-            "CREATIVITY_TECHNIQUES",
-            "PROJECT_MANAGEMENT",
-            "MULTIDISCIPLINARY_WORKSHOP",
-            "FINANCIAL_MANAGEMENT",
-            "ENGLISH",
-            "USAGE_DESIGN",
-            "DIGITAL_LEGISLATION",
-            "WRITTEN_EXPRESSION_TECHNIQUES"
-          ]
+          skills: ["ENGLISH", "EXPRESSION_COMMUNICATION"]
         }
       ]
     };
@@ -62865,7 +62848,7 @@ _EducationComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
     \u0275\u0275advance(6);
     \u0275\u0275property("ngForOf", ctx.iut.subjects);
   }
-}, dependencies: [MatExpansionModule, MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, TranslateModule, TranslatePipe, NgForOf, MatIconModule], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding: 15px;\n  height: calc(100% - 25px);\n  gap: 20px;\n}\nimg[_ngcontent-%COMP%] {\n  height: fit-content;\n  width: 50%;\n}\n.chrono[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n}\nul[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 5px;\n}\n.bar[_ngcontent-%COMP%] {\n  border-radius: 10px;\n  position: absolute;\n  left: 5px;\n  background-color: black;\n  width: 10px;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.graph[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.disk[_ngcontent-%COMP%] {\n  padding: 10px;\n  border-radius: 10px;\n  background-color: black;\n}\nli[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.telecom[_ngcontent-%COMP%] {\n  background-color: #70aab7;\n  border-radius: 3px;\n  height: 50%;\n  display: flex;\n  padding: 10px;\n  width: calc(100% - 50px);\n}\np[_ngcontent-%COMP%] {\n  margin: 4px 0;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  gap: 25px;\n}\n@media (max-width: 500px) {\n  [_nghost-%COMP%] {\n    height: calc(100% - 80px);\n  }\n  .telecom[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n  .mat-expansion-panel-header[_ngcontent-%COMP%] {\n    height: 36px;\n  }\n  .mat-expansion-panel-spacing[_ngcontent-%COMP%] {\n    margin: 10px 0;\n  }\n  h3[_ngcontent-%COMP%] {\n    margin: 0 0 10px 0;\n  }\n  img[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2VkdWNhdGlvbi9lZHVjYXRpb24uY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxNXB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDI1cHgpO1xuICBnYXA6IDIwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICB3aWR0aDogNTAlO1xufVxuXG4uY2hyb25vIHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xufVxudWwge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDVweDtcbn1cbi5iYXIge1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDVweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIHdpZHRoOiAxMHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbi5ncmFwaCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uZGlzayB7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xufVxubGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi50ZWxlY29tIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIzXCIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIGhlaWdodDogNTAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiAxMHB4O1xuICB3aWR0aDogY2FsYygxMDAlIC0gNTBweCk7XG59XG5cbnAge1xuICBtYXJnaW46IDRweCAwO1xufVxuXG4uY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHdpZHRoOiAxMDAlO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IDI1cHg7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA1MDBweCkge1xuICA6aG9zdCB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMCUgLSA4MHB4KTtcbiAgfVxuICAudGVsZWNvbSB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgfVxuICAubWF0LWV4cGFuc2lvbi1wYW5lbC1oZWFkZXIge1xuICAgIGhlaWdodDogMzZweDtcbiAgfVxuICAubWF0LWV4cGFuc2lvbi1wYW5lbC1zcGFjaW5nIHtcbiAgICBtYXJnaW46IDEwcHggMDtcbiAgfVxuICBoMyB7XG4gICAgbWFyZ2luOiAwIDAgMTBweCAwO1xuICB9XG4gIGltZyB7XG4gICAgZGlzcGxheTogbm9uZTtcbiAgfVxufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUdBO0FBQ0UsV0FBQTtBQUNBLG1CQUFBO0FBQ0EsU0FBQTtBQUNBLFdBQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBO0FBQ0EsT0FBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxTQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsVUFBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxXQUFBOztBQUVGLENBQUE7QUFDRSxpQkFBQTtBQUNBLFlBQUE7QUFDQSxRQUFBO0FBQ0Esb0JBQUE7QUFDQSxTQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxZQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBO0FBQ0EsaUJBQUE7QUFDQSxvQkFBQTs7QUFFRjtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUdGLENBQUE7QUFDRSxvQkFBQTtBQUNBLGlCQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxXQUFBO0FBQ0EsU0FBQSxLQUFBLEtBQUEsRUFBQTs7QUFHRjtBQUNFLFVBQUEsSUFBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQTtBQUNBLFNBQUE7QUFDQSxrQkFBQTtBQUNBLE9BQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFO0FBQ0UsWUFBQSxLQUFBLEtBQUEsRUFBQTs7QUFFRixHQXhCRjtBQXlCSSxvQkFBQTs7QUFFRixHQUFBO0FBQ0UsWUFBQTs7QUFFRixHQUFBO0FBQ0UsWUFBQSxLQUFBOztBQUVGO0FBQ0UsWUFBQSxFQUFBLEVBQUEsS0FBQTs7QUFFRjtBQUNFLGFBQUE7OzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
+}, dependencies: [MatExpansionModule, MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, TranslateModule, TranslatePipe, NgForOf, MatIconModule], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding: 15px;\n  height: calc(100% - 25px);\n  gap: 20px;\n}\nimg[_ngcontent-%COMP%] {\n  height: fit-content;\n  width: 50%;\n}\n.chrono[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n}\nul[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 5px;\n}\n.bar[_ngcontent-%COMP%] {\n  border-radius: 10px;\n  position: absolute;\n  left: 5px;\n  background-color: black;\n  width: 10px;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.graph[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.disk[_ngcontent-%COMP%] {\n  padding: 10px;\n  border-radius: 10px;\n  background-color: black;\n}\nli[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.telecom[_ngcontent-%COMP%] {\n  background-color: #70aab7;\n  border-radius: 3px;\n  height: 50%;\n  display: flex;\n  padding: 10px;\n  width: calc(100% - 50px);\n}\np[_ngcontent-%COMP%] {\n  margin: 4px 0;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  gap: 25px;\n}\n@media (max-width: 500px) {\n  [_nghost-%COMP%] {\n    height: calc(100% - 80px);\n  }\n  .telecom[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n  .mat-expansion-panel-header[_ngcontent-%COMP%] {\n    height: 36px;\n  }\n  .mat-expansion-panel-spacing[_ngcontent-%COMP%] {\n    margin: 10px 0;\n  }\n  h3[_ngcontent-%COMP%] {\n    margin: 0 0 10px 0;\n  }\n  img[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9jb21wb25lbnRzL2VkdWNhdGlvbi9lZHVjYXRpb24uY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxNXB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDI1cHgpO1xuICBnYXA6IDIwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICB3aWR0aDogNTAlO1xufVxuXG4uY2hyb25vIHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xufVxudWwge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDVweDtcbn1cbi5iYXIge1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDVweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIHdpZHRoOiAxMHB4O1xuICBoZWlnaHQ6IDEwMCU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbi5ncmFwaCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uZGlzayB7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xufVxubGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi50ZWxlY29tIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIyXCIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIGhlaWdodDogNTAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiAxMHB4O1xuICB3aWR0aDogY2FsYygxMDAlIC0gNTBweCk7XG59XG5cbnAge1xuICBtYXJnaW46IDRweCAwO1xufVxuXG4uY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHdpZHRoOiAxMDAlO1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IDI1cHg7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA1MDBweCkge1xuICA6aG9zdCB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMCUgLSA4MHB4KTtcbiAgfVxuICAudGVsZWNvbSB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgfVxuICAubWF0LWV4cGFuc2lvbi1wYW5lbC1oZWFkZXIge1xuICAgIGhlaWdodDogMzZweDtcbiAgfVxuICAubWF0LWV4cGFuc2lvbi1wYW5lbC1zcGFjaW5nIHtcbiAgICBtYXJnaW46IDEwcHggMDtcbiAgfVxuICBoMyB7XG4gICAgbWFyZ2luOiAwIDAgMTBweCAwO1xuICB9XG4gIGltZyB7XG4gICAgZGlzcGxheTogbm9uZTtcbiAgfVxufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUdBO0FBQ0UsV0FBQTtBQUNBLG1CQUFBO0FBQ0EsU0FBQTtBQUNBLFdBQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBO0FBQ0EsT0FBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxTQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsVUFBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxXQUFBOztBQUVGLENBQUE7QUFDRSxpQkFBQTtBQUNBLFlBQUE7QUFDQSxRQUFBO0FBQ0Esb0JBQUE7QUFDQSxTQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxZQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBO0FBQ0EsaUJBQUE7QUFDQSxvQkFBQTs7QUFFRjtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBOztBQUdGLENBQUE7QUFDRSxvQkFBQTtBQUNBLGlCQUFBO0FBQ0EsVUFBQTtBQUNBLFdBQUE7QUFDQSxXQUFBO0FBQ0EsU0FBQSxLQUFBLEtBQUEsRUFBQTs7QUFHRjtBQUNFLFVBQUEsSUFBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQTtBQUNBLFNBQUE7QUFDQSxrQkFBQTtBQUNBLE9BQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFO0FBQ0UsWUFBQSxLQUFBLEtBQUEsRUFBQTs7QUFFRixHQXhCRjtBQXlCSSxvQkFBQTs7QUFFRixHQUFBO0FBQ0UsWUFBQTs7QUFFRixHQUFBO0FBQ0UsWUFBQSxLQUFBOztBQUVGO0FBQ0UsWUFBQSxFQUFBLEVBQUEsS0FBQTs7QUFFRjtBQUNFLGFBQUE7OzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
 var EducationComponent = _EducationComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(EducationComponent, { className: "EducationComponent", filePath: "src\\app\\components\\education\\education.component.ts", lineNumber: 14 });
