@@ -62932,7 +62932,6 @@ var _AppComponent = class _AppComponent {
     };
     Object.assign(this.swiperContainer.nativeElement, swiperOption);
     this.swiperContainer.nativeElement.initialize();
-    this.goToSlide(4);
   }
   updateSize() {
     this.swiperContainer.nativeElement.height = window.innerHeight - 82;
@@ -62989,7 +62988,7 @@ _AppComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _A
 ], styles: ["\n\n.swiper-slide[_ngcontent-%COMP%] {\n  background-color: #e8f3f1;\n  display: flex;\n  padding: 15px;\n  height: calc(100% - 30px);\n}\n.swiper[_ngcontent-%COMP%] {\n  height: calc(100vh - 82px);\n}\n@media (max-width: 550px) {\n  .swiper[_ngcontent-%COMP%] {\n    height: calc(100vh - 110px);\n  }\n  .swiper-slide[_ngcontent-%COMP%] {\n    height: calc(100% - 50px);\n  }\n}\n@media (max-width: 400px) {\n  .swiper[_ngcontent-%COMP%] {\n    height: calc(100vh - 135px);\n  }\n  .swiper-slide[_ngcontent-%COMP%] {\n    height: calc(100% - 82px);\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbi5zd2lwZXItc2xpZGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBtYXAuZ2V0KCRjb2xvci1wYWxldHRlLCBcIjFcIik7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIGhlaWdodDogY2FsYygxMDAlIC0gMzBweCk7XG59XG4uc3dpcGVyIHtcbiAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gODJweCk7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA1NTBweCkge1xuICAuc3dpcGVyIHtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAxMTBweCk7XG4gIH1cbiAgLnN3aXBlci1zbGlkZSB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMCUgLSA1MHB4KTtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNDAwcHgpIHtcbiAgLnN3aXBlciB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMTM1cHgpO1xuICB9XG4gIC5zd2lwZXItc2xpZGUge1xuICAgIGhlaWdodDogY2FsYygxMDAlIC0gODJweCk7XG4gIH1cbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFHQSxDQUFBO0FBQ0Usb0JBQUE7QUFDQSxXQUFBO0FBQ0EsV0FBQTtBQUNBLFVBQUEsS0FBQSxLQUFBLEVBQUE7O0FBRUYsQ0FBQTtBQUNFLFVBQUEsS0FBQSxNQUFBLEVBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBTEY7QUFNSSxZQUFBLEtBQUEsTUFBQSxFQUFBOztBQUVGLEdBZEY7QUFlSSxZQUFBLEtBQUEsS0FBQSxFQUFBOzs7QUFJSixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0FkRjtBQWVJLFlBQUEsS0FBQSxNQUFBLEVBQUE7O0FBRUYsR0F2QkY7QUF3QkksWUFBQSxLQUFBLEtBQUEsRUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var AppComponent = _AppComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src\\app\\app.component.ts", lineNumber: 39 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src\\app\\app.component.ts", lineNumber: 38 });
 })();
 
 // src/main.ts
