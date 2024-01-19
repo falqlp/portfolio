@@ -54,7 +54,6 @@ export class AppComponent implements AfterViewInit {
     };
     Object.assign(this.swiperContainer.nativeElement, swiperOption);
     this.swiperContainer.nativeElement.initialize();
-    this.goToSlide(4);
   }
 
   protected updateSize(): void {
