@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   gap: 50px;
-  height: 100%;
+  height: calc(100% - 30px);
 }
 
 .primary-projects {
@@ -35,7 +35,7 @@ img {
 .description {
   padding: 10px;
   text-align: justify;
-  font-size: 16px;
+  font-size: 2vh;
 }
 
 .img-background {

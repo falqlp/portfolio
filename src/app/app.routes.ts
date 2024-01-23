@@ -4,5 +4,5 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 
 export const routes: Routes = [
   { path: 'PokemonManager', component: PokemonManagerComponent },
-  { path: '**', component: PortfolioComponent },
+  { path: '', component: PortfolioComponent },
 ];
