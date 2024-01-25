@@ -1,0 +1,4 @@
+<div class="big-image" *ngIf="urlObservable|async as url">
+  <mat-icon class="close" (click)="close()">close</mat-icon>
+  <img style="height: 80%" [src]="url">
+</div>

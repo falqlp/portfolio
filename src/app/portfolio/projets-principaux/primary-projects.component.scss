@@ -40,6 +40,7 @@ img {
 .img-background {
   display: flex;
   justify-content: center;
+  height: 180px;
 }
 
 @media (max-width: 1000px) {
@@ -53,8 +54,7 @@ img {
     font-size: 2vw;
     padding-top: 0;
   }
-  img {
+  .img-background {
     height: 100px;
-    width: 100px;
   }
 }

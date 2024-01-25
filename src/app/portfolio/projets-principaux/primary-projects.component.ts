@@ -3,11 +3,20 @@ import { NgForOf } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TechnoLogosComponent } from '../techno-logos/techno-logos.component';
+import { RouterLink } from '@angular/router';
+import { ImageViewerComponent } from '../../utils/image-viewer/image-viewer.component';
 
 @Component({
   selector: 'app-primary-projects',
   standalone: true,
-  imports: [NgForOf, TranslateModule, MatTooltipModule, TechnoLogosComponent],
+  imports: [
+    NgForOf,
+    TranslateModule,
+    MatTooltipModule,
+    TechnoLogosComponent,
+    RouterLink,
+    ImageViewerComponent,
+  ],
   templateUrl: './primary-projects.component.html',
   styleUrl: './primary-projects.component.scss',
 })

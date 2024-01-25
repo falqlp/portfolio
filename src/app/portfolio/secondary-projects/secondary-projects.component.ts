@@ -4,6 +4,7 @@ import { NgForOf, NgIf } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TechnoLogosComponent } from '../techno-logos/techno-logos.component';
+import {ImageViewerComponent} from "../../utils/image-viewer/image-viewer.component";
 
 @Component({
   selector: 'app-secondary-projects',
@@ -15,6 +16,7 @@ import { TechnoLogosComponent } from '../techno-logos/techno-logos.component';
     MatTooltipModule,
     TechnoLogosComponent,
     NgIf,
+    ImageViewerComponent,
   ],
   templateUrl: './secondary-projects.component.html',
   styleUrl: './secondary-projects.component.scss',

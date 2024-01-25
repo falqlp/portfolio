@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { startWith } from 'rxjs';
@@ -10,7 +10,7 @@ import { startWith } from 'rxjs';
   templateUrl: './first-slide.component.html',
   styleUrl: './first-slide.component.scss',
 })
-export class FirstSlideComponent implements OnInit, OnDestroy {
+export class FirstSlideComponent implements AfterViewInit, OnDestroy {
   protected texteAnime = '';
   protected isTypingCompleted = false;
   private index = 0;
@@ -21,8 +21,8 @@ export class FirstSlideComponent implements OnInit, OnDestroy {
     window.removeEventListener('load', this.initTypeWriter);
   }
 
-  public ngOnInit(): void {
-    window.addEventListener('load', () => this.initTypeWriter());
+  public ngAfterViewInit(): void {
+    this.initTypeWriter();
   }
 
   protected initTypeWriter(): void {

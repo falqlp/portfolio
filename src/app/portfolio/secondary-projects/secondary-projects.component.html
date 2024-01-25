@@ -5,7 +5,7 @@
       <h3 class="card-title">
         {{ project.title }}
       </h3>
-      <img class="preview" [src]="project.img" [alt]="project.title">
+      <app-image-viewer class="preview" [src]="project.img" [alt]="project.title"/>
       <div class="description">
         <p *ngFor="let p of project.p">{{ p|translate }}</p>
         <a *ngIf="project.a" [href]="project.a">Github</a>

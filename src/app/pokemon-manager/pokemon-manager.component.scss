@@ -1,0 +1,14 @@
+@use "sass:map";
+@import "../../styles/color-palette";
+
+.pokemon-manager-paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: map.get($color-palette, "2");
+  border-radius: 3px;
+}
+:host {
+  padding: 15px;
+  display: flex;
+}

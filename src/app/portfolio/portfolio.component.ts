@@ -12,8 +12,8 @@ import { SecondaryProjectsComponent } from './secondary-projects/secondary-proje
 import { PrimaryProjectsComponent } from './projets-principaux/primary-projects.component';
 import { FirstSlideComponent } from './first-slide/first-slide.component';
 import { NavigationService } from '../navigation.service';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { EducationComponent } from './education/education.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -36,7 +36,10 @@ export class PortfolioComponent implements AfterViewInit {
     this.updateSize();
   }
 
-  constructor(protected navigationService: NavigationService) {}
+  constructor(
+    protected navigationService: NavigationService,
+    protected router: Router
+  ) {}
 
   public ngAfterViewInit(): void {
     const swiperOption: SwiperOptions = {
@@ -49,8 +52,7 @@ export class PortfolioComponent implements AfterViewInit {
     this.swiperContainer.nativeElement.initialize();
     this.navigationService
       .getNavigation()
-      .pipe(takeUntilDestroyed())
-      .subscribe(this.goToSlide);
+      .subscribe((slide) => this.goToSlide(slide));
   }
 
   protected updateSize(): void {
@@ -58,6 +60,7 @@ export class PortfolioComponent implements AfterViewInit {
   }
 
   protected goToSlide(slide: number): void {
+    this.router.navigateByUrl('');
     this.swiperContainer.nativeElement.swiper.slideTo(slide);
   }
 }
