@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Work+Sans&display=swap";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 /* node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css */
 .mat-ripple {
@@ -2806,6 +2807,7 @@ body {
   background-color: #e8f3f1;
   margin: 0;
   font-family: "Work Sans", sans-serif;
+  position: absolute;
 }
 button {
   border: none;
@@ -2837,6 +2839,11 @@ p {
 .mat-expansion-panel,
 .mat-expansion-panel-header:hover {
   background-color: #3b7682 !important;
+}
+.mat-icon {
+  height: 50px !important;
+  width: 50px !important;
+  font-size: 50px;
 }
 
 /* angular:styles/global:styles */

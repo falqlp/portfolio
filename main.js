@@ -25897,13 +25897,13 @@ var _FetchBackend = class _FetchBackend {
       return () => aborter.abort();
     });
   }
-  doRequest(request, signal2, observer) {
+  doRequest(request, signal, observer) {
     return __async(this, null, function* () {
       const init = this.createRequestInit(request);
       let response;
       try {
         const fetchPromise = this.fetchImpl(request.urlWithParams, __spreadValues({
-          signal: signal2
+          signal
         }, init));
         silenceSuperfluousUnhandledPromiseRejection(fetchPromise);
         observer.next({
@@ -39459,13 +39459,13 @@ var _PokemonManagerComponent = class _PokemonManagerComponent {
 _PokemonManagerComponent.\u0275fac = function PokemonManagerComponent_Factory(t) {
   return new (t || _PokemonManagerComponent)();
 };
-_PokemonManagerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PokemonManagerComponent, selectors: [["app-pokemon-manager"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 0, template: function PokemonManagerComponent_Template(rf, ctx) {
+_PokemonManagerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PokemonManagerComponent, selectors: [["app-pokemon-manager"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 0, consts: [[1, "shadow", "pokemon-manager-paragraph"], ["src", "assets/images/pokemon-manager/home.png", 2, "width", "50%"]], template: function PokemonManagerComponent_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "p");
-    \u0275\u0275text(1, "pokemon-manager works!");
+    \u0275\u0275elementStart(0, "div", 0);
+    \u0275\u0275element(1, "img", 1);
     \u0275\u0275elementEnd();
   }
-}, styles: ["\n\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFtdLAogICJzb3VyY2VzQ29udGVudCI6IFtdLAogICJtYXBwaW5ncyI6ICIiLAogICJuYW1lcyI6IFtdCn0K */"] });
+}, styles: ["\n\n.pokemon-manager-paragraph[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  background-color: #70aab7;\n  border-radius: 3px;\n}\n[_nghost-%COMP%] {\n  padding: 15px;\n  display: flex;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb2tlbW9uLW1hbmFnZXIvcG9rZW1vbi1tYW5hZ2VyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG4ucG9rZW1vbi1tYW5hZ2VyLXBhcmFncmFwaCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIyXCIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG59XG46aG9zdCB7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0EsQ0FBQTtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBO0FBQ0Esb0JBQUE7QUFDQSxpQkFBQTs7QUFFRjtBQUNFLFdBQUE7QUFDQSxXQUFBOzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
 var PokemonManagerComponent = _PokemonManagerComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PokemonManagerComponent, { className: "PokemonManagerComponent", filePath: "src\\app\\pokemon-manager\\pokemon-manager.component.ts", lineNumber: 10 });
@@ -54481,6 +54481,62 @@ var TechnoLogosComponent = _TechnoLogosComponent;
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TechnoLogosComponent, { className: "TechnoLogosComponent", filePath: "src\\app\\portfolio\\techno-logos\\techno-logos.component.ts", lineNumber: 12 });
 })();
 
+// src/app/utils/big-image-viewer/big-image-viewer.service.ts
+var _BigImageViewerService = class _BigImageViewerService {
+  constructor() {
+    this.imgSubject = new BehaviorSubject("");
+  }
+  setImage(imageUrl) {
+    this.imgSubject.next(imageUrl);
+  }
+  getImage() {
+    return this.imgSubject.asObservable();
+  }
+};
+_BigImageViewerService.\u0275fac = function BigImageViewerService_Factory(t) {
+  return new (t || _BigImageViewerService)();
+};
+_BigImageViewerService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _BigImageViewerService, factory: _BigImageViewerService.\u0275fac, providedIn: "root" });
+var BigImageViewerService = _BigImageViewerService;
+
+// src/app/utils/image-viewer/image-viewer.component.ts
+var _ImageViewerComponent = class _ImageViewerComponent {
+  constructor(bigImageViewerService, elementRef) {
+    this.bigImageViewerService = bigImageViewerService;
+    this.elementRef = elementRef;
+    this.maxHeight = false;
+  }
+  ngAfterViewInit() {
+    const hwRatioImg = this.elementRef.nativeElement.children[0].naturalHeight / this.elementRef.nativeElement.children[0].naturalWidth;
+    setTimeout(() => {
+      const hwRatioImgDiv = this.elementRef.nativeElement.parentElement.clientHeight / this.elementRef.nativeElement.parentElement.clientWidth;
+      this.maxHeight = hwRatioImg > hwRatioImgDiv;
+    });
+  }
+  click() {
+    this.bigImageViewerService.setImage(this.src);
+  }
+};
+_ImageViewerComponent.\u0275fac = function ImageViewerComponent_Factory(t) {
+  return new (t || _ImageViewerComponent)(\u0275\u0275directiveInject(BigImageViewerService), \u0275\u0275directiveInject(ElementRef));
+};
+_ImageViewerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ImageViewerComponent, selectors: [["app-image-viewer"]], inputs: { src: "src", alt: "alt" }, standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 1, vars: 3, consts: [[3, "ngClass", "src", "alt", "click"]], template: function ImageViewerComponent_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "img", 0);
+    \u0275\u0275listener("click", function ImageViewerComponent_Template_img_click_0_listener() {
+      return ctx.click();
+    });
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    \u0275\u0275property("ngClass", ctx.maxHeight ? "max-height" : "max-width")("src", ctx.src, \u0275\u0275sanitizeUrl)("alt", ctx.alt);
+  }
+}, dependencies: [NgClass], styles: ["\n\n[_nghost-%COMP%] {\n  display: contents;\n}\n.max-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.max-height[_ngcontent-%COMP%] {\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC91dGlscy9pbWFnZS12aWV3ZXIvaW1hZ2Utdmlld2VyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyI6aG9zdCB7XG4gIGRpc3BsYXk6IGNvbnRlbnRzO1xufVxuLm1heC13aWR0aCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuLm1heC1oZWlnaHQge1xuICBoZWlnaHQ6IDEwMCU7XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQUE7QUFDRSxXQUFBOztBQUVGLENBQUE7QUFDRSxTQUFBOztBQUVGLENBQUE7QUFDRSxVQUFBOzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
+var ImageViewerComponent = _ImageViewerComponent;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ImageViewerComponent, { className: "ImageViewerComponent", filePath: "src\\app\\utils\\image-viewer\\image-viewer.component.ts", lineNumber: 12 });
+})();
+
 // src/app/portfolio/secondary-projects/secondary-projects.component.ts
 function SecondaryProjectsComponent_div_4_p_6_Template(rf, ctx) {
   if (rf & 1) {
@@ -54511,7 +54567,7 @@ function SecondaryProjectsComponent_div_4_Template(rf, ctx) {
     \u0275\u0275elementStart(0, "div", 2)(1, "div")(2, "h3", 3);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(4, "img", 4);
+    \u0275\u0275element(4, "app-image-viewer", 4);
     \u0275\u0275elementStart(5, "div", 5);
     \u0275\u0275template(6, SecondaryProjectsComponent_div_4_p_6_Template, 3, 3, "p", 6)(7, SecondaryProjectsComponent_div_4_a_7_Template, 2, 1, "a", 7);
     \u0275\u0275elementEnd()();
@@ -54523,7 +54579,7 @@ function SecondaryProjectsComponent_div_4_Template(rf, ctx) {
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate1(" ", project_r1.title, " ");
     \u0275\u0275advance();
-    \u0275\u0275property("src", project_r1.img, \u0275\u0275sanitizeUrl)("alt", project_r1.title);
+    \u0275\u0275property("src", project_r1.img)("alt", project_r1.title);
     \u0275\u0275advance(2);
     \u0275\u0275property("ngForOf", project_r1.p);
     \u0275\u0275advance();
@@ -54597,11 +54653,12 @@ _SecondaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompon
   MatCardModule,
   MatTooltipModule,
   TechnoLogosComponent,
-  NgIf
+  NgIf,
+  ImageViewerComponent
 ], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: calc(100% - 30px);\n}\n.secondary-project[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  background-color: #70aab7;\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  padding-bottom: 10px;\n}\n.preview[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 0 10px 10px 10px;\n  text-align: justify;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n}\n@media (max-width: 500px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n    flex-direction: column;\n    width: 100%;\n  }\n  .secondary-project[_ngcontent-%COMP%] {\n    flex: 1;\n    width: 100%;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  .preview[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb3J0Zm9saW8vc2Vjb25kYXJ5LXByb2plY3RzL3NlY29uZGFyeS1wcm9qZWN0cy5jb21wb25lbnQuc2NzcyJdLAogICJzb3VyY2VzQ29udGVudCI6IFsiQHVzZSBcInNhc3M6bWFwXCI7XG5AaW1wb3J0IFwiLi4vLi4vLi4vc3R5bGVzL2NvbG9yLXBhbGV0dGVcIjtcblxuOmhvc3Qge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuXG4uY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBnYXA6IDUwcHg7XG4gIGhlaWdodDogY2FsYygxMDAlIC0gMzBweCk7XG59XG5cbi5zZWNvbmRhcnktcHJvamVjdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIyXCIpO1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHBhZGRpbmctYm90dG9tOiAxMHB4O1xufVxuLnByZXZpZXcge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmNhcmQtdGl0bGUge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5kZXNjcmlwdGlvbiB7XG4gIHBhZGRpbmc6IDAgMTBweCAxMHB4IDEwcHg7XG4gIHRleHQtYWxpZ246IGp1c3RpZnk7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiAxMDAwcHgpIHtcbiAgLmNvbnRlbnQge1xuICAgIGdhcDogMTBweDtcbiAgfVxuICAuc2Vjb25kYXJ5LXByb2plY3Qge1xuICAgIGZsZXg6IDE7XG4gIH1cbiAgLmRlc2NyaXB0aW9uIHtcbiAgICBmb250LXNpemU6IDJ2dztcbiAgICBwYWRkaW5nLXRvcDogMDtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNTAwcHgpIHtcbiAgLmNvbnRlbnQge1xuICAgIGdhcDogMTBweDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gIC5zZWNvbmRhcnktcHJvamVjdCB7XG4gICAgZmxleDogMTtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuICAuZGVzY3JpcHRpb24ge1xuICAgIGZvbnQtc2l6ZTogMnZ3O1xuICAgIHBhZGRpbmctdG9wOiAwO1xuICB9XG4gIC5wcmV2aWV3IHtcbiAgICBkaXNwbGF5OiBub25lO1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTtBQUNBLG9CQUFBO0FBQ0EsU0FBQTtBQUNBLGlCQUFBO0FBQ0EsWUFBQTtBQUNBLGtCQUFBOztBQUVGLENBQUE7QUFDRSxTQUFBOztBQUdGLENBQUE7QUFDRSxjQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBLEVBQUEsS0FBQSxLQUFBO0FBQ0EsY0FBQTs7QUFHRixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0EvQkY7QUFnQ0ksU0FBQTs7QUFFRixHQTNCRjtBQTRCSSxVQUFBOztBQUVGLEdBWkY7QUFhSSxlQUFBO0FBQ0EsaUJBQUE7OztBQUlKLE9BQUEsQ0FBQSxTQUFBLEVBQUE7QUFDRSxHQTVDRjtBQTZDSSxTQUFBO0FBQ0Esb0JBQUE7QUFDQSxXQUFBOztBQUVGLEdBMUNGO0FBMkNJLFVBQUE7QUFDQSxXQUFBOztBQUVGLEdBNUJGO0FBNkJJLGVBQUE7QUFDQSxpQkFBQTs7QUFFRixHQXhDRjtBQXlDSSxhQUFBOzs7IiwKICAibmFtZXMiOiBbXQp9Cg== */"] });
 var SecondaryProjectsComponent = _SecondaryProjectsComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SecondaryProjectsComponent, { className: "SecondaryProjectsComponent", filePath: "src\\app\\portfolio\\secondary-projects\\secondary-projects.component.ts", lineNumber: 22 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SecondaryProjectsComponent, { className: "SecondaryProjectsComponent", filePath: "src\\app\\portfolio\\secondary-projects\\secondary-projects.component.ts", lineNumber: 24 });
 })();
 
 // src/app/portfolio/projets-principaux/primary-projects.component.ts
@@ -54618,7 +54675,7 @@ function PrimaryProjectsComponent_p_12_Template(rf, ctx) {
     \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, p_r2));
   }
 }
-function PrimaryProjectsComponent_p_26_Template(rf, ctx) {
+function PrimaryProjectsComponent_p_28_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "p");
     \u0275\u0275text(1);
@@ -54664,7 +54721,7 @@ var _PrimaryProjectsComponent = class _PrimaryProjectsComponent {
 _PrimaryProjectsComponent.\u0275fac = function PrimaryProjectsComponent_Factory(t) {
   return new (t || _PrimaryProjectsComponent)();
 };
-_PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrimaryProjectsComponent, selectors: [["app-primary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 31, vars: 16, consts: [[1, "content"], [1, "primary-projects", "shadow"], [1, "card-title"], [1, "img-background", 2, "background-color", "#fcf5e6"], ["src", "assets/images/pokemon-manager/pm_logo.png", "alt", "pm logo"], [1, "description"], [4, "ngFor", "ngForOf"], ["href", "https://github.com/falqlp/PokemonManager"], [3, "technologies"], [1, "img-background", 2, "background-color", "#2A353B"], ["src", "assets/images/aquiweb/aquiweb.jpg", "alt", "aquiweb logo"], ["href", "https://www.astree-software.fr/logiciel-mes/"]], template: function PrimaryProjectsComponent_Template(rf, ctx) {
+_PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrimaryProjectsComponent, selectors: [["app-primary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 33, vars: 17, consts: [[1, "content"], [1, "primary-projects", "shadow"], [1, "card-title"], [1, "img-background", 2, "background-color", "#fcf5e6"], ["src", "assets/images/pokemon-manager/pm_logo.png", "alt", "pm logo"], [1, "description"], [4, "ngFor", "ngForOf"], ["href", "https://github.com/falqlp/PokemonManager"], [3, "routerLink"], [3, "technologies"], [1, "img-background", 2, "background-color", "#2A353B"], ["src", "assets/images/aquiweb/aquiweb.jpg", "alt", "aquiweb logo"], ["href", "https://www.astree-software.fr/logiciel-mes/"]], template: function PrimaryProjectsComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h3");
     \u0275\u0275text(1);
@@ -54675,7 +54732,7 @@ _PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponen
     \u0275\u0275pipe(8, "translate");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(9, "div", 3);
-    \u0275\u0275element(10, "img", 4);
+    \u0275\u0275element(10, "app-image-viewer", 4);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(11, "div", 5);
     \u0275\u0275template(12, PrimaryProjectsComponent_p_12_Template, 3, 3, "p", 6);
@@ -54685,46 +54742,59 @@ _PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponen
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(16, "a", 7);
     \u0275\u0275text(17, "Github");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(18, "a", 8);
+    \u0275\u0275text(19, "En savoir plus");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275element(18, "app-techno-logos", 8);
+    \u0275\u0275element(20, "app-techno-logos", 9);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(19, "div", 1)(20, "div")(21, "h3", 2);
-    \u0275\u0275text(22, "Aquiweb");
+    \u0275\u0275elementStart(21, "div", 1)(22, "div")(23, "h3", 2);
+    \u0275\u0275text(24, "Aquiweb");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(23, "div", 9);
-    \u0275\u0275element(24, "img", 10);
+    \u0275\u0275elementStart(25, "div", 10);
+    \u0275\u0275element(26, "app-image-viewer", 11);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(25, "div", 5);
-    \u0275\u0275template(26, PrimaryProjectsComponent_p_26_Template, 3, 3, "p", 6);
-    \u0275\u0275elementStart(27, "a", 11);
-    \u0275\u0275text(28);
-    \u0275\u0275pipe(29, "translate");
+    \u0275\u0275elementStart(27, "div", 5);
+    \u0275\u0275template(28, PrimaryProjectsComponent_p_28_Template, 3, 3, "p", 6);
+    \u0275\u0275elementStart(29, "a", 12);
+    \u0275\u0275text(30);
+    \u0275\u0275pipe(31, "translate");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275element(30, "app-techno-logos", 8);
+    \u0275\u0275element(32, "app-techno-logos", 9);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(2, 8, "PRIMARY_PROJECTS"), " :");
+    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(2, 9, "PRIMARY_PROJECTS"), " :");
     \u0275\u0275advance(6);
-    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(8, 10, "POKEMON_MANAGER"));
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(8, 11, "POKEMON_MANAGER"));
     \u0275\u0275advance(5);
     \u0275\u0275property("ngForOf", ctx.pokemonManager.p);
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(15, 12, "WORK_IN_PROGRESS"), " ");
+    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(15, 13, "WORK_IN_PROGRESS"), " ");
     \u0275\u0275advance(4);
+    \u0275\u0275property("routerLink", "PokemonManager");
+    \u0275\u0275advance(2);
     \u0275\u0275property("technologies", ctx.pokemonManager.technologies);
     \u0275\u0275advance(8);
     \u0275\u0275property("ngForOf", ctx.aquiweb.p);
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(29, 14, "MORE"));
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(31, 15, "MORE"));
     \u0275\u0275advance(2);
     \u0275\u0275property("technologies", ctx.aquiweb.technologies);
   }
-}, dependencies: [NgForOf, TranslateModule, TranslatePipe, MatTooltipModule, TechnoLogosComponent], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: calc(100% - 30px);\n}\n.primary-projects[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  background-color: #70aab7;\n  gap: 10px;\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  justify-content: space-between;\n  padding-bottom: 10px;\n}\nimg[_ngcontent-%COMP%] {\n  height: 180px;\n  width: 180px;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 10px;\n  text-align: justify;\n  font-size: 2vh;\n}\n.img-background[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .primary-projects[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  img[_ngcontent-%COMP%] {\n    height: 100px;\n    width: 100px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb3J0Zm9saW8vcHJvamV0cy1wcmluY2lwYXV4L3ByaW1hcnktcHJvamVjdHMuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLmNvbnRlbnQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZ2FwOiA1MHB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMwcHgpO1xufVxuXG4ucHJpbWFyeS1wcm9qZWN0cyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGJhY2tncm91bmQtY29sb3I6IG1hcC5nZXQoJGNvbG9yLXBhbGV0dGUsIFwiMlwiKTtcbiAgZ2FwOiAxMHB4O1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgcGFkZGluZy1ib3R0b206IDEwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IDE4MHB4O1xuICB3aWR0aDogMTgwcHg7XG59XG4uY2FyZC10aXRsZSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5kZXNjcmlwdGlvbiB7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIHRleHQtYWxpZ246IGp1c3RpZnk7XG4gIGZvbnQtc2l6ZTogMnZoO1xufVxuXG4uaW1nLWJhY2tncm91bmQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDEwMDBweCkge1xuICAuY29udGVudCB7XG4gICAgZ2FwOiAxMHB4O1xuICB9XG4gIC5wcmltYXJ5LXByb2plY3RzIHtcbiAgICBmbGV4OiAxO1xuICB9XG4gIC5kZXNjcmlwdGlvbiB7XG4gICAgZm9udC1zaXplOiAydnc7XG4gICAgcGFkZGluZy10b3A6IDA7XG4gIH1cbiAgaW1nIHtcbiAgICBoZWlnaHQ6IDEwMHB4O1xuICAgIHdpZHRoOiAxMDBweDtcbiAgfVxufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUdBO0FBQ0UsV0FBQTtBQUNBLGtCQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsbUJBQUE7QUFDQSxPQUFBO0FBQ0EsVUFBQSxLQUFBLEtBQUEsRUFBQTs7QUFHRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGtCQUFBO0FBQ0Esb0JBQUE7QUFDQSxPQUFBO0FBQ0EsU0FBQTtBQUNBLGlCQUFBO0FBQ0EsWUFBQTtBQUNBLG1CQUFBO0FBQ0Esa0JBQUE7O0FBRUY7QUFDRSxVQUFBO0FBQ0EsU0FBQTs7QUFFRixDQUFBO0FBQ0UsY0FBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGNBQUE7QUFDQSxhQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0EsbUJBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBckNGO0FBc0NJLFNBQUE7O0FBRUYsR0FqQ0Y7QUFrQ0ksVUFBQTs7QUFFRixHQWxCRjtBQW1CSSxlQUFBO0FBQ0EsaUJBQUE7O0FBRUY7QUFDRSxZQUFBO0FBQ0EsV0FBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
+}, dependencies: [
+  NgForOf,
+  TranslateModule,
+  TranslatePipe,
+  MatTooltipModule,
+  TechnoLogosComponent,
+  RouterLink,
+  ImageViewerComponent
+], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  gap: 50px;\n  height: calc(100% - 30px);\n}\n.primary-projects[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  background-color: #70aab7;\n  gap: 10px;\n  width: 40%;\n  border-radius: 3px;\n  overflow: hidden;\n  justify-content: space-between;\n  padding-bottom: 10px;\n}\nimg[_ngcontent-%COMP%] {\n  height: 180px;\n  width: 180px;\n}\n.card-title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.description[_ngcontent-%COMP%] {\n  padding: 10px;\n  text-align: justify;\n  font-size: 2vh;\n}\n.img-background[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  height: 180px;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    gap: 10px;\n  }\n  .primary-projects[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .description[_ngcontent-%COMP%] {\n    font-size: 2vw;\n    padding-top: 0;\n  }\n  .img-background[_ngcontent-%COMP%] {\n    height: 100px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb3J0Zm9saW8vcHJvamV0cy1wcmluY2lwYXV4L3ByaW1hcnktcHJvamVjdHMuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIkB1c2UgXCJzYXNzOm1hcFwiO1xuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XG5cbjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLmNvbnRlbnQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZ2FwOiA1MHB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMwcHgpO1xufVxuXG4ucHJpbWFyeS1wcm9qZWN0cyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGJhY2tncm91bmQtY29sb3I6IG1hcC5nZXQoJGNvbG9yLXBhbGV0dGUsIFwiMlwiKTtcbiAgZ2FwOiAxMHB4O1xuICB3aWR0aDogNDAlO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgcGFkZGluZy1ib3R0b206IDEwcHg7XG59XG5pbWcge1xuICBoZWlnaHQ6IDE4MHB4O1xuICB3aWR0aDogMTgwcHg7XG59XG4uY2FyZC10aXRsZSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5kZXNjcmlwdGlvbiB7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIHRleHQtYWxpZ246IGp1c3RpZnk7XG4gIGZvbnQtc2l6ZTogMnZoO1xufVxuXG4uaW1nLWJhY2tncm91bmQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgaGVpZ2h0OiAxODBweDtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDEwMDBweCkge1xuICAuY29udGVudCB7XG4gICAgZ2FwOiAxMHB4O1xuICB9XG4gIC5wcmltYXJ5LXByb2plY3RzIHtcbiAgICBmbGV4OiAxO1xuICB9XG4gIC5kZXNjcmlwdGlvbiB7XG4gICAgZm9udC1zaXplOiAydnc7XG4gICAgcGFkZGluZy10b3A6IDA7XG4gIH1cbiAgLmltZy1iYWNrZ3JvdW5kIHtcbiAgICBoZWlnaHQ6IDEwMHB4O1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLE9BQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBOztBQUdGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxvQkFBQTtBQUNBLE9BQUE7QUFDQSxTQUFBO0FBQ0EsaUJBQUE7QUFDQSxZQUFBO0FBQ0EsbUJBQUE7QUFDQSxrQkFBQTs7QUFFRjtBQUNFLFVBQUE7QUFDQSxTQUFBOztBQUVGLENBQUE7QUFDRSxjQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBO0FBQ0EsY0FBQTtBQUNBLGFBQUE7O0FBR0YsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLFVBQUE7O0FBR0YsT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBdENGO0FBdUNJLFNBQUE7O0FBRUYsR0FsQ0Y7QUFtQ0ksVUFBQTs7QUFFRixHQW5CRjtBQW9CSSxlQUFBO0FBQ0EsaUJBQUE7O0FBRUYsR0FqQkY7QUFrQkksWUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var PrimaryProjectsComponent = _PrimaryProjectsComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PrimaryProjectsComponent, { className: "PrimaryProjectsComponent", filePath: "src\\app\\portfolio\\projets-principaux\\primary-projects.component.ts", lineNumber: 14 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PrimaryProjectsComponent, { className: "PrimaryProjectsComponent", filePath: "src\\app\\portfolio\\projets-principaux\\primary-projects.component.ts", lineNumber: 23 });
 })();
 
 // src/app/portfolio/first-slide/first-slide.component.ts
@@ -54738,8 +54808,8 @@ var _FirstSlideComponent = class _FirstSlideComponent {
   ngOnDestroy() {
     window.removeEventListener("load", this.initTypeWriter);
   }
-  ngOnInit() {
-    window.addEventListener("load", () => this.initTypeWriter());
+  ngAfterViewInit() {
+    this.initTypeWriter();
   }
   initTypeWriter() {
     this.translateService.onLangChange.asObservable().pipe(startWith(null)).subscribe(() => {
@@ -54784,21 +54854,6 @@ var FirstSlideComponent = _FirstSlideComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FirstSlideComponent, { className: "FirstSlideComponent", filePath: "src\\app\\portfolio\\first-slide\\first-slide.component.ts", lineNumber: 13 });
 })();
-
-// node_modules/@angular/core/fesm2022/rxjs-interop.mjs
-function takeUntilDestroyed(destroyRef) {
-  if (!destroyRef) {
-    assertInInjectionContext(takeUntilDestroyed);
-    destroyRef = inject(DestroyRef);
-  }
-  const destroyed$ = new Observable((observer) => {
-    const unregisterFn = destroyRef.onDestroy(observer.next.bind(observer));
-    return unregisterFn;
-  });
-  return (source) => {
-    return source.pipe(takeUntil(destroyed$));
-  };
-}
 
 // node_modules/@angular/cdk/fesm2022/accordion.mjs
 var nextId$1 = 0;
@@ -56964,8 +57019,9 @@ var _PortfolioComponent = class _PortfolioComponent {
   onResize() {
     this.updateSize();
   }
-  constructor(navigationService) {
+  constructor(navigationService, router) {
     this.navigationService = navigationService;
+    this.router = router;
     this.swiper = Swiper;
   }
   ngAfterViewInit() {
@@ -56977,17 +57033,18 @@ var _PortfolioComponent = class _PortfolioComponent {
     };
     Object.assign(this.swiperContainer.nativeElement, swiperOption);
     this.swiperContainer.nativeElement.initialize();
-    this.navigationService.getNavigation().pipe(takeUntilDestroyed()).subscribe(this.goToSlide);
+    this.navigationService.getNavigation().subscribe((slide2) => this.goToSlide(slide2));
   }
   updateSize() {
     this.swiperContainer.nativeElement.height = window.innerHeight - 82;
   }
   goToSlide(slide2) {
+    this.router.navigateByUrl("");
     this.swiperContainer.nativeElement.swiper.slideTo(slide2);
   }
 };
 _PortfolioComponent.\u0275fac = function PortfolioComponent_Factory(t) {
-  return new (t || _PortfolioComponent)(\u0275\u0275directiveInject(NavigationService));
+  return new (t || _PortfolioComponent)(\u0275\u0275directiveInject(NavigationService), \u0275\u0275directiveInject(Router));
 };
 _PortfolioComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PortfolioComponent, selectors: [["app-portfolio"]], viewQuery: function PortfolioComponent_Query(rf, ctx) {
   if (rf & 1) {
@@ -61455,7 +61512,7 @@ function Manipulation(_ref) {
 // node_modules/swiper/shared/effect-init.mjs
 function effectInit(params) {
   const {
-    effect: effect2,
+    effect,
     swiper,
     on,
     setTranslate: setTranslate2,
@@ -61466,9 +61523,9 @@ function effectInit(params) {
     getEffectParams
   } = params;
   on("beforeInit", () => {
-    if (swiper.params.effect !== effect2)
+    if (swiper.params.effect !== effect)
       return;
-    swiper.classNames.push(`${swiper.params.containerModifierClass}${effect2}`);
+    swiper.classNames.push(`${swiper.params.containerModifierClass}${effect}`);
     if (perspective && perspective()) {
       swiper.classNames.push(`${swiper.params.containerModifierClass}3d`);
     }
@@ -61477,17 +61534,17 @@ function effectInit(params) {
     Object.assign(swiper.originalParams, overwriteParamsResult);
   });
   on("setTranslate", () => {
-    if (swiper.params.effect !== effect2)
+    if (swiper.params.effect !== effect)
       return;
     setTranslate2();
   });
   on("setTransition", (_s, duration) => {
-    if (swiper.params.effect !== effect2)
+    if (swiper.params.effect !== effect)
       return;
     setTransition2(duration);
   });
   on("transitionEnd", () => {
-    if (swiper.params.effect !== effect2)
+    if (swiper.params.effect !== effect)
       return;
     if (recreateShadows) {
       if (!getEffectParams || !getEffectParams().slideShadows)
@@ -61500,7 +61557,7 @@ function effectInit(params) {
   });
   let requireUpdateOnVirtual;
   on("virtualUpdate", () => {
-    if (swiper.params.effect !== effect2)
+    if (swiper.params.effect !== effect)
       return;
     if (!swiper.slides.length) {
       requireUpdateOnVirtual = true;
@@ -63047,6 +63104,53 @@ var TopBarComponent = _TopBarComponent;
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TopBarComponent, { className: "TopBarComponent", filePath: "src\\app\\portfolio\\top-bar\\top-bar.component.ts", lineNumber: 12 });
 })();
 
+// src/app/utils/big-image-viewer/big-image-viewer.component.ts
+function BigImageViewerComponent_div_0_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r3 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "div", 1)(1, "mat-icon", 2);
+    \u0275\u0275listener("click", function BigImageViewerComponent_div_0_Template_mat_icon_click_1_listener() {
+      \u0275\u0275restoreView(_r3);
+      const ctx_r2 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r2.close());
+    });
+    \u0275\u0275text(2, "close");
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(3, "img", 3);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const url_r1 = ctx.ngIf;
+    \u0275\u0275advance(3);
+    \u0275\u0275property("src", url_r1, \u0275\u0275sanitizeUrl);
+  }
+}
+var _BigImageViewerComponent = class _BigImageViewerComponent {
+  constructor(bigImageViewerService) {
+    this.bigImageViewerService = bigImageViewerService;
+    this.urlObservable = this.bigImageViewerService.getImage();
+  }
+  close() {
+    this.bigImageViewerService.setImage("");
+  }
+};
+_BigImageViewerComponent.\u0275fac = function BigImageViewerComponent_Factory(t) {
+  return new (t || _BigImageViewerComponent)(\u0275\u0275directiveInject(BigImageViewerService));
+};
+_BigImageViewerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _BigImageViewerComponent, selectors: [["app-big-image-viewer"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 3, consts: [["class", "big-image", 4, "ngIf"], [1, "big-image"], [1, "close", 3, "click"], [2, "height", "80%", 3, "src"]], template: function BigImageViewerComponent_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275template(0, BigImageViewerComponent_div_0_Template, 4, 1, "div", 0);
+    \u0275\u0275pipe(1, "async");
+  }
+  if (rf & 2) {
+    \u0275\u0275property("ngIf", \u0275\u0275pipeBind1(1, 1, ctx.urlObservable));
+  }
+}, dependencies: [AsyncPipe, NgIf, MatIconModule, MatIcon], styles: ["\n\n.big-image[_ngcontent-%COMP%] {\n  position: absolute;\n  background-color: rgba(0, 0, 0, 0.6);\n  z-index: 5;\n  height: 100vh;\n  width: 100vw;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n.close[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 0;\n  top: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC91dGlscy9iaWctaW1hZ2Utdmlld2VyL2JpZy1pbWFnZS12aWV3ZXIuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIi5iaWctaW1hZ2Uge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42KTtcbiAgei1pbmRleDogNTtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5jbG9zZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IDA7XG4gIHRvcDogMDtcbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBQSxDQUFBO0FBQ0UsWUFBQTtBQUNBLG9CQUFBLEtBQUEsQ0FBQSxFQUFBLENBQUEsRUFBQSxDQUFBLEVBQUE7QUFDQSxXQUFBO0FBQ0EsVUFBQTtBQUNBLFNBQUE7QUFDQSxZQUFBO0FBQ0EsV0FBQTtBQUNBLG1CQUFBO0FBQ0EsZUFBQTtBQUNBLGtCQUFBOztBQUVGLENBQUE7QUFDRSxZQUFBO0FBQ0EsU0FBQTtBQUNBLE9BQUE7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
+var BigImageViewerComponent = _BigImageViewerComponent;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(BigImageViewerComponent, { className: "BigImageViewerComponent", filePath: "src\\app\\utils\\big-image-viewer\\big-image-viewer.component.ts", lineNumber: 13 });
+})();
+
 // src/app/app.component.ts
 register();
 var _AppComponent = class _AppComponent {
@@ -63057,14 +63161,20 @@ var _AppComponent = class _AppComponent {
 _AppComponent.\u0275fac = function AppComponent_Factory(t) {
   return new (t || _AppComponent)();
 };
-_AppComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 0, template: function AppComponent_Template(rf, ctx) {
+_AppComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 3, vars: 0, template: function AppComponent_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "app-top-bar")(1, "router-outlet");
+    \u0275\u0275element(0, "app-big-image-viewer")(1, "app-top-bar")(2, "router-outlet");
   }
-}, dependencies: [TranslateModule, HttpClientModule, RouterOutlet, TopBarComponent], styles: ["\n\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFtdLAogICJzb3VyY2VzQ29udGVudCI6IFtdLAogICJtYXBwaW5ncyI6ICIiLAogICJuYW1lcyI6IFtdCn0K */"] });
+}, dependencies: [
+  TranslateModule,
+  HttpClientModule,
+  RouterOutlet,
+  TopBarComponent,
+  BigImageViewerComponent
+], styles: ["\n\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFtdLAogICJzb3VyY2VzQ29udGVudCI6IFtdLAogICJtYXBwaW5ncyI6ICIiLAogICJuYW1lcyI6IFtdCn0K */"] });
 var AppComponent = _AppComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src\\app\\app.component.ts", lineNumber: 17 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src\\app\\app.component.ts", lineNumber: 24 });
 })();
 
 // src/main.ts
@@ -63155,13 +63265,6 @@ bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err))
    *)
 
 @angular/router/fesm2022/router.mjs:
-  (**
-   * @license Angular v17.0.9
-   * (c) 2010-2022 Google LLC. https://angular.io/
-   * License: MIT
-   *)
-
-@angular/core/fesm2022/rxjs-interop.mjs:
   (**
    * @license Angular v17.0.9
    * (c) 2010-2022 Google LLC. https://angular.io/
