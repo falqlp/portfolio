@@ -39453,22 +39453,128 @@ function provideRouterInitializer() {
 }
 var VERSION4 = new Version("17.0.9");
 
+// src/app/utils/big-image-viewer/big-image-viewer.service.ts
+var _BigImageViewerService = class _BigImageViewerService {
+  constructor() {
+    this.imgSubject = new BehaviorSubject("");
+  }
+  setImage(imageUrl) {
+    this.imgSubject.next(imageUrl);
+  }
+  getImage() {
+    return this.imgSubject.asObservable();
+  }
+};
+_BigImageViewerService.\u0275fac = function BigImageViewerService_Factory(t) {
+  return new (t || _BigImageViewerService)();
+};
+_BigImageViewerService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _BigImageViewerService, factory: _BigImageViewerService.\u0275fac, providedIn: "root" });
+var BigImageViewerService = _BigImageViewerService;
+
+// src/app/utils/image-viewer/image-viewer.component.ts
+var _ImageViewerComponent = class _ImageViewerComponent {
+  constructor(bigImageViewerService, elementRef) {
+    this.bigImageViewerService = bigImageViewerService;
+    this.elementRef = elementRef;
+    this.maxHeight = false;
+  }
+  ngAfterViewInit() {
+    setTimeout(() => {
+      const hwRatioImg = this.elementRef.nativeElement.children[0].naturalHeight / this.elementRef.nativeElement.children[0].naturalWidth;
+      const hwRatioImgDiv = this.elementRef.nativeElement.parentElement.clientHeight / this.elementRef.nativeElement.parentElement.clientWidth;
+      this.maxHeight = hwRatioImg > hwRatioImgDiv;
+    }, 100);
+  }
+  click() {
+    this.bigImageViewerService.setImage(this.src);
+  }
+};
+_ImageViewerComponent.\u0275fac = function ImageViewerComponent_Factory(t) {
+  return new (t || _ImageViewerComponent)(\u0275\u0275directiveInject(BigImageViewerService), \u0275\u0275directiveInject(ElementRef));
+};
+_ImageViewerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ImageViewerComponent, selectors: [["app-image-viewer"]], inputs: { src: "src", alt: "alt" }, standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 1, vars: 3, consts: [[3, "ngClass", "src", "alt", "click"]], template: function ImageViewerComponent_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "img", 0);
+    \u0275\u0275listener("click", function ImageViewerComponent_Template_img_click_0_listener() {
+      return ctx.click();
+    });
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    \u0275\u0275property("ngClass", ctx.maxHeight ? "max-height" : "max-width")("src", ctx.src, \u0275\u0275sanitizeUrl)("alt", ctx.alt);
+  }
+}, dependencies: [NgClass], styles: ["\n\n[_nghost-%COMP%] {\n  display: contents;\n  cursor: pointer;\n}\n.max-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.max-height[_ngcontent-%COMP%] {\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC91dGlscy9pbWFnZS12aWV3ZXIvaW1hZ2Utdmlld2VyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyI6aG9zdCB7XG4gIGRpc3BsYXk6IGNvbnRlbnRzO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4ubWF4LXdpZHRoIHtcbiAgd2lkdGg6IDEwMCU7XG59XG4ubWF4LWhlaWdodCB7XG4gIGhlaWdodDogMTAwJTtcbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBQTtBQUNFLFdBQUE7QUFDQSxVQUFBOztBQUVGLENBQUE7QUFDRSxTQUFBOztBQUVGLENBQUE7QUFDRSxVQUFBOzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
+var ImageViewerComponent = _ImageViewerComponent;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ImageViewerComponent, { className: "ImageViewerComponent", filePath: "src\\app\\utils\\image-viewer\\image-viewer.component.ts", lineNumber: 12 });
+})();
+
 // src/app/pokemon-manager/pokemon-manager.component.ts
+function PokemonManagerComponent_div_1_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 2)(1, "div", 3);
+    \u0275\u0275element(2, "app-image-viewer", 4);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "p", 5);
+    \u0275\u0275text(4);
+    \u0275\u0275pipe(5, "translate");
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    const paragraph_r1 = ctx.$implicit;
+    const i_r2 = ctx.index;
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275property("ngClass", i_r2 % 2 === 0 ? "" : "reverse");
+    \u0275\u0275advance(2);
+    \u0275\u0275property("src", ctx_r0.baseUrl + paragraph_r1.img + ".png");
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(5, 3, paragraph_r1.p));
+  }
+}
 var _PokemonManagerComponent = class _PokemonManagerComponent {
+  constructor() {
+    this.baseUrl = "assets/images/pokemon-manager/";
+    this.paragraphs = [
+      {
+        img: "home",
+        p: "Work in progress"
+      },
+      {
+        img: "home",
+        p: "Work in progress"
+      },
+      {
+        img: "home",
+        p: "Work in progress"
+      },
+      {
+        img: "home",
+        p: "Work in progress"
+      },
+      {
+        img: "home",
+        p: "Work in progress"
+      }
+    ];
+  }
 };
 _PokemonManagerComponent.\u0275fac = function PokemonManagerComponent_Factory(t) {
   return new (t || _PokemonManagerComponent)();
 };
-_PokemonManagerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PokemonManagerComponent, selectors: [["app-pokemon-manager"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 0, consts: [[1, "shadow", "pokemon-manager-paragraph"], ["src", "assets/images/pokemon-manager/home.png", 2, "width", "50%"]], template: function PokemonManagerComponent_Template(rf, ctx) {
+_PokemonManagerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PokemonManagerComponent, selectors: [["app-pokemon-manager"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 1, consts: [[1, "pokemon-manager-paragraphs"], ["class", "shadow pokemon-manager-paragraph", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "shadow", "pokemon-manager-paragraph", 3, "ngClass"], [1, "img-content"], [2, "flex", "1", 3, "src"], [1, "text-content"]], template: function PokemonManagerComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0);
-    \u0275\u0275element(1, "img", 1);
+    \u0275\u0275template(1, PokemonManagerComponent_div_1_Template, 6, 5, "div", 1);
     \u0275\u0275elementEnd();
   }
-}, styles: ["\n\n.pokemon-manager-paragraph[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  background-color: #70aab7;\n  border-radius: 3px;\n}\n[_nghost-%COMP%] {\n  padding: 15px;\n  display: flex;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb2tlbW9uLW1hbmFnZXIvcG9rZW1vbi1tYW5hZ2VyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG4ucG9rZW1vbi1tYW5hZ2VyLXBhcmFncmFwaCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIyXCIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG59XG46aG9zdCB7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0EsQ0FBQTtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBO0FBQ0Esb0JBQUE7QUFDQSxpQkFBQTs7QUFFRjtBQUNFLFdBQUE7QUFDQSxXQUFBOzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
+  if (rf & 2) {
+    \u0275\u0275advance();
+    \u0275\u0275property("ngForOf", ctx.paragraphs);
+  }
+}, dependencies: [ImageViewerComponent, NgForOf, TranslateModule, TranslatePipe, NgClass], styles: ["\n\n.pokemon-manager-paragraph[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  background-color: #70aab7;\n  border-radius: 3px;\n  overflow: hidden;\n  gap: 10px;\n}\n.reverse[_ngcontent-%COMP%] {\n  flex-direction: row-reverse;\n}\n[_nghost-%COMP%] {\n  padding: 15px;\n  display: flex;\n  margin-top: 82px;\n}\n.img-content[_ngcontent-%COMP%], .text-content[_ngcontent-%COMP%] {\n  flex: 1;\n}\n.pokemon-manager-paragraphs[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 25px;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb2tlbW9uLW1hbmFnZXIvcG9rZW1vbi1tYW5hZ2VyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG4ucG9rZW1vbi1tYW5hZ2VyLXBhcmFncmFwaCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIyXCIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGdhcDogMTBweDtcbn1cbi5yZXZlcnNlIHtcbiAgZmxleC1kaXJlY3Rpb246IHJvdy1yZXZlcnNlO1xufVxuOmhvc3Qge1xuICBwYWRkaW5nOiAxNXB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBtYXJnaW4tdG9wOiA4MnB4O1xufVxuLmltZy1jb250ZW50LFxuLnRleHQtY29udGVudCB7XG4gIGZsZXg6IDE7XG59XG4ucG9rZW1vbi1tYW5hZ2VyLXBhcmFncmFwaHMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IDI1cHg7XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0EsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLG9CQUFBO0FBQ0EsaUJBQUE7QUFDQSxZQUFBO0FBQ0EsT0FBQTs7QUFFRixDQUFBO0FBQ0Usa0JBQUE7O0FBRUY7QUFDRSxXQUFBO0FBQ0EsV0FBQTtBQUNBLGNBQUE7O0FBRUYsQ0FBQTtBQUFBLENBQUE7QUFFRSxRQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxPQUFBOzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
 var PokemonManagerComponent = _PokemonManagerComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PokemonManagerComponent, { className: "PokemonManagerComponent", filePath: "src\\app\\pokemon-manager\\pokemon-manager.component.ts", lineNumber: 10 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PokemonManagerComponent, { className: "PokemonManagerComponent", filePath: "src\\app\\pokemon-manager\\pokemon-manager.component.ts", lineNumber: 13 });
 })();
 
 // node_modules/swiper/shared/ssr-window.esm.mjs
@@ -54481,62 +54587,6 @@ var TechnoLogosComponent = _TechnoLogosComponent;
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TechnoLogosComponent, { className: "TechnoLogosComponent", filePath: "src\\app\\portfolio\\techno-logos\\techno-logos.component.ts", lineNumber: 12 });
 })();
 
-// src/app/utils/big-image-viewer/big-image-viewer.service.ts
-var _BigImageViewerService = class _BigImageViewerService {
-  constructor() {
-    this.imgSubject = new BehaviorSubject("");
-  }
-  setImage(imageUrl) {
-    this.imgSubject.next(imageUrl);
-  }
-  getImage() {
-    return this.imgSubject.asObservable();
-  }
-};
-_BigImageViewerService.\u0275fac = function BigImageViewerService_Factory(t) {
-  return new (t || _BigImageViewerService)();
-};
-_BigImageViewerService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _BigImageViewerService, factory: _BigImageViewerService.\u0275fac, providedIn: "root" });
-var BigImageViewerService = _BigImageViewerService;
-
-// src/app/utils/image-viewer/image-viewer.component.ts
-var _ImageViewerComponent = class _ImageViewerComponent {
-  constructor(bigImageViewerService, elementRef) {
-    this.bigImageViewerService = bigImageViewerService;
-    this.elementRef = elementRef;
-    this.maxHeight = false;
-  }
-  ngAfterViewInit() {
-    const hwRatioImg = this.elementRef.nativeElement.children[0].naturalHeight / this.elementRef.nativeElement.children[0].naturalWidth;
-    setTimeout(() => {
-      const hwRatioImgDiv = this.elementRef.nativeElement.parentElement.clientHeight / this.elementRef.nativeElement.parentElement.clientWidth;
-      this.maxHeight = hwRatioImg > hwRatioImgDiv;
-    });
-  }
-  click() {
-    this.bigImageViewerService.setImage(this.src);
-  }
-};
-_ImageViewerComponent.\u0275fac = function ImageViewerComponent_Factory(t) {
-  return new (t || _ImageViewerComponent)(\u0275\u0275directiveInject(BigImageViewerService), \u0275\u0275directiveInject(ElementRef));
-};
-_ImageViewerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ImageViewerComponent, selectors: [["app-image-viewer"]], inputs: { src: "src", alt: "alt" }, standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 1, vars: 3, consts: [[3, "ngClass", "src", "alt", "click"]], template: function ImageViewerComponent_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "img", 0);
-    \u0275\u0275listener("click", function ImageViewerComponent_Template_img_click_0_listener() {
-      return ctx.click();
-    });
-    \u0275\u0275elementEnd();
-  }
-  if (rf & 2) {
-    \u0275\u0275property("ngClass", ctx.maxHeight ? "max-height" : "max-width")("src", ctx.src, \u0275\u0275sanitizeUrl)("alt", ctx.alt);
-  }
-}, dependencies: [NgClass], styles: ["\n\n[_nghost-%COMP%] {\n  display: contents;\n}\n.max-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.max-height[_ngcontent-%COMP%] {\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC91dGlscy9pbWFnZS12aWV3ZXIvaW1hZ2Utdmlld2VyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyI6aG9zdCB7XG4gIGRpc3BsYXk6IGNvbnRlbnRzO1xufVxuLm1heC13aWR0aCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuLm1heC1oZWlnaHQge1xuICBoZWlnaHQ6IDEwMCU7XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQUE7QUFDRSxXQUFBOztBQUVGLENBQUE7QUFDRSxTQUFBOztBQUVGLENBQUE7QUFDRSxVQUFBOzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
-var ImageViewerComponent = _ImageViewerComponent;
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ImageViewerComponent, { className: "ImageViewerComponent", filePath: "src\\app\\utils\\image-viewer\\image-viewer.component.ts", lineNumber: 12 });
-})();
-
 // src/app/portfolio/secondary-projects/secondary-projects.component.ts
 function SecondaryProjectsComponent_div_4_p_6_Template(rf, ctx) {
   if (rf & 1) {
@@ -57039,7 +57089,9 @@ var _PortfolioComponent = class _PortfolioComponent {
     this.swiperContainer.nativeElement.height = window.innerHeight - 82;
   }
   goToSlide(slide2) {
-    this.router.navigateByUrl("");
+    if (this.router.url !== "/") {
+      this.router.navigateByUrl("");
+    }
     this.swiperContainer.nativeElement.swiper.slideTo(slide2);
   }
 };
@@ -57080,7 +57132,7 @@ _PortfolioComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
   PrimaryProjectsComponent,
   FirstSlideComponent,
   EducationComponent
-], styles: ["\n\n.swiper-slide[_ngcontent-%COMP%] {\n  background-color: #e8f3f1;\n  display: flex;\n  padding: 15px;\n  height: calc(100% - 30px);\n}\n.swiper[_ngcontent-%COMP%] {\n  height: calc(100vh - 82px);\n}\n@media (max-width: 550px) {\n  .swiper[_ngcontent-%COMP%] {\n    height: calc(100vh - 110px);\n  }\n  .swiper-slide[_ngcontent-%COMP%] {\n    height: calc(100% - 50px);\n  }\n}\n@media (max-width: 400px) {\n  .swiper[_ngcontent-%COMP%] {\n    height: calc(100vh - 135px);\n  }\n  .swiper-slide[_ngcontent-%COMP%] {\n    height: calc(100% - 82px);\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb3J0Zm9saW8vcG9ydGZvbGlvLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcclxuQGltcG9ydCBcIi4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XHJcblxyXG4uc3dpcGVyLXNsaWRlIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiBtYXAuZ2V0KCRjb2xvci1wYWxldHRlLCBcIjFcIik7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBwYWRkaW5nOiAxNXB4O1xyXG4gIGhlaWdodDogY2FsYygxMDAlIC0gMzBweCk7XHJcbn1cclxuLnN3aXBlciB7XHJcbiAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gODJweCk7XHJcbn1cclxuXHJcbkBtZWRpYSAobWF4LXdpZHRoOiA1NTBweCkge1xyXG4gIC5zd2lwZXIge1xyXG4gICAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMTEwcHgpO1xyXG4gIH1cclxuICAuc3dpcGVyLXNsaWRlIHtcclxuICAgIGhlaWdodDogY2FsYygxMDAlIC0gNTBweCk7XHJcbiAgfVxyXG59XHJcblxyXG5AbWVkaWEgKG1heC13aWR0aDogNDAwcHgpIHtcclxuICAuc3dpcGVyIHtcclxuICAgIGhlaWdodDogY2FsYygxMDB2aCAtIDEzNXB4KTtcclxuICB9XHJcbiAgLnN3aXBlci1zbGlkZSB7XHJcbiAgICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDgycHgpO1xyXG4gIH1cclxufVxyXG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0EsQ0FBQTtBQUNFLG9CQUFBO0FBQ0EsV0FBQTtBQUNBLFdBQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBOztBQUVGLENBQUE7QUFDRSxVQUFBLEtBQUEsTUFBQSxFQUFBOztBQUdGLE9BQUEsQ0FBQSxTQUFBLEVBQUE7QUFDRSxHQUxGO0FBTUksWUFBQSxLQUFBLE1BQUEsRUFBQTs7QUFFRixHQWRGO0FBZUksWUFBQSxLQUFBLEtBQUEsRUFBQTs7O0FBSUosT0FBQSxDQUFBLFNBQUEsRUFBQTtBQUNFLEdBZEY7QUFlSSxZQUFBLEtBQUEsTUFBQSxFQUFBOztBQUVGLEdBdkJGO0FBd0JJLFlBQUEsS0FBQSxLQUFBLEVBQUE7OzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
+], styles: ["\n\n.swiper-slide[_ngcontent-%COMP%] {\n  background-color: #e8f3f1;\n  display: flex;\n  padding: 15px;\n  height: calc(100% - 30px);\n}\n.swiper[_ngcontent-%COMP%] {\n  height: calc(100vh - 82px);\n  margin-top: 82px;\n}\n@media (max-width: 550px) {\n  .swiper[_ngcontent-%COMP%] {\n    height: calc(100vh - 110px);\n  }\n  .swiper-slide[_ngcontent-%COMP%] {\n    height: calc(100% - 50px);\n  }\n}\n@media (max-width: 400px) {\n  .swiper[_ngcontent-%COMP%] {\n    height: calc(100vh - 135px);\n  }\n  .swiper-slide[_ngcontent-%COMP%] {\n    height: calc(100% - 82px);\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb3J0Zm9saW8vcG9ydGZvbGlvLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG4uc3dpcGVyLXNsaWRlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIxXCIpO1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiAxNXB4O1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMwcHgpO1xufVxuLnN3aXBlciB7XG4gIGhlaWdodDogY2FsYygxMDB2aCAtIDgycHgpO1xuICBtYXJnaW4tdG9wOiA4MnB4O1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNTUwcHgpIHtcbiAgLnN3aXBlciB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMTEwcHgpO1xuICB9XG4gIC5zd2lwZXItc2xpZGUge1xuICAgIGhlaWdodDogY2FsYygxMDAlIC0gNTBweCk7XG4gIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDQwMHB4KSB7XG4gIC5zd2lwZXIge1xuICAgIGhlaWdodDogY2FsYygxMDB2aCAtIDEzNXB4KTtcbiAgfVxuICAuc3dpcGVyLXNsaWRlIHtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDgycHgpO1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0EsQ0FBQTtBQUNFLG9CQUFBO0FBQ0EsV0FBQTtBQUNBLFdBQUE7QUFDQSxVQUFBLEtBQUEsS0FBQSxFQUFBOztBQUVGLENBQUE7QUFDRSxVQUFBLEtBQUEsTUFBQSxFQUFBO0FBQ0EsY0FBQTs7QUFHRixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0FORjtBQU9JLFlBQUEsS0FBQSxNQUFBLEVBQUE7O0FBRUYsR0FmRjtBQWdCSSxZQUFBLEtBQUEsS0FBQSxFQUFBOzs7QUFJSixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0FmRjtBQWdCSSxZQUFBLEtBQUEsTUFBQSxFQUFBOztBQUVGLEdBeEJGO0FBeUJJLFlBQUEsS0FBQSxLQUFBLEVBQUE7OzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
 var PortfolioComponent = _PortfolioComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PortfolioComponent, { className: "PortfolioComponent", filePath: "src\\app\\portfolio\\portfolio.component.ts", lineNumber: 31 });
@@ -63098,7 +63150,7 @@ _TopBarComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type:
     \u0275\u0275advance(6);
     \u0275\u0275property("src", "https://flagsapi.com/" + (ctx.lang === "fr-FR" ? "FR" : "GB") + "/flat/32.png", \u0275\u0275sanitizeUrl)("alt", ctx.lang);
   }
-}, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\nheader[_ngcontent-%COMP%] {\n  margin: 25px 0;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n}\n.nav[_ngcontent-%COMP%] {\n  display: flex;\n}\nh2[_ngcontent-%COMP%] {\n  margin: 0;\n}\n.lang[_ngcontent-%COMP%] {\n  height: fit-content;\n  cursor: pointer;\n}\n.github[_ngcontent-%COMP%] {\n  height: 28px;\n  margin-left: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb3J0Zm9saW8vdG9wLWJhci90b3AtYmFyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcclxuQGltcG9ydCBcIi4uLy4uLy4uL3N0eWxlcy9jb2xvci1wYWxldHRlXCI7XHJcblxyXG5oZWFkZXIge1xyXG4gIG1hcmdpbjogMjVweCAwO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG59XHJcbi5uYXYge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuaDIge1xyXG4gIG1hcmdpbjogMDtcclxufVxyXG4ubGFuZyB7XHJcbiAgaGVpZ2h0OiBmaXQtY29udGVudDtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuLmdpdGh1YiB7XHJcbiAgaGVpZ2h0OiAyOHB4O1xyXG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xyXG59XHJcbiJdLAogICJtYXBwaW5ncyI6ICI7QUFHQTtBQUNFLFVBQUEsS0FBQTtBQUNBLFNBQUE7QUFDQSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTtBQUNBLGVBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7O0FBRUY7QUFDRSxVQUFBOztBQUVGLENBQUE7QUFDRSxVQUFBO0FBQ0EsVUFBQTs7QUFFRixDQUFBO0FBQ0UsVUFBQTtBQUNBLGVBQUE7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
+}, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\nheader[_ngcontent-%COMP%] {\n  padding: 25px 0;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  position: fixed;\n  z-index: 2;\n  background-color: #e8f3f1;\n}\n.nav[_ngcontent-%COMP%] {\n  display: flex;\n}\nh2[_ngcontent-%COMP%] {\n  margin: 0;\n}\n.lang[_ngcontent-%COMP%] {\n  height: fit-content;\n  cursor: pointer;\n}\n.github[_ngcontent-%COMP%] {\n  height: 28px;\n  margin-left: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb3J0Zm9saW8vdG9wLWJhci90b3AtYmFyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG5oZWFkZXIge1xuICBwYWRkaW5nOiAyNXB4IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB6LWluZGV4OiAyO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBtYXAuZ2V0KCRjb2xvci1wYWxldHRlLCBcIjFcIik7XG59XG4ubmF2IHtcbiAgZGlzcGxheTogZmxleDtcbn1cbmgyIHtcbiAgbWFyZ2luOiAwO1xufVxuLmxhbmcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4uZ2l0aHViIHtcbiAgaGVpZ2h0OiAyOHB4O1xuICBtYXJnaW4tbGVmdDogMTBweDtcbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFHQTtBQUNFLFdBQUEsS0FBQTtBQUNBLFNBQUE7QUFDQSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTtBQUNBLGVBQUE7QUFDQSxZQUFBO0FBQ0EsV0FBQTtBQUNBLG9CQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBOztBQUVGO0FBQ0UsVUFBQTs7QUFFRixDQUFBO0FBQ0UsVUFBQTtBQUNBLFVBQUE7O0FBRUYsQ0FBQTtBQUNFLFVBQUE7QUFDQSxlQUFBOzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
 var TopBarComponent = _TopBarComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TopBarComponent, { className: "TopBarComponent", filePath: "src\\app\\portfolio\\top-bar\\top-bar.component.ts", lineNumber: 12 });
@@ -63145,7 +63197,7 @@ _BigImageViewerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent
   if (rf & 2) {
     \u0275\u0275property("ngIf", \u0275\u0275pipeBind1(1, 1, ctx.urlObservable));
   }
-}, dependencies: [AsyncPipe, NgIf, MatIconModule, MatIcon], styles: ["\n\n.big-image[_ngcontent-%COMP%] {\n  position: absolute;\n  background-color: rgba(0, 0, 0, 0.6);\n  z-index: 5;\n  height: 100vh;\n  width: 100vw;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n.close[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 0;\n  top: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC91dGlscy9iaWctaW1hZ2Utdmlld2VyL2JpZy1pbWFnZS12aWV3ZXIuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIi5iaWctaW1hZ2Uge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42KTtcbiAgei1pbmRleDogNTtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5jbG9zZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IDA7XG4gIHRvcDogMDtcbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBQSxDQUFBO0FBQ0UsWUFBQTtBQUNBLG9CQUFBLEtBQUEsQ0FBQSxFQUFBLENBQUEsRUFBQSxDQUFBLEVBQUE7QUFDQSxXQUFBO0FBQ0EsVUFBQTtBQUNBLFNBQUE7QUFDQSxZQUFBO0FBQ0EsV0FBQTtBQUNBLG1CQUFBO0FBQ0EsZUFBQTtBQUNBLGtCQUFBOztBQUVGLENBQUE7QUFDRSxZQUFBO0FBQ0EsU0FBQTtBQUNBLE9BQUE7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
+}, dependencies: [AsyncPipe, NgIf, MatIconModule, MatIcon], styles: ["\n\n.big-image[_ngcontent-%COMP%] {\n  position: fixed;\n  background-color: rgba(0, 0, 0, 0.6);\n  z-index: 5;\n  height: 100vh;\n  width: 100vw;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n.close[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 20px;\n  top: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC91dGlscy9iaWctaW1hZ2Utdmlld2VyL2JpZy1pbWFnZS12aWV3ZXIuY29tcG9uZW50LnNjc3MiXSwKICAic291cmNlc0NvbnRlbnQiOiBbIi5iaWctaW1hZ2Uge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42KTtcbiAgei1pbmRleDogNTtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cbi5jbG9zZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IDIwcHg7XG4gIHRvcDogMjBweDtcbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBQSxDQUFBO0FBQ0UsWUFBQTtBQUNBLG9CQUFBLEtBQUEsQ0FBQSxFQUFBLENBQUEsRUFBQSxDQUFBLEVBQUE7QUFDQSxXQUFBO0FBQ0EsVUFBQTtBQUNBLFNBQUE7QUFDQSxZQUFBO0FBQ0EsV0FBQTtBQUNBLG1CQUFBO0FBQ0EsZUFBQTtBQUNBLGtCQUFBOztBQUVGLENBQUE7QUFDRSxZQUFBO0FBQ0EsU0FBQTtBQUNBLE9BQUE7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var BigImageViewerComponent = _BigImageViewerComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(BigImageViewerComponent, { className: "BigImageViewerComponent", filePath: "src\\app\\utils\\big-image-viewer\\big-image-viewer.component.ts", lineNumber: 13 });
