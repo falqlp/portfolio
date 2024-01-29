@@ -1,5 +1,5 @@
 .big-image {
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 5;
   height: 100vh;
@@ -12,6 +12,6 @@
 }
 .close {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 20px;
+  top: 20px;
 }

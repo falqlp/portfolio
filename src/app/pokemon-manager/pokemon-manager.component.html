@@ -1,3 +1,8 @@
-<div class="shadow pokemon-manager-paragraph">
-  <img style="width: 50%" src="assets/images/pokemon-manager/home.png">
+<div class="pokemon-manager-paragraphs">
+  <div class="shadow pokemon-manager-paragraph" *ngFor="let paragraph of paragraphs;let i=index" [ngClass]="i%2===0? '': 'reverse'">
+    <div class="img-content">
+      <app-image-viewer style="flex: 1" [src]="baseUrl + paragraph.img + '.png'"></app-image-viewer>
+    </div>
+    <p class="text-content">{{ paragraph.p|translate }}</p>
+  </div>
 </div>
