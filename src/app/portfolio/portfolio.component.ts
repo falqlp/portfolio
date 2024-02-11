@@ -60,9 +60,6 @@ export class PortfolioComponent implements AfterViewInit {
   }
 
   protected goToSlide(slide: number): void {
-    if (this.router.url !== '/') {
-      this.router.navigateByUrl('');
-    }
     this.swiperContainer.nativeElement.swiper.slideTo(slide);
   }
 }

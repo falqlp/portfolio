@@ -26,3 +26,14 @@ h2 {
   height: 28px;
   margin-left: 10px;
 }
+@media (max-width: 500px) {
+  h2 {
+    font-size: 14px;
+  }
+  button {
+    font-size: 10px;
+  }
+  header {
+    padding: 15px 0;
+  }
+}
