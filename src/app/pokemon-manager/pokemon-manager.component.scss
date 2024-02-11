@@ -3,11 +3,14 @@
 
 .pokemon-manager-paragraph {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   background-color: map.get($color-palette, "2");
   border-radius: 3px;
   overflow: hidden;
-  gap: 10px;
+}
+.title {
+  text-align: center;
 }
 .reverse {
   flex-direction: row-reverse;
@@ -17,12 +20,23 @@
   display: flex;
   margin-top: 82px;
 }
+.content {
+  display: flex;
+}
 .img-content,
 .text-content {
   flex: 1;
+}
+.text-content {
+  padding: 10px;
 }
 .pokemon-manager-paragraphs {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+@media (max-width: 1000px) {
+  .content {
+    flex-direction: column;
+  }
 }

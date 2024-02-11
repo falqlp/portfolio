@@ -1,8 +1,21 @@
 <div class="pokemon-manager-paragraphs">
-  <div class="shadow pokemon-manager-paragraph" *ngFor="let paragraph of paragraphs;let i=index" [ngClass]="i%2===0? '': 'reverse'">
-    <div class="img-content">
-      <app-image-viewer style="flex: 1" [src]="baseUrl + paragraph.img + '.png'"></app-image-viewer>
+  <div
+    class="shadow pokemon-manager-paragraph"
+    *ngFor="let pokemonManagerInfo of pokemonManagerInfos; let i = index"
+  >
+    <h3 class="title">{{ pokemonManagerInfo.title | translate }}</h3>
+    <div class="content" [ngClass]="i % 2 === 0 ? '' : 'reverse'">
+      <div class="img-content">
+        <app-image-viewer
+          style="flex: 1"
+          [src]="baseUrl + pokemonManagerInfo.img + '.png'"
+        ></app-image-viewer>
+      </div>
+      <div class="text-content">
+        <p *ngFor="let paragraph of pokemonManagerInfo.p">
+          {{ paragraph | translate }}
+        </p>
+      </div>
     </div>
-    <p class="text-content">{{ paragraph.p|translate }}</p>
   </div>
 </div>

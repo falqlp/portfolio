@@ -12,26 +12,36 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class PokemonManagerComponent {
   protected baseUrl = 'assets/images/pokemon-manager/';
-  protected paragraphs = [
+  protected pokemonManagerInfos = [
     {
-      img: 'home',
-      p: 'Work in progress',
+      title: 'BATTLE',
+      img: 'Battle',
+      p: ['BATTLE_DESC1', 'BATTLE_DESC2', 'BATTLE_DESC3'],
     },
     {
-      img: 'home',
-      p: 'Work in progress',
+      title: 'STORAGE_PC',
+      img: 'Storage PC',
+      p: ['PC_DESC1', 'PC_DESC2'],
     },
     {
-      img: 'home',
-      p: 'Work in progress',
+      title: 'NURSERY',
+      img: 'Nursery',
+      p: ['NURSERY_DESC1', 'NURSERY_DESC2', 'NURSERY_DESC3'],
     },
     {
-      img: 'home',
-      p: 'Work in progress',
+      title: 'CALENDAR',
+      img: 'Calendar',
+      p: ['CALENDAR_DESC1', 'CALENDAR_DESC2', 'CALENDAR_DESC3'],
     },
     {
-      img: 'home',
-      p: 'Work in progress',
+      title: 'POKEDEX',
+      img: 'Pokedex',
+      p: ['POKEDEX_DESC'],
+    },
+    {
+      title: 'GAMES',
+      img: 'Games',
+      p: ['GAMES_DESC'],
     },
   ];
 }
