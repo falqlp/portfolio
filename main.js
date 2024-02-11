@@ -39534,7 +39534,9 @@ function PokemonManagerComponent_div_1_Template(rf, ctx) {
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(7, "div", 7);
     \u0275\u0275template(8, PokemonManagerComponent_div_1_p_8_Template, 3, 3, "p", 8);
-    \u0275\u0275elementEnd()()();
+    \u0275\u0275elementStart(9, "a", 9);
+    \u0275\u0275text(10, "Github");
+    \u0275\u0275elementEnd()()()();
   }
   if (rf & 2) {
     const pokemonManagerInfo_r1 = ctx.$implicit;
@@ -39590,10 +39592,10 @@ var _PokemonManagerComponent = class _PokemonManagerComponent {
 _PokemonManagerComponent.\u0275fac = function PokemonManagerComponent_Factory(t) {
   return new (t || _PokemonManagerComponent)();
 };
-_PokemonManagerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PokemonManagerComponent, selectors: [["app-pokemon-manager"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 1, consts: [[1, "pokemon-manager-paragraphs"], ["class", "shadow pokemon-manager-paragraph", 4, "ngFor", "ngForOf"], [1, "shadow", "pokemon-manager-paragraph"], [1, "title"], [1, "content", 3, "ngClass"], [1, "img-content"], [2, "flex", "1", 3, "src"], [1, "text-content"], [4, "ngFor", "ngForOf"]], template: function PokemonManagerComponent_Template(rf, ctx) {
+_PokemonManagerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PokemonManagerComponent, selectors: [["app-pokemon-manager"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 1, consts: [[1, "pokemon-manager-paragraphs"], ["class", "shadow pokemon-manager-paragraph", 4, "ngFor", "ngForOf"], [1, "shadow", "pokemon-manager-paragraph"], [1, "title"], [1, "content", 3, "ngClass"], [1, "img-content"], [2, "flex", "1", 3, "src"], [1, "text-content"], [4, "ngFor", "ngForOf"], ["href", "https://github.com/falqlp/PokemonManager"]], template: function PokemonManagerComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0);
-    \u0275\u0275template(1, PokemonManagerComponent_div_1_Template, 9, 6, "div", 1);
+    \u0275\u0275template(1, PokemonManagerComponent_div_1_Template, 11, 6, "div", 1);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -54754,7 +54756,7 @@ function PrimaryProjectsComponent_p_12_Template(rf, ctx) {
     \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, p_r2));
   }
 }
-function PrimaryProjectsComponent_p_28_Template(rf, ctx) {
+function PrimaryProjectsComponent_p_26_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "p");
     \u0275\u0275text(1);
@@ -54800,7 +54802,7 @@ var _PrimaryProjectsComponent = class _PrimaryProjectsComponent {
 _PrimaryProjectsComponent.\u0275fac = function PrimaryProjectsComponent_Factory(t) {
   return new (t || _PrimaryProjectsComponent)();
 };
-_PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrimaryProjectsComponent, selectors: [["app-primary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 33, vars: 17, consts: [[1, "content"], [1, "primary-projects", "shadow"], [1, "card-title"], [1, "img-background", 2, "background-color", "#fcf5e6"], ["src", "assets/images/pokemon-manager/pm_logo.png", "alt", "pm logo"], [1, "description"], [4, "ngFor", "ngForOf"], ["href", "https://github.com/falqlp/PokemonManager"], [3, "routerLink"], [3, "technologies"], [1, "img-background", 2, "background-color", "#2A353B"], ["src", "assets/images/aquiweb/aquiweb.jpg", "alt", "aquiweb logo"], ["href", "https://www.astree-software.fr/logiciel-mes/"]], template: function PrimaryProjectsComponent_Template(rf, ctx) {
+_PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrimaryProjectsComponent, selectors: [["app-primary-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 31, vars: 16, consts: [[1, "content"], [1, "primary-projects", "shadow"], [1, "card-title"], [1, "img-background", 2, "background-color", "#fcf5e6"], ["src", "assets/images/pokemon-manager/pm_logo.png", "alt", "pm logo"], [1, "description"], [4, "ngFor", "ngForOf"], ["routerLink", "PokemonManager"], [3, "technologies"], [1, "img-background", 2, "background-color", "#2a353b"], ["src", "assets/images/aquiweb/aquiweb.jpg", "alt", "aquiweb logo"], ["href", "https://www.astree-software.fr/logiciel-mes/"]], template: function PrimaryProjectsComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h3");
     \u0275\u0275text(1);
@@ -54820,45 +54822,40 @@ _PrimaryProjectsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponen
     \u0275\u0275pipe(15, "translate");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(16, "a", 7);
-    \u0275\u0275text(17, "Github");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(18, "a", 8);
-    \u0275\u0275text(19, "En savoir plus");
+    \u0275\u0275text(17, "En savoir plus");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275element(20, "app-techno-logos", 9);
+    \u0275\u0275element(18, "app-techno-logos", 8);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(21, "div", 1)(22, "div")(23, "h3", 2);
-    \u0275\u0275text(24, "Aquiweb");
+    \u0275\u0275elementStart(19, "div", 1)(20, "div")(21, "h3", 2);
+    \u0275\u0275text(22, "Aquiweb");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(25, "div", 10);
-    \u0275\u0275element(26, "app-image-viewer", 11);
+    \u0275\u0275elementStart(23, "div", 9);
+    \u0275\u0275element(24, "app-image-viewer", 10);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(27, "div", 5);
-    \u0275\u0275template(28, PrimaryProjectsComponent_p_28_Template, 3, 3, "p", 6);
-    \u0275\u0275elementStart(29, "a", 12);
-    \u0275\u0275text(30);
-    \u0275\u0275pipe(31, "translate");
+    \u0275\u0275elementStart(25, "div", 5);
+    \u0275\u0275template(26, PrimaryProjectsComponent_p_26_Template, 3, 3, "p", 6);
+    \u0275\u0275elementStart(27, "a", 11);
+    \u0275\u0275text(28);
+    \u0275\u0275pipe(29, "translate");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275element(32, "app-techno-logos", 9);
+    \u0275\u0275element(30, "app-techno-logos", 8);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(2, 9, "PRIMARY_PROJECTS"), " :");
+    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(2, 8, "PRIMARY_PROJECTS"), " :");
     \u0275\u0275advance(6);
-    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(8, 11, "POKEMON_MANAGER"));
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(8, 10, "POKEMON_MANAGER"));
     \u0275\u0275advance(5);
     \u0275\u0275property("ngForOf", ctx.pokemonManager.p);
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(15, 13, "WORK_IN_PROGRESS"), " ");
+    \u0275\u0275textInterpolate1("", \u0275\u0275pipeBind1(15, 12, "WORK_IN_PROGRESS"), " ");
     \u0275\u0275advance(4);
-    \u0275\u0275property("routerLink", "PokemonManager");
-    \u0275\u0275advance(2);
     \u0275\u0275property("technologies", ctx.pokemonManager.technologies);
     \u0275\u0275advance(8);
     \u0275\u0275property("ngForOf", ctx.aquiweb.p);
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(31, 15, "MORE"));
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(29, 14, "MORE"));
     \u0275\u0275advance(2);
     \u0275\u0275property("technologies", ctx.aquiweb.technologies);
   }
@@ -57076,18 +57073,22 @@ var EducationComponent = _EducationComponent;
 
 // src/app/navigation.service.ts
 var _NavigationService = class _NavigationService {
-  constructor() {
+  constructor(router) {
+    this.router = router;
     this.navigationSubject = new BehaviorSubject(0);
   }
   getNavigation() {
     return this.navigationSubject.asObservable();
   }
   updateNavigation(slide2) {
+    if (this.router.url !== "/") {
+      this.router.navigateByUrl("");
+    }
     this.navigationSubject.next(slide2);
   }
 };
 _NavigationService.\u0275fac = function NavigationService_Factory(t) {
-  return new (t || _NavigationService)();
+  return new (t || _NavigationService)(\u0275\u0275inject(Router));
 };
 _NavigationService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _NavigationService, factory: _NavigationService.\u0275fac, providedIn: "root" });
 var NavigationService = _NavigationService;
@@ -57118,9 +57119,6 @@ var _PortfolioComponent = class _PortfolioComponent {
     this.swiperContainer.nativeElement.height = window.innerHeight - 82;
   }
   goToSlide(slide2) {
-    if (this.router.url !== "/") {
-      this.router.navigateByUrl("");
-    }
     this.swiperContainer.nativeElement.swiper.slideTo(slide2);
   }
 };
@@ -63179,7 +63177,7 @@ _TopBarComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type:
     \u0275\u0275advance(6);
     \u0275\u0275property("src", "https://flagsapi.com/" + (ctx.lang === "fr-FR" ? "FR" : "GB") + "/flat/32.png", \u0275\u0275sanitizeUrl)("alt", ctx.lang);
   }
-}, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\nheader[_ngcontent-%COMP%] {\n  padding: 25px 0;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  position: fixed;\n  z-index: 2;\n  background-color: #e8f3f1;\n}\n.nav[_ngcontent-%COMP%] {\n  display: flex;\n}\nh2[_ngcontent-%COMP%] {\n  margin: 0;\n}\n.lang[_ngcontent-%COMP%] {\n  height: fit-content;\n  cursor: pointer;\n}\n.github[_ngcontent-%COMP%] {\n  height: 28px;\n  margin-left: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb3J0Zm9saW8vdG9wLWJhci90b3AtYmFyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG5oZWFkZXIge1xuICBwYWRkaW5nOiAyNXB4IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB6LWluZGV4OiAyO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBtYXAuZ2V0KCRjb2xvci1wYWxldHRlLCBcIjFcIik7XG59XG4ubmF2IHtcbiAgZGlzcGxheTogZmxleDtcbn1cbmgyIHtcbiAgbWFyZ2luOiAwO1xufVxuLmxhbmcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4uZ2l0aHViIHtcbiAgaGVpZ2h0OiAyOHB4O1xuICBtYXJnaW4tbGVmdDogMTBweDtcbn1cbiJdLAogICJtYXBwaW5ncyI6ICI7QUFHQTtBQUNFLFdBQUEsS0FBQTtBQUNBLFNBQUE7QUFDQSxXQUFBO0FBQ0Esa0JBQUE7QUFDQSxtQkFBQTtBQUNBLGVBQUE7QUFDQSxZQUFBO0FBQ0EsV0FBQTtBQUNBLG9CQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBOztBQUVGO0FBQ0UsVUFBQTs7QUFFRixDQUFBO0FBQ0UsVUFBQTtBQUNBLFVBQUE7O0FBRUYsQ0FBQTtBQUNFLFVBQUE7QUFDQSxlQUFBOzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
+}, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\nheader[_ngcontent-%COMP%] {\n  padding: 25px 0;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  position: fixed;\n  z-index: 2;\n  background-color: #e8f3f1;\n}\n.nav[_ngcontent-%COMP%] {\n  display: flex;\n}\nh2[_ngcontent-%COMP%] {\n  margin: 0;\n}\n.lang[_ngcontent-%COMP%] {\n  height: fit-content;\n  cursor: pointer;\n}\n.github[_ngcontent-%COMP%] {\n  height: 28px;\n  margin-left: 10px;\n}\n@media (max-width: 500px) {\n  h2[_ngcontent-%COMP%] {\n    font-size: 14px;\n  }\n  button[_ngcontent-%COMP%] {\n    font-size: 10px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb3J0Zm9saW8vdG9wLWJhci90b3AtYmFyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG5oZWFkZXIge1xuICBwYWRkaW5nOiAyNXB4IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB6LWluZGV4OiAyO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBtYXAuZ2V0KCRjb2xvci1wYWxldHRlLCBcIjFcIik7XG59XG4ubmF2IHtcbiAgZGlzcGxheTogZmxleDtcbn1cbmgyIHtcbiAgbWFyZ2luOiAwO1xufVxuLmxhbmcge1xuICBoZWlnaHQ6IGZpdC1jb250ZW50O1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4uZ2l0aHViIHtcbiAgaGVpZ2h0OiAyOHB4O1xuICBtYXJnaW4tbGVmdDogMTBweDtcbn1cbkBtZWRpYSAobWF4LXdpZHRoOiA1MDBweCkge1xuICBoMiB7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICB9XG4gIGJ1dHRvbiB7XG4gICAgZm9udC1zaXplOiAxMHB4O1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0E7QUFDRSxXQUFBLEtBQUE7QUFDQSxTQUFBO0FBQ0EsV0FBQTtBQUNBLGtCQUFBO0FBQ0EsbUJBQUE7QUFDQSxlQUFBO0FBQ0EsWUFBQTtBQUNBLFdBQUE7QUFDQSxvQkFBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTs7QUFFRjtBQUNFLFVBQUE7O0FBRUYsQ0FBQTtBQUNFLFVBQUE7QUFDQSxVQUFBOztBQUVGLENBQUE7QUFDRSxVQUFBO0FBQ0EsZUFBQTs7QUFFRixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0U7QUFDRSxlQUFBOztBQUVGO0FBQ0UsZUFBQTs7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
 var TopBarComponent = _TopBarComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TopBarComponent, { className: "TopBarComponent", filePath: "src\\app\\portfolio\\top-bar\\top-bar.component.ts", lineNumber: 12 });
