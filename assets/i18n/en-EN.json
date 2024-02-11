@@ -61,5 +61,14 @@
   "COMPUTER_SCIENCE": "Computer Science",
   "EXPRESSION_COMMUNICATION": "Expression and Communication",
   "PORTFOLIO_DESC1": "Through this portfolio project, I have designed and developed a showcase of my skills and projects as a developer. The aim was to create a space that represents me professionally, highlighting my work.",
-  "PORTFOLIO_DESC2": "This portfolio is a reflection of my journey, my passion for software development, and my commitment to staying at the forefront of technology in a dynamic professional environment."
+  "PORTFOLIO_DESC2": "This portfolio is a reflection of my journey, my passion for software development, and my commitment to staying at the forefront of technology in a dynamic professional environment.",
+  "BATTLE_DESC1": "In my Pokémon Manager game, I have devised a battle system where two teams of six Pokémon each engage in duels completely orchestrated by artificial intelligence.",
+  "BATTLE_DESC2": "The player's involvement lies in the strategy beforehand: meticulously choosing your Pokémon team before the battle begins is crucial, as once the combat is underway, the flow of events is in the hands of your Pokémon.",
+  "BATTLE_DESC3": "Each Pokémon has two specific attacks, and any decision to change attack or Pokémon during battle incurs a recovery time.",
+  "PC_DESC1": "The storage PC in Pokémon Manager is at the heart of the player's strategic management. Here, one can manage their entire collection of Pokémon, accessing a detailed set of information for each creature.",
+  "PC_DESC2": "Players can not only select two attacks from a wide range that each Pokémon is capable of learning, but they can also compose their battle team by choosing which Pokémon will be active for upcoming encounters and which will stay in reserve.",
+  "NURSERY_DESC1": "The nursery in Pokémon Manager is currently the only way to expand one's collection of Pokémon. The system allows players to order eggs by specifying the desired type and quantity, depending on the nursery's level of development.",
+  "NURSERY_DESC2": "After placing an order, there is a waiting period for incubation before receiving the eggs. Then comes the first selection stage, where players must eliminate half of the eggs, guided solely by an estimate of each egg's hidden potential.",
+  "NURSERY_DESC3": "Finally, a final selection phase reveals the type of Pokémon for each remaining egg, allowing for a more refined strategy in shaping one's team."
+
 }
