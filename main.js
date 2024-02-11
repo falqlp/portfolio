@@ -39540,19 +39540,23 @@ var _PokemonManagerComponent = class _PokemonManagerComponent {
         p: "Work in progress"
       },
       {
-        img: "home",
+        img: "Storage PC",
         p: "Work in progress"
       },
       {
-        img: "home",
+        img: "Nursery",
         p: "Work in progress"
       },
       {
-        img: "home",
+        img: "Battle",
         p: "Work in progress"
       },
       {
-        img: "home",
+        img: "Pokedex",
+        p: "Work in progress"
+      },
+      {
+        img: "Games",
         p: "Work in progress"
       }
     ];
