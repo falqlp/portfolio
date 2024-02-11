@@ -39510,7 +39510,7 @@ var ImageViewerComponent = _ImageViewerComponent;
 })();
 
 // src/app/pokemon-manager/pokemon-manager.component.ts
-function PokemonManagerComponent_div_1_p_4_Template(rf, ctx) {
+function PokemonManagerComponent_div_1_p_8_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "p");
     \u0275\u0275text(1);
@@ -39525,17 +39525,24 @@ function PokemonManagerComponent_div_1_p_4_Template(rf, ctx) {
 }
 function PokemonManagerComponent_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 2)(1, "div", 3);
-    \u0275\u0275element(2, "app-image-viewer", 4);
+    \u0275\u0275elementStart(0, "div", 2)(1, "h3", 3);
+    \u0275\u0275text(2);
+    \u0275\u0275pipe(3, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 5);
-    \u0275\u0275template(4, PokemonManagerComponent_div_1_p_4_Template, 3, 3, "p", 6);
-    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(4, "div", 4)(5, "div", 5);
+    \u0275\u0275element(6, "app-image-viewer", 6);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(7, "div", 7);
+    \u0275\u0275template(8, PokemonManagerComponent_div_1_p_8_Template, 3, 3, "p", 8);
+    \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
     const pokemonManagerInfo_r1 = ctx.$implicit;
     const i_r2 = ctx.index;
     const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(3, 4, pokemonManagerInfo_r1.title));
+    \u0275\u0275advance(2);
     \u0275\u0275property("ngClass", i_r2 % 2 === 0 ? "" : "reverse");
     \u0275\u0275advance(2);
     \u0275\u0275property("src", ctx_r0.baseUrl + pokemonManagerInfo_r1.img + ".png");
@@ -39548,28 +39555,34 @@ var _PokemonManagerComponent = class _PokemonManagerComponent {
     this.baseUrl = "assets/images/pokemon-manager/";
     this.pokemonManagerInfos = [
       {
+        title: "BATTLE",
         img: "Battle",
         p: ["BATTLE_DESC1", "BATTLE_DESC2", "BATTLE_DESC3"]
       },
       {
+        title: "STORAGE_PC",
         img: "Storage PC",
         p: ["PC_DESC1", "PC_DESC2"]
       },
       {
+        title: "NURSERY",
         img: "Nursery",
         p: ["NURSERY_DESC1", "NURSERY_DESC2", "NURSERY_DESC3"]
       },
       {
+        title: "CALENDAR",
         img: "Calendar",
-        p: ["Work in progress"]
+        p: ["CALENDAR_DESC1", "CALENDAR_DESC2", "CALENDAR_DESC3"]
       },
       {
+        title: "POKEDEX",
         img: "Pokedex",
-        p: ["Work in progress"]
+        p: ["POKEDEX_DESC"]
       },
       {
+        title: "GAMES",
         img: "Games",
-        p: ["Work in progress"]
+        p: ["GAMES_DESC"]
       }
     ];
   }
@@ -39577,17 +39590,17 @@ var _PokemonManagerComponent = class _PokemonManagerComponent {
 _PokemonManagerComponent.\u0275fac = function PokemonManagerComponent_Factory(t) {
   return new (t || _PokemonManagerComponent)();
 };
-_PokemonManagerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PokemonManagerComponent, selectors: [["app-pokemon-manager"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 1, consts: [[1, "pokemon-manager-paragraphs"], ["class", "shadow pokemon-manager-paragraph", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "shadow", "pokemon-manager-paragraph", 3, "ngClass"], [1, "img-content"], [2, "flex", "1", 3, "src"], [1, "text-content"], [4, "ngFor", "ngForOf"]], template: function PokemonManagerComponent_Template(rf, ctx) {
+_PokemonManagerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PokemonManagerComponent, selectors: [["app-pokemon-manager"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 2, vars: 1, consts: [[1, "pokemon-manager-paragraphs"], ["class", "shadow pokemon-manager-paragraph", 4, "ngFor", "ngForOf"], [1, "shadow", "pokemon-manager-paragraph"], [1, "title"], [1, "content", 3, "ngClass"], [1, "img-content"], [2, "flex", "1", 3, "src"], [1, "text-content"], [4, "ngFor", "ngForOf"]], template: function PokemonManagerComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0);
-    \u0275\u0275template(1, PokemonManagerComponent_div_1_Template, 5, 3, "div", 1);
+    \u0275\u0275template(1, PokemonManagerComponent_div_1_Template, 9, 6, "div", 1);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
     \u0275\u0275advance();
     \u0275\u0275property("ngForOf", ctx.pokemonManagerInfos);
   }
-}, dependencies: [ImageViewerComponent, NgForOf, TranslateModule, TranslatePipe, NgClass], styles: ["\n\n.pokemon-manager-paragraph[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  background-color: #70aab7;\n  border-radius: 3px;\n  overflow: hidden;\n}\n.reverse[_ngcontent-%COMP%] {\n  flex-direction: row-reverse;\n}\n[_nghost-%COMP%] {\n  padding: 15px;\n  display: flex;\n  margin-top: 82px;\n}\n.img-content[_ngcontent-%COMP%], .text-content[_ngcontent-%COMP%] {\n  flex: 1;\n}\n.text-content[_ngcontent-%COMP%] {\n  padding: 10px;\n}\n.pokemon-manager-paragraphs[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 25px;\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb2tlbW9uLW1hbmFnZXIvcG9rZW1vbi1tYW5hZ2VyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG4ucG9rZW1vbi1tYW5hZ2VyLXBhcmFncmFwaCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIyXCIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG4ucmV2ZXJzZSB7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3ctcmV2ZXJzZTtcbn1cbjpob3N0IHtcbiAgcGFkZGluZzogMTVweDtcbiAgZGlzcGxheTogZmxleDtcbiAgbWFyZ2luLXRvcDogODJweDtcbn1cbi5pbWctY29udGVudCxcbi50ZXh0LWNvbnRlbnQge1xuICBmbGV4OiAxO1xufVxuLnRleHQtY29udGVudCB7XG4gIHBhZGRpbmc6IDEwcHg7XG59XG4ucG9rZW1vbi1tYW5hZ2VyLXBhcmFncmFwaHMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IDI1cHg7XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0EsQ0FBQTtBQUNFLFdBQUE7QUFDQSxtQkFBQTtBQUNBLG9CQUFBO0FBQ0EsaUJBQUE7QUFDQSxZQUFBOztBQUVGLENBQUE7QUFDRSxrQkFBQTs7QUFFRjtBQUNFLFdBQUE7QUFDQSxXQUFBO0FBQ0EsY0FBQTs7QUFFRixDQUFBO0FBQUEsQ0FBQTtBQUVFLFFBQUE7O0FBRUYsQ0FKQTtBQUtFLFdBQUE7O0FBRUYsQ0FBQTtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLE9BQUE7OyIsCiAgIm5hbWVzIjogW10KfQo= */"] });
+}, dependencies: [ImageViewerComponent, NgForOf, TranslateModule, TranslatePipe, NgClass], styles: ["\n\n.pokemon-manager-paragraph[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  background-color: #70aab7;\n  border-radius: 3px;\n  overflow: hidden;\n}\n.title[_ngcontent-%COMP%] {\n  text-align: center;\n}\n.reverse[_ngcontent-%COMP%] {\n  flex-direction: row-reverse;\n}\n[_nghost-%COMP%] {\n  padding: 15px;\n  display: flex;\n  margin-top: 82px;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n}\n.img-content[_ngcontent-%COMP%], .text-content[_ngcontent-%COMP%] {\n  flex: 1;\n}\n.text-content[_ngcontent-%COMP%] {\n  padding: 10px;\n}\n.pokemon-manager-paragraphs[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 25px;\n}\n@media (max-width: 1000px) {\n  .content[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2FwcC9wb2tlbW9uLW1hbmFnZXIvcG9rZW1vbi1tYW5hZ2VyLmNvbXBvbmVudC5zY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJAdXNlIFwic2FzczptYXBcIjtcbkBpbXBvcnQgXCIuLi8uLi9zdHlsZXMvY29sb3ItcGFsZXR0ZVwiO1xuXG4ucG9rZW1vbi1tYW5hZ2VyLXBhcmFncmFwaCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogbWFwLmdldCgkY29sb3ItcGFsZXR0ZSwgXCIyXCIpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG4udGl0bGUge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4ucmV2ZXJzZSB7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3ctcmV2ZXJzZTtcbn1cbjpob3N0IHtcbiAgcGFkZGluZzogMTVweDtcbiAgZGlzcGxheTogZmxleDtcbiAgbWFyZ2luLXRvcDogODJweDtcbn1cbi5jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbn1cbi5pbWctY29udGVudCxcbi50ZXh0LWNvbnRlbnQge1xuICBmbGV4OiAxO1xufVxuLnRleHQtY29udGVudCB7XG4gIHBhZGRpbmc6IDEwcHg7XG59XG4ucG9rZW1vbi1tYW5hZ2VyLXBhcmFncmFwaHMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IDI1cHg7XG59XG5AbWVkaWEgKG1heC13aWR0aDogMTAwMHB4KSB7XG4gIC5jb250ZW50IHtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB9XG59XG4iXSwKICAibWFwcGluZ3MiOiAiO0FBR0EsQ0FBQTtBQUNFLFdBQUE7QUFDQSxrQkFBQTtBQUNBLG1CQUFBO0FBQ0Esb0JBQUE7QUFDQSxpQkFBQTtBQUNBLFlBQUE7O0FBRUYsQ0FBQTtBQUNFLGNBQUE7O0FBRUYsQ0FBQTtBQUNFLGtCQUFBOztBQUVGO0FBQ0UsV0FBQTtBQUNBLFdBQUE7QUFDQSxjQUFBOztBQUVGLENBQUE7QUFDRSxXQUFBOztBQUVGLENBQUE7QUFBQSxDQUFBO0FBRUUsUUFBQTs7QUFFRixDQUpBO0FBS0UsV0FBQTs7QUFFRixDQUFBO0FBQ0UsV0FBQTtBQUNBLGtCQUFBO0FBQ0EsT0FBQTs7QUFFRixPQUFBLENBQUEsU0FBQSxFQUFBO0FBQ0UsR0FoQkY7QUFpQkksb0JBQUE7OzsiLAogICJuYW1lcyI6IFtdCn0K */"] });
 var PokemonManagerComponent = _PokemonManagerComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PokemonManagerComponent, { className: "PokemonManagerComponent", filePath: "src\\app\\pokemon-manager\\pokemon-manager.component.ts", lineNumber: 13 });

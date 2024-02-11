@@ -69,6 +69,16 @@
   "PC_DESC2": "Players can not only select two attacks from a wide range that each Pokémon is capable of learning, but they can also compose their battle team by choosing which Pokémon will be active for upcoming encounters and which will stay in reserve.",
   "NURSERY_DESC1": "The nursery in Pokémon Manager is currently the only way to expand one's collection of Pokémon. The system allows players to order eggs by specifying the desired type and quantity, depending on the nursery's level of development.",
   "NURSERY_DESC2": "After placing an order, there is a waiting period for incubation before receiving the eggs. Then comes the first selection stage, where players must eliminate half of the eggs, guided solely by an estimate of each egg's hidden potential.",
-  "NURSERY_DESC3": "Finally, a final selection phase reveals the type of Pokémon for each remaining egg, allowing for a more refined strategy in shaping one's team."
-
+  "NURSERY_DESC3": "Finally, a final selection phase reveals the type of Pokémon for each remaining egg, allowing for a more refined strategy in shaping one's team.",
+  "CALENDAR_DESC1": "The calendar is a central tool, providing an overview of the key events in the game.",
+  "CALENDAR_DESC2": "It is designed to indicate the different types of activities: events related to the nursery are marked in green, while those related to battles are in purple.",
+  "CALENDAR_DESC3": "This feature allows players to easily navigate through the flow of activities and strategically plan their next actions, taking into account upcoming events in the game world.",
+  "POKEDEX_DESC": "The Pokédex provides players with a comprehensive overview of all the Pokémon in the game, making it easier to plan their strategy and discover new species.",
+  "GAMES_DESC": "Players can also create multiple game saves, allowing them to explore different strategies and gaming experiences.",
+  "BATTLE": "Battle",
+  "STORAGE_PC": "Storage PC",
+  "NURSERY": "Nursery",
+  "CALENDAR": "Calendar",
+  "POKEDEX": "Pokédex",
+  "GAMES": "Games"
 }
