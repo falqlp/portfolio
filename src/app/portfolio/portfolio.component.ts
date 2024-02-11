@@ -47,6 +47,9 @@ export class PortfolioComponent implements AfterViewInit {
       slidesPerView: 1,
       direction: 'vertical',
       mousewheel: true,
+      pagination: {
+        type: 'bullets',
+      },
     };
     Object.assign(this.swiperContainer.nativeElement, swiperOption);
     this.swiperContainer.nativeElement.initialize();
