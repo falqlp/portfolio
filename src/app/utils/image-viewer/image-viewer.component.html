@@ -1,1 +1,7 @@
-<img [ngClass]="maxHeight? 'max-height':'max-width'" (click)="click()" [src]="src" [alt]="alt">
+<img
+  [ngClass]="maxHeight ? 'max-height' : 'max-width'"
+  (load)="onImgLoad()"
+  (click)="click()"
+  [src]="src"
+  [alt]="alt"
+/>
