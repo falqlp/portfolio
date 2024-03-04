@@ -39476,7 +39476,6 @@ var _ImageViewerComponent = class _ImageViewerComponent {
   constructor(bigImageViewerService, elementRef) {
     this.bigImageViewerService = bigImageViewerService;
     this.elementRef = elementRef;
-    this.maxHeight = false;
   }
   ngAfterViewInit() {
     setTimeout(() => {
