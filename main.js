@@ -39477,12 +39477,21 @@ var _ImageViewerComponent = class _ImageViewerComponent {
     this.bigImageViewerService = bigImageViewerService;
     this.elementRef = elementRef;
   }
-  ngAfterViewInit() {
-    setTimeout(() => {
-      const hwRatioImg = this.elementRef.nativeElement.children[0].naturalHeight / this.elementRef.nativeElement.children[0].naturalWidth;
-      const hwRatioImgDiv = this.elementRef.nativeElement.parentElement.clientHeight / this.elementRef.nativeElement.parentElement.clientWidth;
-      this.maxHeight = hwRatioImg > hwRatioImgDiv;
-    }, 1e3);
+  // ngAfterViewInit(): void {
+  //   setTimeout(() => {
+  //     const hwRatioImg =
+  //       this.elementRef.nativeElement.children[0].naturalHeight /
+  //       this.elementRef.nativeElement.children[0].naturalWidth;
+  //     const hwRatioImgDiv =
+  //       this.elementRef.nativeElement.parentElement.clientHeight /
+  //       this.elementRef.nativeElement.parentElement.clientWidth;
+  //     this.maxHeight = hwRatioImg > hwRatioImgDiv;
+  //   }, 1000);
+  // }
+  onImgLoad() {
+    const hwRatioImg = this.elementRef.nativeElement.children[0].naturalHeight / this.elementRef.nativeElement.children[0].naturalWidth;
+    const hwRatioImgDiv = this.elementRef.nativeElement.parentElement.clientHeight / this.elementRef.nativeElement.parentElement.clientWidth;
+    this.maxHeight = hwRatioImg > hwRatioImgDiv;
   }
   click() {
     this.bigImageViewerService.setImage(this.src);
@@ -39491,10 +39500,12 @@ var _ImageViewerComponent = class _ImageViewerComponent {
 _ImageViewerComponent.\u0275fac = function ImageViewerComponent_Factory(t) {
   return new (t || _ImageViewerComponent)(\u0275\u0275directiveInject(BigImageViewerService), \u0275\u0275directiveInject(ElementRef));
 };
-_ImageViewerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ImageViewerComponent, selectors: [["app-image-viewer"]], inputs: { src: "src", alt: "alt" }, standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 1, vars: 3, consts: [[3, "ngClass", "src", "alt", "click"]], template: function ImageViewerComponent_Template(rf, ctx) {
+_ImageViewerComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ImageViewerComponent, selectors: [["app-image-viewer"]], inputs: { src: "src", alt: "alt" }, standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 1, vars: 3, consts: [[3, "ngClass", "src", "alt", "load", "click"]], template: function ImageViewerComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "img", 0);
-    \u0275\u0275listener("click", function ImageViewerComponent_Template_img_click_0_listener() {
+    \u0275\u0275listener("load", function ImageViewerComponent_Template_img_load_0_listener() {
+      return ctx.onImgLoad();
+    })("click", function ImageViewerComponent_Template_img_click_0_listener() {
       return ctx.click();
     });
     \u0275\u0275elementEnd();
