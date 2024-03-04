@@ -39477,17 +39477,6 @@ var _ImageViewerComponent = class _ImageViewerComponent {
     this.bigImageViewerService = bigImageViewerService;
     this.elementRef = elementRef;
   }
-  // ngAfterViewInit(): void {
-  //   setTimeout(() => {
-  //     const hwRatioImg =
-  //       this.elementRef.nativeElement.children[0].naturalHeight /
-  //       this.elementRef.nativeElement.children[0].naturalWidth;
-  //     const hwRatioImgDiv =
-  //       this.elementRef.nativeElement.parentElement.clientHeight /
-  //       this.elementRef.nativeElement.parentElement.clientWidth;
-  //     this.maxHeight = hwRatioImg > hwRatioImgDiv;
-  //   }, 1000);
-  // }
   onImgLoad() {
     const hwRatioImg = this.elementRef.nativeElement.children[0].naturalHeight / this.elementRef.nativeElement.children[0].naturalWidth;
     const hwRatioImgDiv = this.elementRef.nativeElement.parentElement.clientHeight / this.elementRef.nativeElement.parentElement.clientWidth;
