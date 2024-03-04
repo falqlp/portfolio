@@ -39482,7 +39482,7 @@ var _ImageViewerComponent = class _ImageViewerComponent {
       const hwRatioImg = this.elementRef.nativeElement.children[0].naturalHeight / this.elementRef.nativeElement.children[0].naturalWidth;
       const hwRatioImgDiv = this.elementRef.nativeElement.parentElement.clientHeight / this.elementRef.nativeElement.parentElement.clientWidth;
       this.maxHeight = hwRatioImg > hwRatioImgDiv;
-    }, 500);
+    }, 1e3);
   }
   click() {
     this.bigImageViewerService.setImage(this.src);
