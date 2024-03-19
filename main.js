@@ -54909,7 +54909,7 @@ var _FirstSlideComponent = class _FirstSlideComponent {
 _FirstSlideComponent.\u0275fac = function FirstSlideComponent_Factory(t) {
   return new (t || _FirstSlideComponent)(\u0275\u0275directiveInject(TranslateService));
 };
-_FirstSlideComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FirstSlideComponent, selectors: [["app-first-slide"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 5, vars: 2, consts: [[1, "content"], ["src", "assets/images/pp/Photo%20d'identit\xE9%20Falq.jpg", "alt", "pp"], [1, "writing-text"], [3, "ngClass"]], template: function FirstSlideComponent_Template(rf, ctx) {
+_FirstSlideComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FirstSlideComponent, selectors: [["app-first-slide"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 5, vars: 2, consts: [[1, "content"], ["src", "assets/images/pp/PP.jpg", "alt", "pp"], [1, "writing-text"], [3, "ngClass"]], template: function FirstSlideComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0);
     \u0275\u0275element(1, "img", 1);
@@ -54920,7 +54920,7 @@ _FirstSlideComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ t
   }
   if (rf & 2) {
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(ctx.texteAnime);
+    \u0275\u0275textInterpolate1(" ", ctx.texteAnime, "");
     \u0275\u0275advance();
     \u0275\u0275property("ngClass", ctx.isTypingCompleted ? "" : "cursor");
   }
