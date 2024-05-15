@@ -62,9 +62,8 @@
   "EXPRESSION_COMMUNICATION": "Expression and Communication",
   "PORTFOLIO_DESC1": "Through this portfolio project, I have designed and developed a showcase of my skills and projects as a developer. The aim was to create a space that represents me professionally, highlighting my work.",
   "PORTFOLIO_DESC2": "This portfolio is a reflection of my journey, my passion for software development, and my commitment to staying at the forefront of technology in a dynamic professional environment.",
-  "BATTLE_DESC1": "In my Pokemon Manager game, I have devised a battle system where two teams of six Pokemon each engage in duels completely orchestrated by artificial intelligence.",
-  "BATTLE_DESC2": "The player's involvement lies in the strategy beforehand: meticulously choosing your Pokemon team before the battle begins is crucial, as once the combat is underway, the flow of events is in the hands of your Pokemon.",
-  "BATTLE_DESC3": "Each Pokemon has two specific attacks, and any decision to change attack or Pokemon during battle incurs a recovery time.",
+  "BATTLE_DESC1": "In my Pokémon Manager game, I've designed a battle system where two teams of six Pokémon each face off in fully automated duels.",
+  "BATTLE_DESC2": "Player involvement lies in the pre-battle strategy: meticulously choosing your team of Pokémon before the battle begins is crucial, as once the fight starts, the course of events is in the hands of your Pokémon.",
   "PC_DESC1": "The storage PC in Pokemon Manager is at the heart of the player's strategic management. Here, one can manage their entire collection of Pokemon, accessing a detailed set of information for each creature.",
   "PC_DESC2": "Players can not only select two attacks from a wide range that each Pokemon is capable of learning, but they can also compose their battle team by choosing which Pokemon will be active for upcoming encounters and which will stay in reserve.",
   "NURSERY_DESC1": "The nursery in Pokemon Manager is currently the only way to expand one's collection of Pokemon. The system allows players to order eggs by specifying the desired type and quantity, depending on the nursery's level of development.",
@@ -80,5 +79,6 @@
   "NURSERY": "Nursery",
   "CALENDAR": "Calendar",
   "POKEDEX": "Pokedex",
-  "GAMES": "Games"
+  "GAMES": "Games",
+  "GALLERY": "Gallery"
 }

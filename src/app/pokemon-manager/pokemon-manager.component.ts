@@ -2,11 +2,18 @@ import { Component } from '@angular/core';
 import { ImageViewerComponent } from '../utils/image-viewer/image-viewer.component';
 import { NgClass, NgForOf } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { GalleryComponent } from '../galery/gallery.component';
 
 @Component({
   selector: 'app-pokemon-manager',
   standalone: true,
-  imports: [ImageViewerComponent, NgForOf, TranslateModule, NgClass],
+  imports: [
+    ImageViewerComponent,
+    NgForOf,
+    TranslateModule,
+    NgClass,
+    GalleryComponent,
+  ],
   templateUrl: './pokemon-manager.component.html',
   styleUrl: './pokemon-manager.component.scss',
 })
@@ -16,7 +23,7 @@ export class PokemonManagerComponent {
     {
       title: 'BATTLE',
       img: 'Battle',
-      p: ['BATTLE_DESC1', 'BATTLE_DESC2', 'BATTLE_DESC3'],
+      p: ['BATTLE_DESC1', 'BATTLE_DESC2'],
     },
     {
       title: 'STORAGE_PC',

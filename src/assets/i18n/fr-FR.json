@@ -62,9 +62,8 @@
   "EXPRESSION_COMMUNICATION": "Expression et communication",
   "PORTFOLIO_DESC1": "À travers ce projet de portfolio, j'ai conçu et développé une vitrine de mes compétences et de mes projets en tant que développeur. L'objectif était de créer un espace qui me représente professionnellement, mettant en avant mes travaux.",
   "PORTFOLIO_DESC2": "Ce portfolio est le reflet de mon parcours, de ma passion pour le développement logiciel et de mon engagement à rester à la pointe de la technologie dans un environnement professionnel dynamique.",
-  "BATTLE_DESC1": "Dans mon jeu Pokémon Manager, j'ai conçu un système de combat où deux équipes de six Pokémon s'affrontent dans des duels entièrement orchestrés par l'intelligence artificielle.",
+  "BATTLE_DESC1": "Dans mon jeu Pokémon Manager, j'ai conçu un système de combat où deux équipes de six Pokémon s'affrontent dans des duels entièrement automatique.",
   "BATTLE_DESC2": "L'implication du joueur réside dans la stratégie préalable : choisir méticuleusement son équipe de Pokémon avant le début de l'affrontement est essentiel, car une fois le combat lancé, le cours des événements est entre les mains de vos Pokémons.",
-  "BATTLE_DESC3": "Chaque Pokémon dispose de deux attaques spécifiques, et toute décision de changer d'attaque ou de Pokémon en plein combat entraîne un temps de récupération.",
   "PC_DESC1": "Le PC de stockage dans Pokémon Manager est au cœur de la gestion stratégique du joueur. C'est ici que l'on peut gérer sa collection complète de Pokémon, en accédant à un ensemble détaillé d'informations pour chaque Pokémon.",
   "PC_DESC2": "Les joueurs peuvent non seulement sélectionner deux attaques parmi un large éventail que chaque Pokémon a la capacité d'apprendre, mais ils peuvent également composer leur équipe de combat en choisissant quels Pokémon seront actifs pour les affrontements à venir et lesquels resteront en réserve.",
   "NURSERY_DESC1": "La pension dans Pokémon Manager est actuellement l'unique moyen d'agrandir sa collection de Pokémon. Le système permet aux joueurs de commander des œufs en spécifiant le type désiré et la quantité, selon le niveau de développement de la pension.",
@@ -80,5 +79,6 @@
   "NURSERY": "Pension",
   "CALENDAR": "Calendrier",
   "POKEDEX": "Pokédex",
-  "GAMES": "Parties"
+  "GAMES": "Parties",
+  "GALLERY": "Galerie"
 }
